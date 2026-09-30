@@ -24,7 +24,7 @@ jobs:
           distribution: temurin
           java-version: 21
           cache: gradle
-      - name: Submodules: az terminology, remove phyphox.org links
+      - name: "Submodules - az terminology, remove phyphox.org links"
         run: |
           python3 tools/elmlab/az_fixes.py
           python3 tools/elmlab/strip_phyphox_org.py
