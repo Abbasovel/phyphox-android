@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="phyphox_primary">#ffff7e22</color>
-    <color name="phyphox_primary_weak">#ffffc399</color>
+    <color name="phyphox_primary">#ff2f6fd6</color>
+    <color name="phyphox_primary_weak">#ffa8c3f2</color>
     <color name="phyphox_rwth_primary">#ff00549f</color>
 
     <color name="phyphox_white_100">#ffffffff</color>

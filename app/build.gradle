@@ -12,7 +12,7 @@ android {
         //  format  WXXYYZZ, where WW is major, XX is minor, YY is patch, and ZZ is build
         versionCode 1030000 //1.03.00-00
 
-        def locales = ['en', 'az', 'cs', 'de', 'el', 'es', 'fr', 'gu', 'hi', 'it', 'ja', 'ka', 'ko', 'nl', 'pl', 'pt', 'ru', 'sr', 'b+sr+Latn', 'ta', 'tr', 'vi', 'zh-rCN', 'zh-rTW']
+        def locales = ['az', 'ru', 'en'] // Elm Lab: Azerbaijani, Russian, English
         buildConfigField "String[]", "LOCALE_ARRAY", "new String[]{\""+locales.join("\",\"")+"\"}"
         resourceConfigurations += locales
 

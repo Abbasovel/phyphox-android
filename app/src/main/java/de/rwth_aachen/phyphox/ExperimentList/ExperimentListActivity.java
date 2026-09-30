@@ -200,6 +200,17 @@ public class ExperimentListActivity extends AppCompatActivity {
 
         //Basics. Call super-constructor and inflate the layout.
         super.onCreate(savedInstanceState);
+
+        //Elm Lab: Azerbaijani is the default language on first launch (Azerbaijani, Russian and
+        //English can be chosen in the settings).
+        android.content.SharedPreferences elmlabPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if (!elmlabPrefs.getBoolean("elmlab_default_locale_set", false)) {
+            elmlabPrefs.edit().putBoolean("elmlab_default_locale_set", true).apply();
+            if (androidx.appcompat.app.AppCompatDelegate.getApplicationLocales().isEmpty()) {
+                androidx.appcompat.app.AppCompatDelegate.setApplicationLocales(
+                        androidx.core.os.LocaleListCompat.forLanguageTags("az"));
+            }
+        }
         setContentView(R.layout.activity_experiment_list);
 
         res = getResources(); //Get Resource reference for easy access.

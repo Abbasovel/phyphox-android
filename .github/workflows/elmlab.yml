@@ -24,6 +24,8 @@ jobs:
           distribution: temurin
           java-version: 21
           cache: gradle
+      - name: Azerbaijani terminology fixes (experiments)
+        run: python3 tools/elmlab/az_fixes.py
       - name: Build APK
         run: ./gradlew --no-daemon --stacktrace assembleRegularRelease
       - name: Collect APK

@@ -65,7 +65,7 @@ public class GraphSetup implements Serializable {
         Matrix.setIdentityM(zScaleMatrix, 0);
 
         colorScale.add(0xff000000);
-        colorScale.add(0xffff7e22);
+        colorScale.add(0xff2f6fd6);
         colorScale.add(0xffffffff);
     }
 

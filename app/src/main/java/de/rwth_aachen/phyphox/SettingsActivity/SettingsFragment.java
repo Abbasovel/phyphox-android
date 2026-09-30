@@ -92,7 +92,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         if(lp != null){
             Locale locale = AppCompatDelegate.getApplicationLocales().get(0);
             if (locale == null)
-                lp.setValue("*");
+                lp.setValue("az");
             else
                 lp.setValue(locale.toString().replace("_", "-"));
         }
@@ -112,7 +112,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 continue;
             valuesUsed.add(rawValue.replace("-r", "-"));
         }
-        valuesUsed.add("*");
+        //Elm Lab: no "system default" entry, the app language is chosen explicitly
 
         int n = valuesUsed.size();
         String[] names = new String[n];
