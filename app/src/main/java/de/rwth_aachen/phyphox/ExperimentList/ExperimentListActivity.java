@@ -726,6 +726,15 @@ public class ExperimentListActivity extends AppCompatActivity {
         TextView tvC = (TextView) creditLayout.findViewById(R.id.creditsPahoMQTT);
         tvC.setText(Html.fromHtml(localizedRes.getString(R.string.creditsPahoMQTT)));
 
+        //Elm Lab: authors and licence texts are collapsed behind a toggle
+        final View elmlabLicenses = creditLayout.findViewById(R.id.elmlabLicenses);
+        final TextView elmlabToggle = (TextView) creditLayout.findViewById(R.id.elmlabLicensesToggle);
+        elmlabToggle.setOnClickListener(view -> {
+            boolean show = elmlabLicenses.getVisibility() != View.VISIBLE;
+            elmlabLicenses.setVisibility(show ? View.VISIBLE : View.GONE);
+            elmlabToggle.setText(show ? R.string.elmlabLicensesHide : R.string.elmlabLicensesShow);
+        });
+
         //Finish alertDialog builder
         credits.setView(creditLayout);
         credits.setPositiveButton(res.getText(R.string.close), new DialogInterface.OnClickListener() {

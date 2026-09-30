@@ -459,4 +459,8 @@
     <string name="localNetworkDeniedHint">Yerli şəbəkə icazəsi olmadan yerli şəbəkənizdəki cihazlara bağlantılar uğursuz olacaq.</string>
     <string name="remoteServerPortInUseTitle">Uzaqdan giriş aktivləşdirilə bilmədi</string>
     <string name="remoteServerPortInUse">Uzaqdan giriş aktivləşdirilə bilmədi, çünki port bu cihazdakı başqa bir tətbiq tərəfindən istifadə olunur. Portu istifadə edən tətbiqi dayandırın və ya phyphox tənzimləmələrində başqa port təyin edin.</string>
+    <string name="elmlabMuseum">Elm Lab — Elçin Abbasovun İnteraktiv Elm Muzeyinin fizika təcrübələri tətbiqidir. Muzeyin kökləri 1998-ci ildə emalatxanada başlanan işlərə gedib çıxır. Bu gün muzeydə fizika, kimya, biologiya, riyaziyyat, coğrafiya və mühəndislik üzrə 150-dən çox işlək interaktiv eksponat var. Əsas ideyamız: elmi danışmaq yox, göstərmək və ziyarətçiyə öz əli ilə sınamağa imkan vermək. Elm Lab ilə telefonunuz cibinizdəki fizika laboratoriyasına çevrilir.\n\nBakı, Mikayıl Müşfiq 2E · filial: Azərbaycan Dövlət Pedaqoji Universiteti\nBiletlər: iTicket.az · Instagram, TikTok: @elmmuzeyi</string>
+    <string name="elmlabAttribution">Elm Lab açıq mənbəli phyphox proqramı (© Dr. Sebastian Staacks, RWTH Aachen Universiteti) əsasında hazırlanıb və GNU GPL v3 lisenziyası ilə, heç bir zəmanət verilmədən yayılır. Mənbə kodu: github.com/Abbasovel/phyphox-android. «phyphox» və «RWTH Aachen» qeydiyyatdan keçmiş ticarət nişanlarıdır; Elm Lab onlarla əlaqəli deyil.</string>
+    <string name="elmlabLicensesShow">Müəlliflər və lisenziyalar ▾</string>
+    <string name="elmlabLicensesHide">Müəlliflər və lisenziyalar ▴</string>
 </resources>
