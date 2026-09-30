@@ -16,6 +16,7 @@
 
     <TextView
         android:id="@+id/bluetooth_scan_dialog_more_info_text"
+        android:visibility="gone"
         android:text="@string/bt_more_info_link_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

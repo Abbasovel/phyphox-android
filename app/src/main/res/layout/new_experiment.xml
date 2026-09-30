@@ -27,6 +27,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/newExperimentPhyphoxInfo"
                 android:id="@+id/newExperimentPhyphoxInfo"
+                android:visibility="gone"
                 android:layout_marginBottom="@dimen/activity_vertical_margin" />
 
             <LinearLayout

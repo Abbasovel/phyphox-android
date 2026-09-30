@@ -194,14 +194,7 @@ public class ExperimentItemAdapter extends BaseAdapter {
                                 .setTitle(R.string.sensorNotAvailableWarningTitle)
                                 .setPositiveButton(R.string.ok, (dialog, id) -> {
 
-                                })
-                                .setNeutralButton(res.getString(R.string.sensorNotAvailableWarningMoreInfo), (dialog, id) -> {
-                                    Uri uri = Uri.parse(res.getString(R.string.sensorNotAvailableWarningMoreInfoURL));
-                                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                                    if (intent.resolveActivity(parentActivity.getPackageManager()) != null) {
-                                        parentActivity.startActivity(intent);
-                                    }
-                                });
+                                }); //Elm Lab: no "more info" link to phyphox.org
                         AlertDialog dialog = builder.create();
                         dialog.show();
                     }

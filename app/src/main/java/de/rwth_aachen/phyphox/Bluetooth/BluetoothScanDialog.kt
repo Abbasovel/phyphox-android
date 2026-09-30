@@ -93,13 +93,7 @@ class BluetoothScanDialog(
 
             if (!autoConnect) {
                 val view = (ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater).inflate(R.layout.bluetooth_scan_dialog, null)
-                builder.setView(view)
-                    .setPositiveButton(R.string.bt_more_info_link_button) { d, _ ->
-                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(ctx.getString(R.string.bt_more_info_link_url)))
-                        if (intent.resolveActivity(parentActivity.packageManager) != null)
-                            parentActivity.startActivity(intent)
-                        d.dismiss()
-                    }
+                builder.setView(view) //Elm Lab: no "more info" link to phyphox.org
                 title = view.findViewById(R.id.bluetooth_scan_dialog_title)
                 val list = view.findViewById<ListView>(R.id.bluetooth_scan_dialog_items)
                 val adapter = DeviceListAdapter()

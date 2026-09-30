@@ -85,6 +85,9 @@ def header_png():
     d.text((x+4, 350), "fizika təcrübələri telefonla", font=fr, fill=MUTED, anchor="ls")
     for dn,k in DENS.items():
         im.resize((round(718*k/4), round(192*k/4)), Image.LANCZOS).save(RES/f"drawable-{dn}/phyphox_dark.png")
+    # logo of the remote-access web interface (submodule file replaced in CI by strip_phyphox_org.py)
+    (FONTS.parent/"assets").mkdir(exist_ok=True)
+    im.resize((1120, 300), Image.LANCZOS).save(FONTS.parent/"assets/webinterface_logo.png")
 
 def museum_png(path_sizes, color, bgcolor=None):
     W,H = 827*2, 378*2
@@ -112,7 +115,7 @@ def strings():
         def fix(m):
             name, body = m.group(2), m.group(3)
             if name in ("app_name","title_activity_experiment"): return f'{m.group(1)}{NAME}{m.group(4)}'
-            if name in KEEP or name.endswith("URL") or name.endswith("_url"): return m.group(0)
+            if name in KEEP or name.startswith("elmlab") or name.endswith("URL") or name.endswith("_url"): return m.group(0)
             return m.group(1) + WORD.sub(NAME, body) + m.group(4)
         s2 = re.sub(r'(<string name="([^"]+)"[^>]*>)(.*?)(</string>)', fix, s, flags=re.S)
         # grammar after the rename: vowel harmony (phyphox-un -> Lab-ın) and English article
