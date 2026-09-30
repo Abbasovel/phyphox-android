@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">phyphox</string>
+    <string name="app_name">Elm Lab</string>
     <string name="action_settings">Indstillinger</string>
-    <string name="title_activity_experiment">phyphox</string>
+    <string name="title_activity_experiment">Elm Lab</string>
     <string name="graph_tools_pan_and_zoom">Flyt/zoom</string>
     <string name="graph_tools_pick">Vælg datapunkt</string>
     <string name="graph_tools_more">Flere værktøjer</string>
@@ -38,11 +38,11 @@
     <string name="newExperimentBluetooth">Nyt eksperiment for Bluetooth enhed</string>
     <string name="newExperimentBluetoothErrorTitle">Bluetooth scanningsfejl</string>
     <string name="newExperimentBluetoothLoadFromDevice">Indlæs fra enhed</string>
-    <string name="newExperimentBluetoothLoadFromDeviceInfo">Denne enhed har sit eget phyphox eksperiment. Vælg \"indlæs fra enhed\" for at åbne det.</string>
+    <string name="newExperimentBluetoothLoadFromDeviceInfo">Denne enhed har sit eget Elm Lab eksperiment. Vælg \"indlæs fra enhed\" for at åbne det.</string>
     <string name="newExperimentQR">Nyt eksperiment fra QR-kode</string>
-    <string name="newExperimentQRscan">Scan en QR-kode, som indeholder et phyphox eksperiment.</string>
+    <string name="newExperimentQRscan">Scan en QR-kode, som indeholder et Elm Lab eksperiment.</string>
     <string name="newExperimentQRErrorTitle">QR-kode fejl.</string>
-    <string name="newExperimentQRNoExperiment">Kunne ikke finde en QR-kode, der indeholder et phyphox eksperiment.</string>
+    <string name="newExperimentQRNoExperiment">Kunne ikke finde en QR-kode, der indeholder et Elm Lab eksperiment.</string>
     <string name="newExperimentQRcrcMismatch">QR-koden, som du lige har scannet, ser ikke ud til at matche de tidligere koder. Venligst scan kun koder, der hører til samme eksperiment.</string>
     <string name="newExperimentQRCodesMissing1">QR-koden, som du lige har scannet, er del af en pakke af</string>
     <string name="newExperimentQRCodesMissing2">koder. Venligst tryk \"videre\" for at scanne de øvrige koder. Antal koder, som stadig mangler:</string>
@@ -113,10 +113,10 @@
     <string name="timedRunStopDelay">Eksperimentets varighed (s)</string>
     <string name="export">Eksportér data</string>
     <string name="export_empty">Denne eksperimentkonfiguration mangler en definition for data eksport. Hvis det er en fejl, kontakt venligst vedkommende, der har skabt QR-koden eller konfigurationsfilen.</string>
-    <string name="export_subject">Data fra phyphox</string>
+    <string name="export_subject">Data fra Elm Lab</string>
     <string name="export_pick_share">Vælg en App til eksport</string>
     <string name="share">Del screenshot</string>
-    <string name="share_subject">Screenshot fra phyphox</string>
+    <string name="share_subject">Screenshot fra Elm Lab</string>
     <string name="share_pick_share">Vælg en App til deling</string>
     <string name="remoteServer">Tillad fjernadgang</string>
     <string name="remoteServerWarning">Du er i gang med at aktivere fjernadgang. Du bør kun gøre det på et sikkert netværk! Vær venligst opmærksom på, at den direkte adgang mellem forskellige enheder på mange universitets- eller virksomhedsnetværk ikke er muligt.

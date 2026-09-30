@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">手机物理工坊</string>
+    <string name="app_name">Elm Lab</string>
     <string name="action_settings">设置</string>
-    <string name="title_activity_experiment">手机物理工坊</string>
+    <string name="title_activity_experiment">Elm Lab</string>
     <string name="newExperiment">新建实验</string>
     <string name="newExperimentPhyphoxInfo">参考phyphox.org网站信息，创设更好的手机实验，并包括数据分析，可与同事，学生和朋友们分享。</string>
     <string name="newExperimentInputTitle">标题</string>
@@ -68,10 +68,10 @@
     <string name="timedRunStartDelay">启动延迟(秒)</string>
     <string name="timedRunStopDelay">实验时长(秒)</string>
     <string name="export">导出数据</string>
-    <string name="export_subject">来自 Phyphox 的数据</string>
+    <string name="export_subject">来自 Elm Lab 的数据</string>
     <string name="export_pick_share">选择导出模式</string>
     <string name="share">分享屏幕截图</string>
-    <string name="share_subject">来自 Phyphox 的屏幕截图</string>
+    <string name="share_subject">来自 Elm Lab 的屏幕截图</string>
     <string name="share_pick_share">选择分享途径</string>
     <string name="remoteServerWarning">您即将启用对所采集数据的远程访问功能。请务必仅在受信任的网络环境下进行此操作！此外请注意，在许多企业或高校网络中，设备之间可能无法直接建立连接。
 \n
@@ -123,7 +123,7 @@
     <string name="newExperimentBluetooth">为蓝牙设备添加实验</string>
     <string name="newExperimentBluetoothErrorTitle">蓝牙扫描错误</string>
     <string name="newExperimentBluetoothLoadFromDevice">从设备加载</string>
-    <string name="newExperimentBluetoothLoadFromDeviceInfo">此设备提供自己的 Phyphox 实验。选择从设备加载即可打开。</string>
+    <string name="newExperimentBluetoothLoadFromDeviceInfo">此设备提供自己的 Elm Lab 实验。选择从设备加载即可打开。</string>
     <string name="newExperimentQR">从二维码添加实验</string>
     <string name="newExperimentQRscan">扫描一个包含Phyphox实验的二维码。</string>
     <string name="newExperimentQRErrorTitle">二维码错误。</string>
@@ -141,7 +141,7 @@
     <string name="gpl">Phyphox是在GNU通用公共许可证下发布的开源软件。请访问http://phyphox.org获取更多信息和访问源代码。但，“phyphox”和“RWTH Aachen”是已注册商标。</string>
     <string name="sensorVendor">供应商特定</string>
     <string name="vendorSensorTitle">供应商特定传感器</string>
-    <string name="save_state_subject">Phyphox 的实验状态</string>
+    <string name="save_state_subject">Elm Lab 的实验状态</string>
     <string name="save_state_default_title">测量</string>
     <string name="save_state_success">状态已保存至你的收藏。</string>
     <string name="timedRun">定时运行</string>
@@ -236,12 +236,12 @@
     <string name="bt_location_service_explanation">除了需要获取位置信息的权限外，Android 系统还要求在进行蓝牙扫描时开启位置服务，因为扫描结果可用于推断位置信息。我们将引导您前往系统设置页面。</string>
     <string name="networkPrivacyWarning">隐私警告</string>
     <string name="networkVisitPrivacyURL">隐私政策</string>
-    <string name="networkPrivacyInfo">本实验使用网络连接，这意味着实验数据可能会传输至网络服务。您可以点击下方的“隐私政策”按钮了解更多详情；该按钮将引导您访问由本实验创建者提供的隐私政策页面。如果所使用的网络服务并非本地设备，请注意：一旦您开始本实验，Phyphox 可能会传输以下信息：</string>
+    <string name="networkPrivacyInfo">本实验使用网络连接，这意味着实验数据可能会传输至网络服务。您可以点击下方的“隐私政策”按钮了解更多详情；该按钮将引导您访问由本实验创建者提供的隐私政策页面。如果所使用的网络服务并非本地设备，请注意：一旦您开始本实验，Elm Lab 可能会传输以下信息：</string>
     <string name="networkPrivacyUniqueID">一个针对该设备和网络服务的唯一标识符，用于匹配该设备在当前实验配置下发送的所有数据。</string>
     <string name="networkPrivacySensorData">来自以下传感器的数据:</string>
     <string name="networkPrivacySensorMicrophone">来自麦克风的录音，或源自此类录音的数据。</string>
     <string name="networkPrivacySensorLocation">位置数据（GPS 数据或类似数据）。</string>
-    <string name="networkPrivacyDeviceInfo">关于您设备型号和/或 Phyphox 版本的详细信息。</string>
+    <string name="networkPrivacyDeviceInfo">关于您设备型号和/或 Elm Lab 版本的详细信息。</string>
     <string name="networkPrivacySensorInfo">关于以下传感器的技术细节:</string>
     <string name="graph_tools_system_time">转换到系统时间</string>
     <string name="categoryPhyphoxOrg">为 Phyphox 做贡献</string>
@@ -454,9 +454,9 @@
     <string name="common_quantity_short_wavelength">λ</string>
     <string name="which_spectrum_orientation">您的设备针对频谱的方向是什么？</string>
     <string name="spectrum_orientation">方向</string>
-    <string name="localNetworkLoadMessage">无法从此地址加载实验。如果它是由本地网络上的设备提供的，则 phyphox 需要获得访问本地网络的权限。请授予权限并再试一次？</string>
-    <string name="localNetworkExperimentMessage">本实验需要连接到本地网络上的设备。phyphox 需要获得访问本地网络的权限才能访问该设备。</string>
+    <string name="localNetworkLoadMessage">无法从此地址加载实验。如果它是由本地网络上的设备提供的，则 Elm Lab 需要获得访问本地网络的权限。请授予权限并再试一次？</string>
+    <string name="localNetworkExperimentMessage">本实验需要连接到本地网络上的设备。Elm Lab 需要获得访问本地网络的权限才能访问该设备。</string>
     <string name="localNetworkDeniedHint">如果没有本地网络权限，连接到本地网络上的设备将会失败。</string>
     <string name="remoteServerPortInUseTitle">无法启用远程访问</string>
-    <string name="remoteServerPortInUse">由于该端口已被设备上的其他应用占用，因此无法启用远程访问。请停止正在使用该端口的应用，或在 Phyphox 设置中设置其他端口。</string>
+    <string name="remoteServerPortInUse">由于该端口已被设备上的其他应用占用，因此无法启用远程访问。请停止正在使用该端口的应用，或在 Elm Lab 设置中设置其他端口。</string>
 </resources>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ফিফক্স</string>
+    <string name="app_name">Elm Lab</string>
     <string name="privacyPolicyURL">https://phyphox.org/privacy</string>
     <string name="action_settings">সেটিংস</string>
-    <string name="title_activity_experiment">ফিফক্স</string>
+    <string name="title_activity_experiment">Elm Lab</string>
     <string name="graph_tools_pan_and_zoom">আঙুল দিয়ে জুম</string>
     <string name="graph_tools_pick">ডাটা নেওয়া</string>
     <string name="graph_tools_more">আরো টুলস</string>
@@ -39,7 +39,7 @@
     <string name="newExperimentBluetooth">ব্লু-টুথ যন্ত্রের জন্য পরীক্ষা যোগ করুন</string>
     <string name="newExperimentBluetoothErrorTitle">ব্লু-টুথ স্ক্যানে ত্রুটি</string>
     <string name="newExperimentBluetoothLoadFromDevice">যন্ত্র থেকে লোড করুন</string>
-    <string name="newExperimentBluetoothLoadFromDeviceInfo">এই যন্ত্রের নিজস্ব phyphox পরীক্ষা আছে। এটি চালু করার জন্য \"যন্ত্র থেকে লোড করুন\" বিকল্পটি বেছে নিন।</string>
+    <string name="newExperimentBluetoothLoadFromDeviceInfo">এই যন্ত্রের নিজস্ব Elm Lab পরীক্ষা আছে। এটি চালু করার জন্য \"যন্ত্র থেকে লোড করুন\" বিকল্পটি বেছে নিন।</string>
     <string name="newExperimentQR">QR কোড থেকে পরীক্ষা যোগ করুন</string>
     <string name="newExperimentQRscan">ফিফক্স পরীক্ষা সম্বলিত QR কোড স্ক্যান করুন।</string>
     <string name="newExperimentQRErrorTitle">QR কোড ত্রুটি।</string>
@@ -158,12 +158,12 @@
     <string name="bt_error_discovering">ব্লুটুথ ডিভাইস পরিষেবাগুলির জন্য অনুসন্ধানে ত্রুটি</string>
     <string name="bt_fail_reading">রিডিংয়ের প্রক্রিয়া সফল হয়নি।</string>
     <string name="bt_fail_writing">রাইটিংয়ের প্রক্রিয়া সফল হয়নি।</string>
-    <string name="bt_more_info_link_text">আপনার ডিভাইস সাপোর্ট না করলে, আমাদের ওয়েবসাইটে phyphox-এ ফ্লেক্সিবল ব্লুটুথ লো এনার্জি সাপোর্ট সম্পর্কে আরও জানতে \"আরো তথ্য\" নির্বাচন করুন।</string>
+    <string name="bt_more_info_link_text">আপনার ডিভাইস সাপোর্ট না করলে, আমাদের ওয়েবসাইটে Elm Lab-এ ফ্লেক্সিবল ব্লুটুথ লো এনার্জি সাপোর্ট সম্পর্কে আরও জানতে \"আরো তথ্য\" নির্বাচন করুন।</string>
     <string name="bt_more_info_link_button">আরো তথ্য</string>
     <string name="bt_more_info_link_url">https://phyphox.org/ble</string>
     <string name="networkPrivacyWarning">গোপনীয়তার সতর্কতা</string>
     <string name="networkVisitPrivacyURL">গোপনীয়তা নীতি</string>
-    <string name="networkPrivacyInfo">এই পরীক্ষাটি একটি নেটওয়ার্ক সংযোগ ব্যবহার করে, যার অর্থ হল পরীক্ষার ডেটা একটি নেটওয়ার্ক পরিষেবাতে পাঠানো যেতে পারে। আপনি নীচের \'গোপনীয়তা নীতি\'তে বোতামে ক্লিক করে আরও বিশদ বিবরণ পেতে পারেন, যা আপনাকে এই পরীক্ষার নির্মাতার দেওয়া গোপনীয়তা নীতি সহ এক ওয়েবসাইটে নিয়ে যাবে৷ যদি নেটওয়ার্ক পরিষেবা স্থানীয় ডিভাইস না হয়, তাহলে আপনার সচেতন হওয়া উচিত যে আপনি এই পরীক্ষা শুরু করলে phyphox নিম্নলিখিত তথ্য প্রেরণ করতে পারে:</string>
+    <string name="networkPrivacyInfo">এই পরীক্ষাটি একটি নেটওয়ার্ক সংযোগ ব্যবহার করে, যার অর্থ হল পরীক্ষার ডেটা একটি নেটওয়ার্ক পরিষেবাতে পাঠানো যেতে পারে। আপনি নীচের \'গোপনীয়তা নীতি\'তে বোতামে ক্লিক করে আরও বিশদ বিবরণ পেতে পারেন, যা আপনাকে এই পরীক্ষার নির্মাতার দেওয়া গোপনীয়তা নীতি সহ এক ওয়েবসাইটে নিয়ে যাবে৷ যদি নেটওয়ার্ক পরিষেবা স্থানীয় ডিভাইস না হয়, তাহলে আপনার সচেতন হওয়া উচিত যে আপনি এই পরীক্ষা শুরু করলে Elm Lab নিম্নলিখিত তথ্য প্রেরণ করতে পারে:</string>
     <string name="settings_theme_no_night">লাইট মোড</string>
     <string name="settings_theme_sync_setting">সিস্টেমের সাথে মিলিয়ে নিন</string>
     <string name="settingGraphViewEdit">ব্যবহারকারী ইন্টারফেস</string>
@@ -310,7 +310,7 @@
     <string name="networkPrivacySensorData">নিম্নলিখিত সেন্সরগুলি থেকে ডেটা:</string>
     <string name="networkPrivacySensorMicrophone">মাইক্রোফোন দ্বারা রেকর্ডিং থেকে প্রাপ্ত রেকর্ডিং বা ডেটা।</string>
     <string name="networkPrivacySensorLocation">অবস্থান ডেটা (GPS ডেটা বা অনুরূপ)।</string>
-    <string name="networkPrivacyDeviceInfo">আপনার ডিভাইসের মডেল এবং / অথবা phyphox এর সংস্করণ সম্পর্কে বিস্তারিত তথ্য।</string>
+    <string name="networkPrivacyDeviceInfo">আপনার ডিভাইসের মডেল এবং / অথবা Elm Lab এর সংস্করণ সম্পর্কে বিস্তারিত তথ্য।</string>
     <string name="settingsHeadLanguage">ভাষা</string>
     <string name="settingsLanguage">অ্যাপের ভাষা</string>
     <string name="settingsTranslation">অনুবাদ</string>

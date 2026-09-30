@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">phyphox</string>
+    <string name="app_name">Elm Lab</string>
     <string name="action_settings">Inställningar</string>
-    <string name="title_activity_experiment">phyphox</string>
+    <string name="title_activity_experiment">Elm Lab</string>
     <string name="graph_tools_pan_and_zoom">Flytta och zooma</string>
     <string name="graph_tools_pick">Välj datapunkt</string>
     <string name="graph_tools_more">Fler verktyg</string>
@@ -37,11 +37,11 @@
     <string name="newExperimentBluetooth">Lägg till experiment för enhet med Bluetooth</string>
     <string name="newExperimentBluetoothErrorTitle">Bluetooth skanningsfel</string>
     <string name="newExperimentBluetoothLoadFromDevice">Ladda ned från enheten</string>
-    <string name="newExperimentBluetoothLoadFromDeviceInfo">Denna enhet har sitt eget phyphox-experiment. Välj ladda ned från enheten för att öppna det.</string>
+    <string name="newExperimentBluetoothLoadFromDeviceInfo">Denna enhet har sitt eget Elm Lab-experiment. Välj ladda ned från enheten för att öppna det.</string>
     <string name="newExperimentQR">Lägg till experiment från QR-kod</string>
-    <string name="newExperimentQRscan">Skanna en QR-kod som innehåller ett phyphox-experiment.</string>
+    <string name="newExperimentQRscan">Skanna en QR-kod som innehåller ett Elm Lab-experiment.</string>
     <string name="newExperimentQRErrorTitle">QR-kod-fel.</string>
-    <string name="newExperimentQRNoExperiment">Kan inte hitta en QR-kod som innehåller ett phyphox-experiment.</string>
+    <string name="newExperimentQRNoExperiment">Kan inte hitta en QR-kod som innehåller ett Elm Lab-experiment.</string>
     <string name="newExperimentQRcrcMismatch">Den QR-kod du just skannade verkar inte matcha de tidigare koderna. Se till att bara scanna koder som hör till samma experiment.</string>
     <string name="newExperimentQRCodesMissing1">Den QR-kod du just skannade är en del av en grupp med</string>
     <string name="newExperimentQRCodesMissing2">"koder. Tryck \"FORTSÄTT\" för att skanna de övriga  koderna. Antal koder som saknas:"</string>
@@ -62,7 +62,7 @@
     <string name="deviceInfoCopied">Informationen om din enhet har kopierats till Urklipp.</string>
     <string name="warning">Varning</string>
     <string name="donotshowagain">Visa inte igen</string>
-    <string name="damageWarning">Var försiktig så att du inte skadar din telefon medan du experimenterar. Var speciellt försiktig så att du inte tappar den på hårda ytor och utsätt den inte för mycket starka magnetfält. Skaparna av phyphox tar inte något ansvar för skador på din telefon.</string>
+    <string name="damageWarning">Var försiktig så att du inte skadar din telefon medan du experimenterar. Var speciellt försiktig så att du inte tappar den på hårda ytor och utsätt den inte för mycket starka magnetfält. Skaparna av Elm Lab tar inte något ansvar för skador på din telefon.</string>
     <string name="info">Info</string>
     <string name="credits">Credit</string>
     <string name="creditsRWTH">phyphox® har utvecklats på 2nd Institute of Physics vid RWTH Aachen University.</string>
@@ -123,10 +123,10 @@
     <string name="enableTimedRun">Gör en tidsstyrd mätning</string>
     <string name="export">Exportera data</string>
     <string name="export_empty">Denna experiment-konfiguration definierar inte några data som ska exporteras. Om detta är fel, kontakta den som skapat QR-koden eller konfigurationsfilen.</string>
-    <string name="export_subject">Data från phyphox</string>
+    <string name="export_subject">Data från Elm Lab</string>
     <string name="export_pick_share">Välj metod för dataexport</string>
     <string name="share">Dela skärmklipp</string>
-    <string name="share_subject">Skärmklipp från phyphox</string>
+    <string name="share_subject">Skärmklipp från Elm Lab</string>
     <string name="share_pick_share">Välj metod för datadelning</string>
     <string name="remoteServer">Tillåt fjärranslutning</string>
     <string name="remoteServerWarning">Du håller på att tillåta fjärranslutning till dina insamlade data. Du ska bara göra detta på ett pålitligt nätverk. Notera också att direkt access mellan olika uenheter inte är möjlig på alla företags- eller universitetsnätverk.
@@ -159,14 +159,14 @@
     <string name="save_state_title">Titel</string>
     <string name="save_state_save">Till samlingen</string>
     <string name="save_state_share">Dela</string>
-    <string name="save_state_subject">Experiment-tillstånd för phyphox</string>
+    <string name="save_state_subject">Experiment-tillstånd för Elm Lab</string>
     <string name="save_state_default_title">Mätning</string>
     <string name="save_state_success">Tillståndet har sparats till din samling.</string>
     <string name="open_zip_title">Öppnar en grupp experiment</string>
     <string name="open_zip_dialog_instructions">Denna resurs innehåller flera experiment. Du kan antingen välja ett av dem och öppna det och eventuellt spara det till din samling, eller använda knappen nedan för att spara alla på en gång.</string>
     <string name="open_save_all">Spara alla</string>
     <string name="open_bluetooth_assets_title">Experiment för Bluetooth enhet</string>
-    <string name="open_bluetooth_assets">Följande experiment för din enhet är tillgängliga från phyphox. Du kan antingen bara öppna dem och använda dem eller lägga till alla till din samling för att lätt komma åt dem från huvudmenyn.</string>
+    <string name="open_bluetooth_assets">Följande experiment för din enhet är tillgängliga från Elm Lab. Du kan antingen bara öppna dem och använda dem eller lägga till alla till din samling för att lätt komma åt dem från huvudmenyn.</string>
     <string name="timedRun">Tidsstyrd körning</string>
     <string name="pick_exportSets">Välj data att exportera.</string>
     <string name="pick_exportFormat">Välj dataformat.</string>
@@ -209,16 +209,16 @@
     <string name="bt_error_discovering">Fel medan bluetooth-enhetens tjänster upptäcktes.</string>
     <string name="bt_fail_reading">Läsningen misslyckades.</string>
     <string name="bt_fail_writing">Skrivningen misslyckades.</string>
-    <string name="bt_more_info_link_text">Om det inte finns stöd för din enhet, välj \"mer information\" för att få veta mer om flexibelt stöd i phyphox för Bluetooth Low Energy.</string>
+    <string name="bt_more_info_link_text">Om det inte finns stöd för din enhet, välj \"mer information\" för att få veta mer om flexibelt stöd i Elm Lab för Bluetooth Low Energy.</string>
     <string name="bt_more_info_link_button">Mer information</string>
     <string name="bt_more_info_link_url">https://phyphox.org/ble</string>
     <string name="networkPrivacyWarning">Integritetsvarning</string>
     <string name="networkVisitPrivacyURL">Integritetspolicy</string>
-    <string name="networkPrivacyInfo">Detta experiment använder en nätverksanslutning vilket innebär att experimentdata kan skickas över ett nätverk. Du hittar fler detaljer genom att klicka på integritetspolicy-knappen nedan. Du kommer då till en webbplats med en integritetspolicy skapad av den som tagit fram detta experiment. Om nätverksservicen inte är lokal bör du vara medveten om att phyphox kan skicka följande information när du startar detta experiment:</string>
+    <string name="networkPrivacyInfo">Detta experiment använder en nätverksanslutning vilket innebär att experimentdata kan skickas över ett nätverk. Du hittar fler detaljer genom att klicka på integritetspolicy-knappen nedan. Du kommer då till en webbplats med en integritetspolicy skapad av den som tagit fram detta experiment. Om nätverksservicen inte är lokal bör du vara medveten om att Elm Lab kan skicka följande information när du startar detta experiment:</string>
     <string name="networkPrivacyUniqueID">Ett ID som är unikt för denna enhet och nätverks-tjänst, som möjliggör matchning av alla data som skickas från enjeten genom denna experiment-konfiguration.</string>
     <string name="networkPrivacySensorData">Data från följande sensorer:</string>
     <string name="networkPrivacySensorMicrophone">Inspelningar eller data som skapats från inspelningar genom telefonen.</string>
     <string name="networkPrivacySensorLocation">Platsinformation (GPS data eller liknande).</string>
-    <string name="networkPrivacyDeviceInfo">Detaljerad information om din enhet och/eller phyphox-versionen.</string>
+    <string name="networkPrivacyDeviceInfo">Detaljerad information om din enhet och/eller Elm Lab-versionen.</string>
     <string name="networkPrivacySensorInfo">Tekniska detaljer för följande sensorer:</string>
 </resources>

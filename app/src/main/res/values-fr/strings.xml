@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">phyphox</string>
+    <string name="app_name">Elm Lab</string>
     <string name="action_settings">Paramètres</string>
-    <string name="title_activity_experiment">phyphox</string>
+    <string name="title_activity_experiment">Elm Lab</string>
     <string name="newExperiment">Ajouter des expériences</string>
     <string name="newExperimentPhyphoxInfo">Visitez le site phyphox.org si vous voulez créer des expériences plus avancées et les partager avec des collègues, des étudiants ou des amis.</string>
     <string name="newExperimentInputTitle">Titre</string>
@@ -19,7 +19,7 @@
     <string name="translationToWebsiteURL">http://phyphox.org/languages#fr</string>
     <string name="warning">Attention</string>
     <string name="donotshowagain">Ne plus montrer</string>
-    <string name="damageWarning">Soyez prudents ! Faites attention à ne pas endommager votre téléphone pendant vos expériences. Veuillez faire particulièrement attention à ne pas le laisser tomber sur des surfaces dures, et ne pas l\'exposer à des champs magnétiques excessifs. Les auteurs de phyphox ne sont pas responsables des dommages éventuels de votre téléphone.</string>
+    <string name="damageWarning">Soyez prudents ! Faites attention à ne pas endommager votre téléphone pendant vos expériences. Veuillez faire particulièrement attention à ne pas le laisser tomber sur des surfaces dures, et ne pas l\'exposer à des champs magnétiques excessifs. Les auteurs de Elm Lab ne sont pas responsables des dommages éventuels de votre téléphone.</string>
     <string name="info">Info</string>
     <string name="credits">Crédits</string>
     <string name="creditsRWTH">phyphox® a été créé à l\'institut de physique II de l\'université technique de Rhénanie-Westphalie à Aix-la-Chapelle (RWTH Aachen University).</string>
@@ -66,10 +66,10 @@
     <string name="timedRunStopDelay">Durée de l\'expérience (s)</string>
     <string name="enableTimedRun">Faire des mesures pendant un temps donné</string>
     <string name="export">Exporter les mesures</string>
-    <string name="export_subject">Mesures de phyphox</string>
+    <string name="export_subject">Mesures de Elm Lab</string>
     <string name="export_pick_share">Choisissez votre moyen d\'exporter les mesures</string>
     <string name="share">Partager une capture d\'écran</string>
-    <string name="share_subject">Capture d\'écran de phyphox</string>
+    <string name="share_subject">Capture d\'écran de Elm Lab</string>
     <string name="share_pick_share">Choisissez votre moyen de partage</string>
     <string name="remoteServer">Autoriser le contrôle à distance</string>
     <string name="remoteServerWarning">Vous êtes sur le point d\'activer l\'accès à distance aux mesures. Vous ne devez le faire que sur un réseau de confiance ! Notez également que l\'accès direct entre appareils peut ne pas être possible sur de certains réseaux d\'entreprise ou universitaires.
@@ -117,11 +117,11 @@
     <string name="newExperimentBluetooth">Ajouter une expérience avec un appareil Bluetooth</string>
     <string name="newExperimentBluetoothErrorTitle">Recherche Bluetooth : erreur</string>
     <string name="newExperimentBluetoothLoadFromDevice">Charger l\'expérience</string>
-    <string name="newExperimentBluetoothLoadFromDeviceInfo">Cet appareil vous propose une expérience phyphox adaptée. Sélectionnez \"charger l\'expérience\" pour la récupérer.</string>
+    <string name="newExperimentBluetoothLoadFromDeviceInfo">Cet appareil vous propose une expérience Elm Lab adaptée. Sélectionnez \"charger l\'expérience\" pour la récupérer.</string>
     <string name="newExperimentQR">Ajouter une expérience à partir d\'un QR code</string>
-    <string name="newExperimentQRscan">Scanner le QR code contenant l\'expérience phyphox.</string>
+    <string name="newExperimentQRscan">Scanner le QR code contenant l\'expérience Elm Lab.</string>
     <string name="newExperimentQRErrorTitle">Erreur de QR code.</string>
-    <string name="newExperimentQRNoExperiment">Impossible de reconnaitre un QR code contenant une expérience phyphox.</string>
+    <string name="newExperimentQRNoExperiment">Impossible de reconnaitre un QR code contenant une expérience Elm Lab.</string>
     <string name="newExperimentQRcrcMismatch">Le QR code que vous venez de scanner ne semble pas correspondre aux précédents. Attention à bien scanner les codes appartenant à la même expérience.</string>
     <string name="newExperimentQRCodesMissing1">Le QR code que vous venez de scanner fait partie d\'une série de</string>
     <string name="newExperimentQRCodesMissing2">codes. Appuyez sur \"continuer\" pour scanner les suivants. QR codes restant :</string>
@@ -157,14 +157,14 @@
     <string name="save_state_title">Titre</string>
     <string name="save_state_save">Dans ma collection</string>
     <string name="save_state_share">Partager</string>
-    <string name="save_state_subject">État de l\'expérience phyphox</string>
+    <string name="save_state_subject">État de l\'expérience Elm Lab</string>
     <string name="save_state_default_title">Mesures</string>
     <string name="save_state_success">Cette expérience à été enregistrée dans votre collection en l\'état.</string>
     <string name="open_zip_title">Ouverture d\'une série d\'expériences</string>
     <string name="open_zip_dialog_instructions">Cette ressource contient plusieurs expériences. Vous pouvez en choisir une pour l\'ouvrir et éventuellement l\'enregistrer dans votre collection, ou utiliser le bouton ci-dessous pour les enregistrer toutes en même temps dans votre collection.</string>
     <string name="open_save_all">Enregistrer tout</string>
     <string name="open_bluetooth_assets_title">Expériences propres aux appareils Bluetooth</string>
-    <string name="open_bluetooth_assets">Les expériences suivantes sont propres à cet appareil Bluetooth sont disponibles auprès de Phyphox. Vous pouvez les ouvrir et les utiliser, ou bien les ajouter à votre collection pour y accéder facilement à partir du menu principal.</string>
+    <string name="open_bluetooth_assets">Les expériences suivantes sont propres à cet appareil Bluetooth sont disponibles auprès de Elm Lab. Vous pouvez les ouvrir et les utiliser, ou bien les ajouter à votre collection pour y accéder facilement à partir du menu principal.</string>
     <string name="timedRun">Définir le temps de mesure</string>
     <string name="pick_exportSets">Choisir le jeu de données à exporter.</string>
     <string name="pick_exportFormat">Choisir le format des données.</string>
@@ -206,7 +206,7 @@
     <string name="bt_error_discovering">Error while discovering the services of the bluetooth device.</string>
     <string name="bt_fail_reading">The reading operation was not successful.</string>
     <string name="bt_fail_writing">The writing operation was not successful.</string>
-    <string name="bt_more_info_link_text">Si votre appareil n\'est pas pris en charge, cliquez sur \"plus d\'infos\" pour en savoir plus sur la prise en charge par phyphox du Bluetooth à basse consommation (Bluetooth Low Energy, BLE) sur notre site Web.</string>
+    <string name="bt_more_info_link_text">Si votre appareil n\'est pas pris en charge, cliquez sur \"plus d\'infos\" pour en savoir plus sur la prise en charge par Elm Lab du Bluetooth à basse consommation (Bluetooth Low Energy, BLE) sur notre site Web.</string>
     <string name="bt_more_info_link_button">Plus d\'info</string>
     <string name="bt_more_info_link_url">https://phyphox.org/ble</string>
     <string name="export_empty">Cette configuration expérimentale ne nécessite pas de définir de données à exporter. Si il s\'agit d\'une erreur, merci de contacter le responsable du QR code ou du fichier de configuration.</string>
@@ -214,12 +214,12 @@
     <string name="bt_location_service_explanation">En plus de l\'autorisation d\'obtenir des informations sur la localisation, Android exige que les services de localisation soient activés pour les scans Bluetooth car le résultat pourrait être utilisé pour trouver des informations de localisation. Nous vous redirigerons vers les paramètres de votre système.</string>
     <string name="networkPrivacyWarning">Avertissement de confidentialité</string>
     <string name="networkVisitPrivacyURL">Politique de confidentialité</string>
-    <string name="networkPrivacyInfo">"Cette expérience utilise une connexion réseau, ce qui signifie que les données de l\'expérience peuvent être transmises à un service réseau. Vous pouvez trouver plus de détails en cliquant sur le bouton  \"politique de confidentialité\" ci-dessous, qui vous amènera au site Web donnant la politique de confidentialité fournie par le créateur de cette expérience. Si le service réseau n\'est pas un appareil local, vous devez savoir que phyphox peut transmettre les informations suivantes si vous démarrez cette expérience :"</string>
+    <string name="networkPrivacyInfo">"Cette expérience utilise une connexion réseau, ce qui signifie que les données de l\'expérience peuvent être transmises à un service réseau. Vous pouvez trouver plus de détails en cliquant sur le bouton  \"politique de confidentialité\" ci-dessous, qui vous amènera au site Web donnant la politique de confidentialité fournie par le créateur de cette expérience. Si le service réseau n\'est pas un appareil local, vous devez savoir que Elm Lab peut transmettre les informations suivantes si vous démarrez cette expérience :"</string>
     <string name="networkPrivacyUniqueID">Un identifiant unique à cet appareil et au service réseau, qui permet de faire correspondre toutes les données envoyées depuis cet appareil via cette configuration d\'expérience.</string>
     <string name="networkPrivacySensorData">Données issues des capteurs suivants :</string>
     <string name="networkPrivacySensorMicrophone">Enregistrements ou données issues des enregistrements du microphone.</string>
     <string name="networkPrivacySensorLocation">Données de localisation (données GPS ou similaires).</string>
-    <string name="networkPrivacyDeviceInfo">Des informations détaillées sur le modèle de votre appareil et / ou la version de phyphox.</string>
+    <string name="networkPrivacyDeviceInfo">Des informations détaillées sur le modèle de votre appareil et / ou la version de Elm Lab.</string>
     <string name="networkPrivacySensorInfo">Détails techniques sur les capteurs suivants :</string>
     <string name="common_unit_short_arbitrary_unit">unité arb.</string>
     <string name="common_direction_short_west">O</string>

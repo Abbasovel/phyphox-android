@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">phyphox</string>
+    <string name="app_name">Elm Lab</string>
     <string name="action_settings">Ρυθμίσεις</string>
-    <string name="title_activity_experiment">phyphox</string>
+    <string name="title_activity_experiment">Elm Lab</string>
     <string name="newExperiment">Προσθήκη πειράματος</string>
     <string name="newExperimentPhyphoxInfo">Επισκεφθείτε την σελίδα phyphox.org για να δημιουργήσετε πιο σύνθετα πειράματα που περιλαμβάνουν ανάλυση δεδομένων και μοιραστείτε τα με συναδέλφους, μαθητές και φίλους.</string>
     <string name="newExperimentInputTitle">Τίτλος</string>
@@ -19,7 +19,7 @@
     <string name="translationToWebsiteURL">http://phyphox.org/languages#el</string>
     <string name="warning">Προειδοποίηση</string>
     <string name="donotshowagain">Να μην προβληθεί ξανά</string>
-    <string name="damageWarning">Προσέξτε να μην προκαλέσετε ζημιά στο κινητό σας κατά τη διάρκεια του πειράματος. Δώστε ιδιαίτερη προσοχή ώστε να μην χτυπήσει σε σκληρές επιφάνειες και αποφύγετε την έκθεσή του σε ισχυρά μαγνητικά πεδία. Οι δημιουργοί του phyphox δεν είναι υπεύθυνοι για τυχόν ζημιές στο κινητό σας.</string>
+    <string name="damageWarning">Προσέξτε να μην προκαλέσετε ζημιά στο κινητό σας κατά τη διάρκεια του πειράματος. Δώστε ιδιαίτερη προσοχή ώστε να μην χτυπήσει σε σκληρές επιφάνειες και αποφύγετε την έκθεσή του σε ισχυρά μαγνητικά πεδία. Οι δημιουργοί του Elm Lab δεν είναι υπεύθυνοι για τυχόν ζημιές στο κινητό σας.</string>
     <string name="info">Πληροφορίες</string>
     <string name="credits">Μνεία</string>
     <string name="creditsRWTH">Η εφαρμογή phyphox® δημιουργήθηκε στο 2ο Ινστιτούτο Φυσικής στο Πανεπιστήμιο RWTH Aachen.</string>
@@ -70,10 +70,10 @@
     <string name="timedRunStopDelay">Διάρκεια πειράματος (s)</string>
     <string name="enableTimedRun">Χρονομετρημένη εκτέλεση</string>
     <string name="export">Εξαγωγή δεδομένων</string>
-    <string name="export_subject">Δεδομένα από phyphox</string>
+    <string name="export_subject">Δεδομένα από Elm Lab</string>
     <string name="export_pick_share">Επιλογή του τρόπου εξαγωγής</string>
     <string name="share">Διαμοιρασμός εικόνας οθόνης</string>
-    <string name="share_subject">Screenshot του phyphox</string>
+    <string name="share_subject">Screenshot του Elm Lab</string>
     <string name="share_pick_share">Επιλογή του τρόπου διαμοιρασμού</string>
     <string name="remoteServer">Να επιτρέπεται απομακρυσμένη πρόσβαση</string>
     <string name="remoteServerWarning">Πρόκειται να επιτρέψετε απομακρυσμένη πρόσβαση στην λήψη δεδομένων. Αυτό θα πρέπει να επιτρέπεται μόνο σε έμπιστο δίκτυο! Επίσης σημειώστε ότι η απευθείας πρόσβαση ανάμεσα σε συσκευές μπορεί να μην είναι δυνατή σε πολλά εταιρικά ή πανεπιστημιακά δίκτυα
@@ -100,7 +100,7 @@
     <string name="save_state_title">Τίτλος</string>
     <string name="save_state_save">Σε συλλογή</string>
     <string name="save_state_share">Διαμοιρασμός</string>
-    <string name="save_state_subject">Κατάσταση πειράματος για phyphox</string>
+    <string name="save_state_subject">Κατάσταση πειράματος για Elm Lab</string>
     <string name="save_state_default_title">Μέτρηση</string>
     <string name="save_state_success">Η κατάσταση αποθηκεύτηκε στη συλλογή σας.</string>
     <string name="timedRun">Χρονομετρημένη εκτέλεση</string>
@@ -139,11 +139,11 @@
     <string name="newExperimentBluetooth">Προσθήκη πειράματος για συσκευή Bluetooth</string>
     <string name="newExperimentBluetoothErrorTitle">Σφάλμα ανίχνευσης Bluetooth</string>
     <string name="newExperimentBluetoothLoadFromDevice">Φόρτωση από συσκευή</string>
-    <string name="newExperimentBluetoothLoadFromDeviceInfo">Η συσκευή παρέχει το δικό της πείραμα phyphox. Επιλέξτε φόρτωση από συσκευή για να το ανοίξετε.</string>
+    <string name="newExperimentBluetoothLoadFromDeviceInfo">Η συσκευή παρέχει το δικό της πείραμα Elm Lab. Επιλέξτε φόρτωση από συσκευή για να το ανοίξετε.</string>
     <string name="newExperimentQR">Προσθήκη πειράματος μέσω κωδικού QR</string>
-    <string name="newExperimentQRscan">Σκανάρετε τον κωδικό QR που περιέχει πείραμα phyphox.</string>
+    <string name="newExperimentQRscan">Σκανάρετε τον κωδικό QR που περιέχει πείραμα Elm Lab.</string>
     <string name="newExperimentQRErrorTitle">Σφάλμα στον κωδικό QR.</string>
-    <string name="newExperimentQRNoExperiment">Δεν μπορεί να βρεθεί κωδικός QR που περιέχει κάποιο πείραμα phyphox.</string>
+    <string name="newExperimentQRNoExperiment">Δεν μπορεί να βρεθεί κωδικός QR που περιέχει κάποιο πείραμα Elm Lab.</string>
     <string name="newExperimentQRcrcMismatch">Ο κωδικός που μόλις σκανάρατε δεν φαίνεται να ταιριάζει με τους προηγούμενους κωδικούς. Παρακαλώ βεβαιωθειτε ότι σκανάρετε μόνο κωδικούς που ανήκουν στο ίδιο πείραμα.</string>
     <string name="newExperimentQRCodesMissing1">Ο κωδικός QR που σκανάρατε είναι μέρος μιας ομάδας</string>
     <string name="newExperimentQRCodesMissing2">κωδικών. Πατήστε συνέχεια για να σκανάρετε τους υπόλοιπους κωδικούς. Κωδικοί που απομένουν ακόμη:</string>
@@ -171,7 +171,7 @@
     <string name="open_zip_dialog_instructions">Αυτή η πηγή περιέχει πολλά πειράματα. Μπορείτε να επιλέξετε είτε να ανοίξετε ένα και αν θέλετε να το αποθηκεύσετε στη συλλογή σας είτε χρησιμοποιώντας το επόμενο κουμπί να τα αποθηκεύσετε όλα στη συλλογή σας απευθείας.</string>
     <string name="open_save_all">Αποθήκευση όλων</string>
     <string name="open_bluetooth_assets_title">Πειράματα για συσκευή Bluetooth</string>
-    <string name="open_bluetooth_assets">Τα επόμενα πειράματα για τη συσκευή σας είναι διαθέσιμα από το phyphox. Μπορείτε είτε απλά να τα ανοίξετε και να τα χρησιμοποιήσετε είτε να τα προσθέσετε όλα στη συλλογή σας ώστε να έχετε εύκολη πρόσβαση σ\' αυτά από το κυρίως μενού.</string>
+    <string name="open_bluetooth_assets">Τα επόμενα πειράματα για τη συσκευή σας είναι διαθέσιμα από το Elm Lab. Μπορείτε είτε απλά να τα ανοίξετε και να τα χρησιμοποιήσετε είτε να τα προσθέσετε όλα στη συλλογή σας ώστε να έχετε εύκολη πρόσβαση σ\' αυτά από το κυρίως μενού.</string>
     <string name="start_hint">Πατήστε το τρίγωνο για να ξεκινήσετε το πείραμα.</string>
     <string name="bluetooth">Bluetooth χαμηλής ενέργειας</string>
     <string name="bt_android_version">Το Bluetooth χαμηλής ενέργειας δεν υποστηρίζεται στην συσκευή αυτή.</string>
@@ -206,12 +206,12 @@
     <string name="bt_error_discovering">Σφάλμα κατά την αναγνώριση των υπηρεσιών της συσκευής bluetooth.</string>
     <string name="bt_fail_reading">Η διαδικασία ανάγνωσης δεν ήταν επιτυχής.</string>
     <string name="bt_fail_writing">Η διαδικασία εγγραφής δεν ήταν επιτυχής.</string>
-    <string name="bt_more_info_link_text">Αν η συσκευή σας δεν υποστηρίζεται, επιλέξτε \"περισσότερες πληροφορίες\" για να μάθετε περισσότερα σχετικά με την ευέλικτη υποστήριξη του phyphox στο Bluetooth Low Energy.</string>
+    <string name="bt_more_info_link_text">Αν η συσκευή σας δεν υποστηρίζεται, επιλέξτε \"περισσότερες πληροφορίες\" για να μάθετε περισσότερα σχετικά με την ευέλικτη υποστήριξη του Elm Lab στο Bluetooth Low Energy.</string>
     <string name="bt_more_info_link_button">Περισσότερες πληροφορίες</string>
     <string name="bt_more_info_link_url">https://phyphox.org/ble</string>
     <string name="networkPrivacyWarning">Προειδοποίηση Απορρήτου</string>
     <string name="networkVisitPrivacyURL">Πολιτική Απορρήτου</string>
-    <string name="networkPrivacyInfo">Το πείραμα αυτό χρησιμοποιεί μια σύνδεση δικτύου, το οποίο σημαίνει ότι δεδομένα μπορεί να μεταδίδονται σε μια δικτυακή υπηρεσία. Μπορείτε να βρείτε περισσότερες λεπτομέρειες πατώντας το πλήκτρο Πολιτικής Απορρήτου το οποίο θα σας μεταφέρει σε μια ιστοσελίδα με την πολιτική απορρήτου, που παρέχει ο δημιουργός του προγράμματος. Αν η υπηρεσία δικτύου δεν είναι μια τοπική συσκευή, πρέπει να γνωρίζετε ότι το phyphox ενδέχεται να μεταδώσει τις παρακάτω πληροφορίες με την εκκίνηση του πειράματος:</string>
+    <string name="networkPrivacyInfo">Το πείραμα αυτό χρησιμοποιεί μια σύνδεση δικτύου, το οποίο σημαίνει ότι δεδομένα μπορεί να μεταδίδονται σε μια δικτυακή υπηρεσία. Μπορείτε να βρείτε περισσότερες λεπτομέρειες πατώντας το πλήκτρο Πολιτικής Απορρήτου το οποίο θα σας μεταφέρει σε μια ιστοσελίδα με την πολιτική απορρήτου, που παρέχει ο δημιουργός του προγράμματος. Αν η υπηρεσία δικτύου δεν είναι μια τοπική συσκευή, πρέπει να γνωρίζετε ότι το Elm Lab ενδέχεται να μεταδώσει τις παρακάτω πληροφορίες με την εκκίνηση του πειράματος:</string>
     <string name="networkPrivacyUniqueID">Ένα αναγνωριστικό που είναι μοναδικό για αυτή τη συσκευή και τη συσκευή δικτύου, το οποίο χρησιμοποιείται για την αντιστοίχηση των δεδομένων που στέλνονται από τη συσκευή.</string>
     <string name="networkPrivacySensorData">Δεδομένα απο τους παρακάτω αισθητήρες:</string>
     <string name="networkPrivacySensorMicrophone">Εγγραφές ή δεδομένα προερχόμενα από εγγραφές του μικροφώνου.</string>
@@ -451,12 +451,12 @@
 \n{startTime} – ώρα έναρξης της μέτρησης
 \n{duration} – διάρκεια της μέτρησης</string>
     <string name="spectrum_orientation">Προσανατολισμός</string>
-    <string name="localNetworkLoadMessage">Δεν ήταν δυνατή η φόρτωση του πειράματος από αυτή τη διεύθυνση. Εάν το πείραμα φιλοξενείται από μια συσκευή στο τοπικό σας δίκτυο, το phyphox χρειάζεται άδεια πρόσβασης στο τοπικό δίκτυο. Θέλετε να παραχωρήσετε την άδεια και να δοκιμάσετε ξανά;</string>
-    <string name="localNetworkExperimentMessage">Αυτό το πείραμα χρησιμοποιεί σύνδεση με μια συσκευή στο τοπικό σας δίκτυο. Το phyphox χρειάζεται άδεια πρόσβασης στο τοπικό δίκτυο για να συνδεθεί με τη συσκευή αυτή.</string>
+    <string name="localNetworkLoadMessage">Δεν ήταν δυνατή η φόρτωση του πειράματος από αυτή τη διεύθυνση. Εάν το πείραμα φιλοξενείται από μια συσκευή στο τοπικό σας δίκτυο, το Elm Lab χρειάζεται άδεια πρόσβασης στο τοπικό δίκτυο. Θέλετε να παραχωρήσετε την άδεια και να δοκιμάσετε ξανά;</string>
+    <string name="localNetworkExperimentMessage">Αυτό το πείραμα χρησιμοποιεί σύνδεση με μια συσκευή στο τοπικό σας δίκτυο. Το Elm Lab χρειάζεται άδεια πρόσβασης στο τοπικό δίκτυο για να συνδεθεί με τη συσκευή αυτή.</string>
     <string name="localNetworkDeniedHint">Χωρίς άδεια πρόσβασης στο τοπικό δίκτυο, οι συνδέσεις με συσκευές στο τοπικό σας δίκτυο θα αποτύχουν.</string>
     <string name="common_unit_short_nano_meter">nm</string>
     <string name="common_unit_short_micro_meter">µm</string>
     <string name="common_quantity_short_wavelength">λ</string>
     <string name="remoteServerPortInUseTitle">Δεν μπόρεσε να ενεργοποιηθεί η απομακρυσμένη πρόσβαση</string>
-    <string name="remoteServerPortInUse">Η απομακρυσμένη πρόσβαση δεν επιτυγχάνεται γιατί η θύρα χρησιμοποιείται ήδη από άλλη εφαρμογή. Σταματήστε την εφαρμογή που χρησιμοποιεί τη θύρα ή ορίστε μια διαφορετική θύρα από τις ρυθμίσεις του phyphox.</string>
+    <string name="remoteServerPortInUse">Η απομακρυσμένη πρόσβαση δεν επιτυγχάνεται γιατί η θύρα χρησιμοποιείται ήδη από άλλη εφαρμογή. Σταματήστε την εφαρμογή που χρησιμοποιεί τη θύρα ή ορίστε μια διαφορετική θύρα από τις ρυθμίσεις του Elm Lab.</string>
 </resources>

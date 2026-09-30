@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">phyphox</string>
+    <string name="app_name">Elm Lab</string>
     <string name="action_settings">Налаштування</string>
-    <string name="title_activity_experiment">phyphox</string>
+    <string name="title_activity_experiment">Elm Lab</string>
     <string name="graph_tools_pan_and_zoom">Зсув і масштабування</string>
     <string name="graph_tools_pick">Вибрати дані</string>
     <string name="graph_tools_more">Інші інструменти</string>
@@ -37,7 +37,7 @@
     <string name="newExperimentBluetooth">Додати експеримент для пристрою Bluetooth</string>
     <string name="newExperimentBluetoothErrorTitle">Помилка сканування Bluetooth</string>
     <string name="newExperimentBluetoothLoadFromDevice">Завантаження з пристрою</string>
-    <string name="newExperimentBluetoothLoadFromDeviceInfo">На цьому пристрої знайдено конфігурацію експерименту phyphox. Виберіть \"Завантажити з пристрою\" щоб відкрити її.</string>
+    <string name="newExperimentBluetoothLoadFromDeviceInfo">На цьому пристрої знайдено конфігурацію експерименту Elm Lab. Виберіть \"Завантажити з пристрою\" щоб відкрити її.</string>
     <string name="newExperimentQR">Додати експеримент з QR коду</string>
     <string name="newExperimentQRscan">Скануйте QR код з конфігурацією експеримента.</string>
     <string name="newExperimentQRErrorTitle">Помилка QR коду.</string>
@@ -62,7 +62,7 @@
     <string name="deviceInfoCopied">Інформацію про пристрій скопійовано до буфера обміну.</string>
     <string name="warning">Попередження</string>
     <string name="donotshowagain">Більше не показувати</string>
-    <string name="damageWarning">Будь-ласка, дбайливо поводьтеся з Вашим телефоном під час експериментів. Ні в якому разі не дозволяйте йому падати на тверді поверхні з висоти і не піддавайте його впливу сильних магнітних полів. Автори phyphox не несуть відповідальності за будь-які пошкодження Вашого телефону.</string>
+    <string name="damageWarning">Будь-ласка, дбайливо поводьтеся з Вашим телефоном під час експериментів. Ні в якому разі не дозволяйте йому падати на тверді поверхні з висоти і не піддавайте його впливу сильних магнітних полів. Автори Elm Lab не несуть відповідальності за будь-які пошкодження Вашого телефону.</string>
     <string name="info">Інформація</string>
     <string name="credits">Подяки</string>
     <string name="creditsRWTH">phyphox було створено в Інституті Фізики №2 Університету Аахена.</string>
@@ -123,10 +123,10 @@
     <string name="enableTimedRun">Використовувати контроль часу</string>
     <string name="export">Експорт даних</string>
     <string name="export_empty">Конфігурація цього експерименту не передбачає експорт даних. Якщо це помилка, зв\'яжіться з розробником QR коду чи конфігураційного файлу.</string>
-    <string name="export_subject">Дані з phyphox</string>
+    <string name="export_subject">Дані з Elm Lab</string>
     <string name="export_pick_share">Виберіть метод експорту</string>
     <string name="share">Поділитись знімком екрану</string>
-    <string name="share_subject">Знімок екрану з phyphox</string>
+    <string name="share_subject">Знімок екрану з Elm Lab</string>
     <string name="share_pick_share">Поділитися через</string>
     <string name="remoteServer">Дозволити віддалений доступ</string>
     <string name="remoteServerWarning">Ви збираєтеся дозволити віддалений доступ до отриманих Вами даних. Робіть це тільки у мережах, яким Ви довіряєте! Майте на увазі, що прямий доступ між приладами може бути неможливим у багатьох корпоративних та університетських мережах.
@@ -159,14 +159,14 @@
     <string name="save_state_title">Назва</string>
     <string name="save_state_save">До колекції</string>
     <string name="save_state_share">Поділитись</string>
-    <string name="save_state_subject">Стан експерименту від phyphox</string>
+    <string name="save_state_subject">Стан експерименту від Elm Lab</string>
     <string name="save_state_default_title">Виміри</string>
     <string name="save_state_success">Стан було збережено до твоєї колекції.</string>
     <string name="open_zip_title">Відкриття кількох експериментів</string>
     <string name="open_zip_dialog_instructions">Цей ресурс містить кілька експериментів. Ви можете або вибрати один з них і, якщо хочете, зберегти його до Вашої колекції, або натиснути на кнопку нижче щоб зберегти їх всіх до Вашої колекції відразу.</string>
     <string name="open_save_all">Зберегти все</string>
     <string name="open_bluetooth_assets_title">Експерименти для пристрою Bluetooth</string>
-    <string name="open_bluetooth_assets">Наступні експерименти від phyphox доступні для Вашого пристрою. Можете просто відкрити і використовувати їх або додати їх до колекції для зручного доступу до них з головного меню.</string>
+    <string name="open_bluetooth_assets">Наступні експерименти від Elm Lab доступні для Вашого пристрою. Можете просто відкрити і використовувати їх або додати їх до колекції для зручного доступу до них з головного меню.</string>
     <string name="timedRun">Контроль часу</string>
     <string name="pick_exportSets">Виберіть набір даних для експорту.</string>
     <string name="pick_exportFormat">Виберіть формат даних.</string>
@@ -208,7 +208,7 @@
     <string name="bt_error_discovering">Помилка при відкритті сервісів з пристрою Bluetooth.</string>
     <string name="bt_fail_reading">Невдала операція зчитування.</string>
     <string name="bt_fail_writing">Невдала операція запису.</string>
-    <string name="bt_more_info_link_text">Якщо Ваш пристрій не підтримується, виберіть \"Інформація\", щоб дізнатись більше про гнучку підтримку Bluetooth Low Energy в phyphox на нашій веб-сторінці.</string>
+    <string name="bt_more_info_link_text">Якщо Ваш пристрій не підтримується, виберіть \"Інформація\", щоб дізнатись більше про гнучку підтримку Bluetooth Low Energy в Elm Lab на нашій веб-сторінці.</string>
     <string name="bt_more_info_link_button">Інформація</string>
     <string name="bt_more_info_link_url">https://phyphox.org/ble</string>
     <string name="sensorAttitude">Позиція</string>
@@ -218,7 +218,7 @@
     <string name="bt_location_service_explanation">На додачу до дозволу на отримання інформації про місцезнаходження, Android вимагає, щоб служби визначення місцезнаходження були ввімкнені для сканування Bluetooth, оскільки результат можна використовувати для отримання інформації про місцезнаходження. Ми перенаправимо вас до налаштувань системи.</string>
     <string name="networkPrivacyWarning">Попередження про захист персональних даних</string>
     <string name="networkVisitPrivacyURL">Політика конфіденційності</string>
-    <string name="networkPrivacyInfo">Цей експеримент використовує мережеве з\'єднання, що означає, що дані можуть бути передані до мережевого сервісу. Для отримання більш детальної інформації ви можете натиснути на Політику конфіденційності нижче, яка переведе вас на веб-сторінку з політикою конфіденційності, надану автором цього експерименту. Якщо мережева служба не є локальним пристроєм, ви повинні знати, що phyphox може передавати наступні дані під час цього експерименту:</string>
+    <string name="networkPrivacyInfo">Цей експеримент використовує мережеве з\'єднання, що означає, що дані можуть бути передані до мережевого сервісу. Для отримання більш детальної інформації ви можете натиснути на Політику конфіденційності нижче, яка переведе вас на веб-сторінку з політикою конфіденційності, надану автором цього експерименту. Якщо мережева служба не є локальним пристроєм, ви повинні знати, що Elm Lab може передавати наступні дані під час цього експерименту:</string>
     <string name="networkPrivacyUniqueID">Ідентифікатор, який є унікальним для цього пристрою та мережевої служби. Він дає можливість зв\'язати всі дані, надіслані цим пристроєм під час цього експерименту, між собою.</string>
     <string name="networkPrivacySensorData">Дані наступних сенсорів:</string>
     <string name="networkPrivacySensorMicrophone">Записи з мікрофону або дані, отримані з таких записів.</string>

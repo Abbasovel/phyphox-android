@@ -1,0 +1,49 @@
+name: Elm Lab APK
+on:
+  push:
+    branches: [elmlab]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: elmlab-build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          submodules: recursive
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+      - name: Build APK
+        run: ./gradlew --no-daemon --stacktrace assembleRegularRelease
+      - name: Collect APK
+        run: |
+          mkdir -p out
+          cp app/build/outputs/apk/regular/release/*.apk "out/ElmLab-b${{ github.run_number }}.apk"
+          ls -la out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ElmLab-apk
+          path: out/*.apk
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: elmlab-b${{ github.run_number }}
+          name: Elm Lab — build ${{ github.run_number }}
+          target_commitish: ${{ github.sha }}
+          make_latest: true
+          files: out/*.apk
+          body: |
+            Elm Lab — İnteraktiv Elm Muzeyi üçün fizika təcrübələri tətbiqi.
+            phyphox (RWTH Aachen, GPL-3.0) əsasında hazırlanıb; mənbə kodu bu repozitoriyadadır.
+            Quraşdırma: APK faylını telefona endirin və açın.

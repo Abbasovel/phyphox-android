@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">phyphox</string>
+    <string name="app_name">Elm Lab</string>
     <string name="privacyPolicyURL">https://phyphox.org/privatnost</string>
     <string name="action_settings">Postavke</string>
-    <string name="title_activity_experiment">phyphox</string>
+    <string name="title_activity_experiment">Elm Lab</string>
     <string name="graph_tools_pan_and_zoom">Pomicanje i zumiranje</string>
     <string name="graph_tools_pick">Izaberite podatke</string>
     <string name="graph_tools_more">Više alata</string>
@@ -41,9 +41,9 @@
     <string name="newExperimentBluetoothLoadFromDevice">Učitajte s uređaja</string>
     <string name="newExperimentBluetoothLoadFromDeviceInfo">Ovaj uređaj pruža vlastiti pyhphox pokus. Odaberite u učitavanje s uređaja kako bi ste otvorili.</string>
     <string name="newExperimentQR">Dodajte pokus iz QR koda</string>
-    <string name="newExperimentQRscan">Skenirajte QR kod koji sadrži phyphox pokus.</string>
+    <string name="newExperimentQRscan">Skenirajte QR kod koji sadrži Elm Lab pokus.</string>
     <string name="newExperimentQRErrorTitle">pogreška QR koda.</string>
-    <string name="newExperimentQRNoExperiment">Nije pronađen QR kod koji sadrži phyphox pokus.</string>
+    <string name="newExperimentQRNoExperiment">Nije pronađen QR kod koji sadrži Elm Lab pokus.</string>
     <string name="newExperimentQRcrcMismatch">Izgleda da QR kod koji ste upravo skenirali ne odgovara prihašnjim kodovima. Molim Vas da skenirate samo kodove koji pripadaju istom pokusu.</string>
     <string name="newExperimentQRCodesMissing1">QR koji ste upravo skenirali je dio seta od</string>
     <string name="newExperimentQRCodesMissing2">kodova. Molim Vas da pritisnete nastavi kako bi ste skenirali preostale kodove. Kodovi koji još nedostaju:</string>
@@ -64,7 +64,7 @@
     <string name="deviceInfoCopied">Informacije o uređaju su kopirane u međuspremnik.</string>
     <string name="warning">Upozorenje</string>
     <string name="donotshowagain">Ne prikazuj ponovno</string>
-    <string name="damageWarning">Molim Vas budite oprezni kako ne bi ste oštetili vaš telefon tijekom pokusa. Molim Vas posebno pazite da ga ne ispustite na tvrde površine i da ga ne izlažete prejakim magnetskim poljima. Autori phyphox-a nisu odgovorni za eventualna oštećenja Vašeg telefona.</string>
+    <string name="damageWarning">Molim Vas budite oprezni kako ne bi ste oštetili vaš telefon tijekom pokusa. Molim Vas posebno pazite da ga ne ispustite na tvrde površine i da ga ne izlažete prejakim magnetskim poljima. Autori Elm Lab-a nisu odgovorni za eventualna oštećenja Vašeg telefona.</string>
     <string name="info">Informacije</string>
     <string name="credits">Bodovi</string>
     <string name="creditsRWTH">phyphox® je kreiran na drugom Institutu Fizike na RWTH Aachen Sveučilištu.</string>
@@ -169,14 +169,14 @@
     <string name="save_state_title">Naslov</string>
     <string name="save_state_save">U kolekciju</string>
     <string name="save_state_share">Podijeli</string>
-    <string name="save_state_subject">Stanje pokusa za phyphox</string>
+    <string name="save_state_subject">Stanje pokusa za Elm Lab</string>
     <string name="save_state_default_title">Mjerenje</string>
     <string name="save_state_success">Stanje je spremljeno u Vašu kolekciju.</string>
     <string name="open_zip_title">Otvaranje grupe pokusa</string>
     <string name="open_zip_dialog_instructions">Ovaj izvor sadrži više pokusa. Možete odabrati jedan radi otvaranja, ili spremanja u Vašu kolekciju, ili spremiti ih sve, odjednom, u Vašu kolekciju koristeći dugme ispod.</string>
     <string name="open_save_all">Spremite sve</string>
     <string name="open_bluetooth_assets_title">Pokusi za Bluetooth uređaj</string>
-    <string name="open_bluetooth_assets">Phyphox omogućuje sljedeće pokuse za Vaš uređaj. Možete ih jednostavno otvoriti i koristiti ili ih dodati u Vašu kolekciju radi jednostavnog pristupa iz glavnog izbornika.</string>
+    <string name="open_bluetooth_assets">Elm Lab omogućuje sljedeće pokuse za Vaš uređaj. Možete ih jednostavno otvoriti i koristiti ili ih dodati u Vašu kolekciju radi jednostavnog pristupa iz glavnog izbornika.</string>
     <string name="timedRun">Mjereno izvođenje</string>
     <string name="pick_exportSets">Izaberite grupe podataka za izvoz.</string>
     <string name="pick_exportFormat">Izaberite format podataka.</string>
@@ -226,7 +226,7 @@
     <string name="bt_more_info_link_url">https://phyphox.org/ble</string>
     <string name="networkPrivacyWarning">Upozorenje o privatnosti</string>
     <string name="networkVisitPrivacyURL">Politika privatnosti</string>
-    <string name="networkPrivacyInfo">Ovaj pokus koristi mrežnu vezu, što znači da se podatci pokusa mogu prenijeti na mrežnu uslugu. Više detalja možete pronaći klikom na dugme smjernice za privatnost ispod, koje će vas odvesti na web lokaciju s politikom privatnosti koju je stvorio autor ovog pokusa. Ako mrežna usluga nije lokalni uređaj, trebali biste biti svjesni da phyphox može prenijeti sljedeće informacije ako pokrenete ovaj pokus:</string>
+    <string name="networkPrivacyInfo">Ovaj pokus koristi mrežnu vezu, što znači da se podatci pokusa mogu prenijeti na mrežnu uslugu. Više detalja možete pronaći klikom na dugme smjernice za privatnost ispod, koje će vas odvesti na web lokaciju s politikom privatnosti koju je stvorio autor ovog pokusa. Ako mrežna usluga nije lokalni uređaj, trebali biste biti svjesni da Elm Lab može prenijeti sljedeće informacije ako pokrenete ovaj pokus:</string>
     <string name="networkPrivacyUniqueID">ID koji je jedinstven za ovaj uređaj i mrežnu uslugu, koji omogućuju podudaranje svih podataka poslanih s ovog uređaja kroz ovu konfiguraciju pokusa.</string>
     <string name="networkPrivacySensorData">Podaci iz sljedećeg senzora:</string>
     <string name="networkPrivacySensorMicrophone">Snimke ili podaci izvedeni iz snimki s mikrofona.</string>

@@ -5,9 +5,9 @@
     <string name="faqPhyphoxOrg">پرسش‌های متداول</string>
     <string name="sensorLight">نور</string>
     <string name="sensorGyroscope">چرخش‌نما</string>
-    <string name="app_name">فیفاکس</string>
+    <string name="app_name">Elm Lab</string>
     <string name="action_settings">تنظیمات</string>
-    <string name="title_activity_experiment">فیفاکس</string>
+    <string name="title_activity_experiment">Elm Lab</string>
     <string name="newExperiment">افزودن آزمایش‌ها</string>
     <string name="newExperimentPhyphoxInfo">از phyphox.org دیدن کرده تا آزمایش‌های پیشرفته‌تری را شامل تجزیه و تحلیل داده‌ها ایجاد کنید و آن‌ها را با همکاران، شاگردان و دوستان خود به اشتراک بگذارید.</string>
     <string name="help">راهنما و اطلاعات</string>

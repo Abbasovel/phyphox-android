@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">phyphox</string>
+    <string name="app_name">Elm Lab</string>
     <string name="privacyPolicyURL">https://phyphox.org/privacy</string>
     <string name="action_settings">அமைப்புகள்</string>
-    <string name="title_activity_experiment">phyphox</string>
+    <string name="title_activity_experiment">Elm Lab</string>
     <string name="graph_tools_pan_and_zoom">நகர்த்து &amp; பெரிதாக்கு</string>
     <string name="graph_tools_pick">தரவை எடு</string>
     <string name="graph_tools_more">மேலும்</string>
@@ -39,11 +39,11 @@
     <string name="newExperimentBluetooth">Bluetooth சாதனத்திற்கான சோதனையைச் சேர்</string>
     <string name="newExperimentBluetoothErrorTitle">Bluetooth சாதனப்பிழை</string>
     <string name="newExperimentBluetoothLoadFromDevice">சாதனத்திலிருந்து பதிவேற்று</string>
-    <string name="newExperimentBluetoothLoadFromDeviceInfo">இந்த சாதனம் அதன் சொந்த phyphox பரிசோதனையை வழங்குகிறது. அதைத் திறக்க \"சாதனத்திலிருந்து பதிவேற்று\" என்பதைத் தேர்ந்தெடுக்கவும்.</string>
+    <string name="newExperimentBluetoothLoadFromDeviceInfo">இந்த சாதனம் அதன் சொந்த Elm Lab பரிசோதனையை வழங்குகிறது. அதைத் திறக்க \"சாதனத்திலிருந்து பதிவேற்று\" என்பதைத் தேர்ந்தெடுக்கவும்.</string>
     <string name="newExperimentQR">QR குறியீட்டிலிருந்து சோதனையைச் சேர்</string>
-    <string name="newExperimentQRscan">phyphox பரிசோதனையைக் கொண்ட QR குறியீட்டைக் காட்டவும்.</string>
+    <string name="newExperimentQRscan">Elm Lab பரிசோதனையைக் கொண்ட QR குறியீட்டைக் காட்டவும்.</string>
     <string name="newExperimentQRErrorTitle">QR குறியீட்டில் பிழை.</string>
-    <string name="newExperimentQRNoExperiment">phyphox பரிசோதனையைக் கொண்ட QR குறியீட்டை கண்டறிய முடியவில்லை.</string>
+    <string name="newExperimentQRNoExperiment">Elm Lab பரிசோதனையைக் கொண்ட QR குறியீட்டை கண்டறிய முடியவில்லை.</string>
     <string name="newExperimentQRcrcMismatch">நீங்கள் இப்போது ஸ்கேன் செய்த QR குறியீடு முந்தைய குறியீட்டுடன் பொருந்தவில்லை. அதே பரிசோதனையைச் சேர்ந்த குறியீட்டை மட்டும் ஸ்கேன் செய்வதை உறுதி செய்யுங்கள்.</string>
     <string name="newExperimentQRCodesMissing1">நீங்கள் இப்போது ஸ்கேன் செய்த QR குறியீடு ஒரு தொகுப்பின் ஒரு பகுதி</string>
     <string name="newExperimentQRCodesMissing2">மீதமுள்ள குறியீடுகளை ஸ்கேன் செய்ய தொடரவும் என்பதை அழுத்தவும். குறியீடுகள் இன்னும் இல்லை:</string>
@@ -64,7 +64,7 @@
     <string name="deviceInfoCopied">சாதனத் தகவல் உங்கள் இடைநிலைப்பலகை-க்கு நகலெடுக்கப்பட்டது.</string>
     <string name="warning">எச்சரிக்கை</string>
     <string name="donotshowagain">மீண்டும் காட்டாதே</string>
-    <string name="damageWarning">பரிசோதனை செய்யும் போது உங்கள் தொலைபேசியை சேதப்படுத்தாமல் கவனமாக இருங்கள். கடினமான பரப்புகளில் அது விழுவதைத் தவிர்க்கவும், அதிகப்படியான காந்தப்புலன் உள்ள பகுதிகளில் வெளிப்படுத்தாமல் இருக்கவும் சிறப்பு கவனம் செலுத்துங்கள். உங்கள் தொலைபேசியில் ஏற்படும் எந்தவொரு சேதத்திற்கும் phyphox ஆசிரியர்கள் பொறுப்பல்ல.</string>
+    <string name="damageWarning">பரிசோதனை செய்யும் போது உங்கள் தொலைபேசியை சேதப்படுத்தாமல் கவனமாக இருங்கள். கடினமான பரப்புகளில் அது விழுவதைத் தவிர்க்கவும், அதிகப்படியான காந்தப்புலன் உள்ள பகுதிகளில் வெளிப்படுத்தாமல் இருக்கவும் சிறப்பு கவனம் செலுத்துங்கள். உங்கள் தொலைபேசியில் ஏற்படும் எந்தவொரு சேதத்திற்கும் Elm Lab ஆசிரியர்கள் பொறுப்பல்ல.</string>
     <string name="info">தகவல்கள்</string>
     <string name="credits">நன்மதிப்பு</string>
     <string name="creditsRWTH">phyphox® RWTH Aachen பல்கலைக்கழகத்தில் உள்ள 2வது இயற்பியல் நிறுவனத்தில் உருவாக்கப்பட்டது.</string>
@@ -131,10 +131,10 @@
     <string name="enableTimedRun">காலச்செயலைச் செய்</string>
     <string name="export">தரவைப் பதிவேற்று</string>
     <string name="export_empty">இந்தப் பரிசோதனையின் உள்ளமைவு ஏற்றுமதி தொடர்பாய் எந்த தரவையும் வரையறுக்கவில்லை. இது பிழையாக இருந்தால், QR குறியீடு அல்லது உள்ளமைவு கோப்பின் மூலத்தைத் தொடர்பு கொள்ளவும்.</string>
-    <string name="export_subject">phyphox-ன் தரவுகள்</string>
+    <string name="export_subject">Elm Lab-ன் தரவுகள்</string>
     <string name="export_pick_share">பதிவேற்று முறையைத் தேர்வுசெய்க</string>
     <string name="share">திரையின் படத்தை பகிரவும்</string>
-    <string name="share_subject">phyphox லிருந்து காட்சிப்படம்</string>
+    <string name="share_subject">Elm Lab லிருந்து காட்சிப்படம்</string>
     <string name="share_pick_share">பகிர்வு முறையைத் தேர்வுசெய்க</string>
     <string name="remoteServer">தொலைநிலை அணுகலை அனுமதி</string>
     <string name="remoteServerWarning">பெறப்பட்ட தரவை தொலைநிலை அணுகலை நீங்கள் இயக்க உள்ளீர்கள். நம்பகமான இணையத்தில் மட்டுமே நீங்கள் அவ்வாறு செய்ய வேண்டும்! மேலும், பல தொழில்துறை அல்லது பல்கலைக்கழக இணையங்களில் சாதனங்களுக்கு இடையே நேரடி அணுகல் சாத்தியமில்லாமல் போகலாம் என்பதை நினைவில் கொள்ளவும்.
@@ -168,7 +168,7 @@
     <string name="save_state_title">தலைப்பு</string>
     <string name="save_state_save">தொகுப்பிற்கு</string>
     <string name="save_state_share">பகிர்</string>
-    <string name="save_state_subject">phyphox-கான பரிசோதனை நிலை</string>
+    <string name="save_state_subject">Elm Lab-கான பரிசோதனை நிலை</string>
     <string name="save_state_default_title">அளவீடு</string>
     <string name="save_state_success">உங்கள் தொகுப்பில் நிலை சேமிக்கப்பட்டுள்ளது.</string>
     <string name="open_zip_title">பரிசோதனைகளின் தொகுப்பைத் திறக்கிறது</string>
@@ -191,7 +191,7 @@
     <string name="errorWritingStateFile">நிலைக் கோப்பை எழுதுவதில் பிழை:</string>
     <string name="sensorGyroscope">Gyroscope</string>
     <string name="open_bluetooth_assets_title">Bluetooth சாதனத்திற்கான பரிசோதனைகள்</string>
-    <string name="open_bluetooth_assets">உங்கள் சாதனத்திற்கான பின்வரும் பரிசோதனைகள் phyphox-லிருந்து கிடைக்கின்றன. நீங்கள் அவற்றைத் திறந்து பயன்படுத்தலாம் அல்லது பிரதான பட்டியலிலிருந்து எளிதாக அணுக உங்கள் சேகரிப்பில் அனைத்தையும் சேர்க்கலாம்.</string>
+    <string name="open_bluetooth_assets">உங்கள் சாதனத்திற்கான பின்வரும் பரிசோதனைகள் Elm Lab-லிருந்து கிடைக்கின்றன. நீங்கள் அவற்றைத் திறந்து பயன்படுத்தலாம் அல்லது பிரதான பட்டியலிலிருந்து எளிதாக அணுக உங்கள் சேகரிப்பில் அனைத்தையும் சேர்க்கலாம்.</string>
     <string name="bluetooth">Bluetooth Low Entergy (BLE) Bluetooth Smart</string>
     <string name="bt_android_version">இந்தச்சாதனத்தில் Bluetooth Low Entergy (BLE)/Bluetooth Smart செயல்படாது.</string>
     <string name="bt_pick_device">ஒரு சாதனத்தைத் தேர்ந்தெடுக்கவும்.</string>
@@ -226,17 +226,17 @@
     <string name="bt_error_discovering">Bluetooth சாதனத்தின் சேவைகளைக் கண்டறியும் போது பிழை.</string>
     <string name="bt_fail_reading">படிக்கும் செயல்பாடு தோல்வியடைந்தது.</string>
     <string name="bt_fail_writing">எழுதும் செயல்பாடு தோல்வியடைந்தது.</string>
-    <string name="bt_more_info_link_text">உங்கள் சாதனம் பொருந்தவில்லையெனில், எங்கள் phyphox வலைத்தளத்தில் \"மேலும் தகவல்கள்\" என்பதைத் தேர்ந்தெடுத்து Bluetooth Low Entergy (BLE)-ப் பற்றி மேலும் அறியவும்.</string>
+    <string name="bt_more_info_link_text">உங்கள் சாதனம் பொருந்தவில்லையெனில், எங்கள் Elm Lab வலைத்தளத்தில் \"மேலும் தகவல்கள்\" என்பதைத் தேர்ந்தெடுத்து Bluetooth Low Entergy (BLE)-ப் பற்றி மேலும் அறியவும்.</string>
     <string name="bt_more_info_link_button">மேலும் தகவலுக்கு</string>
     <string name="bt_more_info_link_url">https://phyphox.org/ble</string>
     <string name="networkPrivacyWarning">தனியுரிமை எச்சரிக்கை</string>
     <string name="networkVisitPrivacyURL">தனியுரிமைக் கொள்கை</string>
-    <string name="networkPrivacyInfo">இந்தப் பரிசோதனை ஒரு தொலைதொடர்பு இணைப்பைப் பயன்படுத்துகிறது, அதாவது சோதனைத் தரவை ஒரு தொலைத்தொடர்பு சேவைக்கு அனுப்ப முடியும். கீழே உள்ள தனியுரிமைக் கொள்கை பொத்தானைக் சொடுக்குவதன் மூலம் கூடுதல் விவரங்களைக் காணலாம், அது இந்தப் பரிசோதனையை உருவாக்கியவர் வழங்கிய தனியுரிமைக் கொள்கையைக் கொண்ட வலைத்தளத்திற்கு உங்களை அழைத்துச் செல்லும். இணைப்புச் சேவை ஒரு உள்ளூர் சாதனமாக இல்லாவிட்டால், நீங்கள் இந்தப் பரிசோதனையைத் தொடங்கினால், phyphox பின்வரும் தகவல்களை அனுப்பக்கூடும் என்பதை அறிந்திடுக:</string>
+    <string name="networkPrivacyInfo">இந்தப் பரிசோதனை ஒரு தொலைதொடர்பு இணைப்பைப் பயன்படுத்துகிறது, அதாவது சோதனைத் தரவை ஒரு தொலைத்தொடர்பு சேவைக்கு அனுப்ப முடியும். கீழே உள்ள தனியுரிமைக் கொள்கை பொத்தானைக் சொடுக்குவதன் மூலம் கூடுதல் விவரங்களைக் காணலாம், அது இந்தப் பரிசோதனையை உருவாக்கியவர் வழங்கிய தனியுரிமைக் கொள்கையைக் கொண்ட வலைத்தளத்திற்கு உங்களை அழைத்துச் செல்லும். இணைப்புச் சேவை ஒரு உள்ளூர் சாதனமாக இல்லாவிட்டால், நீங்கள் இந்தப் பரிசோதனையைத் தொடங்கினால், Elm Lab பின்வரும் தகவல்களை அனுப்பக்கூடும் என்பதை அறிந்திடுக:</string>
     <string name="networkPrivacyUniqueID">இந்தச் சாதனத்திற்கும் தொலைதொடர்பு சேவைக்கும் தனித்துவமான ஒரு அடையாள குறியீடு, இது பரிசோதனை அமைவு மூலம் இந்தச் சாதனத்திலிருந்து அனுப்பப்படும் அனைத்து தரவையும் அடையாளப்படுத்த அனுமதிக்கிறது.</string>
     <string name="networkPrivacySensorData">பின்வரும் உணர்விகளிலிருந்து தரவுகள்:</string>
     <string name="networkPrivacySensorMicrophone">ஒலிவாங்கியிலிருந்து பெறப்பட்ட ஒலிப்பதிவுகள் அல்லது தரவுகள்.</string>
     <string name="networkPrivacySensorLocation">இருப்பிடத் தரவு (GPS தரவு/அதைப் போன்ற).</string>
-    <string name="networkPrivacyDeviceInfo">உங்கள் சாதனத்தின் வகை மற்றும்/அல்லது phyphox பதிப்பு பற்றிய விரிவான தகவல்கள்.</string>
+    <string name="networkPrivacyDeviceInfo">உங்கள் சாதனத்தின் வகை மற்றும்/அல்லது Elm Lab பதிப்பு பற்றிய விரிவான தகவல்கள்.</string>
     <string name="networkPrivacySensorInfo">பின்வரும் உணர்விகளின் தொழில்நுட்ப விவரங்கள்:</string>
     <string name="timedRunBeeps">ஒலி அதிர்வுகள்</string>
     <string name="beeperCountdown">துவக்க ஒலிகள்</string>
@@ -454,7 +454,7 @@
     <string name="common_unit_short_micro_meter">மைக்ரோமீட்டர் (மை.மீ)</string>
     <string name="common_quantity_short_wavelength">λ</string>
     <string name="spectrum_orientation">திசைநிலை</string>
-    <string name="localNetworkLoadMessage">இந்த முகவரியிலிருந்து பரிசோதனையை ஏற்ற முடியவில்லை. இது உங்கள் அருகிலுள்ள Network-ல் உள்ள ஒரு சாதனத்திலிருந்து வழங்கப்பட்டால், அந்த நெட்வொர்க்கை அணுக phyphox-க்கு அனுமதி தேவை. அனுமதியை வழங்கிவிட்டு மீண்டும் முயற்சிக்கவும்.</string>
-    <string name="localNetworkExperimentMessage">இந்தச் சோதனை உங்கள் உள்ளூர் பிணையத்தில் (local network) உள்ள ஒரு சாதனத்துடனான இணைப்பைப் பயன்படுத்துகிறது. அதை அணுகுவதற்கு, உள்ளூர் பிணையத்தை அணுகுவதற்கான அனுமதி phyphox-க்குத் தேவைப்படுகிறது.</string>
+    <string name="localNetworkLoadMessage">இந்த முகவரியிலிருந்து பரிசோதனையை ஏற்ற முடியவில்லை. இது உங்கள் அருகிலுள்ள Network-ல் உள்ள ஒரு சாதனத்திலிருந்து வழங்கப்பட்டால், அந்த நெட்வொர்க்கை அணுக Elm Lab-க்கு அனுமதி தேவை. அனுமதியை வழங்கிவிட்டு மீண்டும் முயற்சிக்கவும்.</string>
+    <string name="localNetworkExperimentMessage">இந்தச் சோதனை உங்கள் உள்ளூர் பிணையத்தில் (local network) உள்ள ஒரு சாதனத்துடனான இணைப்பைப் பயன்படுத்துகிறது. அதை அணுகுவதற்கு, உள்ளூர் பிணையத்தை அணுகுவதற்கான அனுமதி Elm Lab-க்குத் தேவைப்படுகிறது.</string>
     <string name="localNetworkDeniedHint">உள்ளூர் பிணைய அனுமதி இல்லாமல், உங்கள் உள்ளூர் பிணையத்தில் (local network) உள்ள சாதனங்களுக்கான இணைப்புகள் தோல்வியடையும்.</string>
 </resources>

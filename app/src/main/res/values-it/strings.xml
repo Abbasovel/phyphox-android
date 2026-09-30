@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Phyphox</string>
+    <string name="app_name">Elm Lab</string>
     <string name="switchColumns1">Vista: 1 colonna</string>
     <string name="switchColumns3">Vista: 3 colonne</string>
     <string name="switchColumns2">Vista: 2 colonne</string>
@@ -61,15 +61,15 @@
     <string name="categoryNewExperiment">Esperimenti personalizzati</string>
     <string name="confirmDeleteTitle">Conferma eliminazione\?</string>
     <string name="pick_exportFormat">Scegli il formato dei dati.</string>
-    <string name="share_subject">Screenshot da phyphox</string>
-    <string name="title_activity_experiment">phyphox</string>
+    <string name="share_subject">Screenshot da Elm Lab</string>
+    <string name="title_activity_experiment">Elm Lab</string>
     <string name="save_locally_done">L’esperimento è stato correttamente aggiunto alla collezione.</string>
     <string name="delete">Elimina</string>
     <string name="share_pick_share">Scegli come condividere</string>
     <string name="newExperimentInputRate">Frequenza sensore (in Hz, 0 = il più veloce possibile)</string>
     <string name="share">Condividi screenshot</string>
     <string name="warning">Avvertenza</string>
-    <string name="damageWarning">Fate attenzione a non danneggiare il telefono facendo gli esperimenti. Abbiate cura in particolare di non farlo cadere su superfici dure e di non esporlo a campi magnetici eccessivi. Gli autori di phyphox non sono responsabili di eventuali danni al vostro telefono.</string>
+    <string name="damageWarning">Fate attenzione a non danneggiare il telefono facendo gli esperimenti. Abbiate cura in particolare di non farlo cadere su superfici dure e di non esporlo a campi magnetici eccessivi. Gli autori di Elm Lab non sono responsabili di eventuali danni al vostro telefono.</string>
     <string name="sensorMagneticField">Campo magnetico</string>
     <string name="remotePhyphoxOrgURL">http://phyphox.org/remote-control</string>
     <string name="confirmDelete">Vuoi eliminare questo esperimento dalla tua collezione\?</string>
@@ -131,9 +131,9 @@
     <string name="newExperimentBluetooth">Aggiungi esperimento per dispositivo Bluetooth</string>
     <string name="newExperimentBluetoothErrorTitle">Errore nella ricerca di dispositivi Bluetooth</string>
     <string name="newExperimentQR">Aggiungi esperimento da QR code</string>
-    <string name="newExperimentQRscan">Scansiona il codice QR dell\'esperimento phyphox.</string>
+    <string name="newExperimentQRscan">Scansiona il codice QR dell\'esperimento Elm Lab.</string>
     <string name="newExperimentQRErrorTitle">Errore nel codice QR.</string>
-    <string name="newExperimentQRNoExperiment">Impossibile trovare il codice QR di un esperimento phyphox.</string>
+    <string name="newExperimentQRNoExperiment">Impossibile trovare il codice QR di un esperimento Elm Lab.</string>
     <string name="newExperimentQRBadCRC">Controllo fallito. Il codice QR è sbagliato oppure qualcosa non ha funzionato nella sua lettura.</string>
     <string name="newExperimentBTReadErrorTitle">Errore nell\'esperimento Bluetooth.</string>
     <string name="newExperimentBTReadErrorCorrupted">I dati trasmessi sono corrotti.</string>
@@ -206,7 +206,7 @@
     <string name="bt_error_discovering">Si è verificato un errore nella ricerca di servizi del dispositivo Bluetooth.</string>
     <string name="bt_fail_reading">La lettura non è andata a buon fine.</string>
     <string name="bt_fail_writing">La scrittura non è stata possibile.</string>
-    <string name="bt_more_info_link_text">"Se il dispositivo non è supportato, fai click su \"più info\" per maggiori informazioni sul supporto Bluetooth Low Energy  di phyphox, presenti sul nostro sito web."</string>
+    <string name="bt_more_info_link_text">"Se il dispositivo non è supportato, fai click su \"più info\" per maggiori informazioni sul supporto Bluetooth Low Energy  di Elm Lab, presenti sul nostro sito web."</string>
     <string name="bt_more_info_link_button">più info</string>
     <string name="bt_more_info_link_url">https://phyphox.org/ble</string>
     <string name="common_unit_short_arbitrary_unit">u.a.</string>

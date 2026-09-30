@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">phyphox</string>
+    <string name="app_name">Elm Lab</string>
     <string name="action_settings">Configurações</string>
-    <string name="title_activity_experiment">phyphox</string>
+    <string name="title_activity_experiment">Elm Lab</string>
     <string name="newExperiment">Adicionar experimento</string>
     <string name="newExperimentPhyphoxInfo">Visite phyphox.org para criar outros experimentos incluindo análise de dados e compartilha-los com seus colegas, alunos e amigos.</string>
     <string name="newExperimentInputTitle">Título</string>
@@ -62,16 +62,16 @@
     <string name="timedRunStartDelay">Atraso inicial (s)</string>
     <string name="timedRunStopDelay">Duração do experimento (s)</string>
     <string name="export">Exportar Dados</string>
-    <string name="export_subject">Dados do phyphox</string>
+    <string name="export_subject">Dados do Elm Lab</string>
     <string name="export_pick_share">Escolha um método para exportar</string>
     <string name="share">Compartilhar captura da tela</string>
-    <string name="share_subject">Captura da tela do phyphox</string>
+    <string name="share_subject">Captura da tela do Elm Lab</string>
     <string name="share_pick_share">Escolha como compartilhar</string>
     <string name="remoteServer">Permitir acesso remoto</string>
     <string name="hotspotSettings">Configurações do ponto de acesso</string>
     <string name="newExperimentInputBufferSize">Tamanho do buffer (número de valores guardados)</string>
     <string name="warning">Aviso</string>
-    <string name="damageWarning">Tome cuidado para não danificar o seu telefone durante os experimentos. Tenha muita atenção para evitar deixar cair sobre superfícies duras e não expor a campos magnéticos fortes. Os autores de phyphox não são responsáveis por qualquer dano ao seu telefone.</string>
+    <string name="damageWarning">Tome cuidado para não danificar o seu telefone durante os experimentos. Tenha muita atenção para evitar deixar cair sobre superfícies duras e não expor a campos magnéticos fortes. Os autores de Elm Lab não são responsáveis por qualquer dano ao seu telefone.</string>
     <string name="credits">Créditos</string>
     <string name="timed_stop">Parar medida temporizada</string>
     <string name="timed_start">Começar medida temporizada</string>
@@ -97,7 +97,7 @@
     <string name="save_state_title">Título</string>
     <string name="save_state_save">Salvar na coleção</string>
     <string name="save_state_share">Compartilhar</string>
-    <string name="save_state_subject">Estado do experimento para phyphox</string>
+    <string name="save_state_subject">Estado do experimento para Elm Lab</string>
     <string name="save_state_default_title">Medidas</string>
     <string name="save_state_success">Medidas foram salvas na colecão.</string>
     <string name="timedRun">Medida temporizada</string>
@@ -139,11 +139,11 @@
     <string name="newExperimentBluetooth">Adicionar experimento para o dispositivo Bluetooth</string>
     <string name="newExperimentBluetoothErrorTitle">Erro escaneando Bluetooth</string>
     <string name="newExperimentBluetoothLoadFromDevice">Carregado do dispositivo</string>
-    <string name="newExperimentBluetoothLoadFromDeviceInfo">Este dispositivo fornece seu próprio experimento de phyphox. Selecione carregar do dispositivo para abri-lo.</string>
+    <string name="newExperimentBluetoothLoadFromDeviceInfo">Este dispositivo fornece seu próprio experimento de Elm Lab. Selecione carregar do dispositivo para abri-lo.</string>
     <string name="newExperimentQR">Adicionar experimento com código QR</string>
-    <string name="newExperimentQRscan">Escaneie um código QR que contém um experimento phyphox.</string>
+    <string name="newExperimentQRscan">Escaneie um código QR que contém um experimento Elm Lab.</string>
     <string name="newExperimentQRErrorTitle">Erro no código QR.</string>
-    <string name="newExperimentQRNoExperiment">Não foi possível encontrar um código QR que contém um experimento phyphox.</string>
+    <string name="newExperimentQRNoExperiment">Não foi possível encontrar um código QR que contém um experimento Elm Lab.</string>
     <string name="newExperimentQRcrcMismatch">O código QR que você escaneou não coincide com códigos anteriores. Por favor, assegure-se de estar escaneando somente códigos pertencentes ao mesmo experimento.</string>
     <string name="newExperimentQRCodesMissing1">O código QR que você acabou de escanear faz parte de um conjunto de</string>
     <string name="newExperimentQRCodesMissing2">códigos. Por favor, clique continue para escanear os códigos restantes. Códigos ainda faltando:</string>
@@ -171,7 +171,7 @@
     <string name="open_zip_dialog_instructions">Este recurso contém múltiplos experimentos. Você pode escolher um para abrir e opcionalmente salvar na sua coleção ou usar o botão abaixo para salvá-los todos na sua coleção de uma única vez.</string>
     <string name="open_save_all">Salvar tudo</string>
     <string name="open_bluetooth_assets_title">Experimentos para dispositivos Bluetooth</string>
-    <string name="open_bluetooth_assets">Os seguintes experimentos para o seu aparelho estão disponíveis no phyphox. Você pode apenas abrir e usá-lo ou adicioná-los todos a sua coleção para facilmente acessá-los no menu principal.</string>
+    <string name="open_bluetooth_assets">Os seguintes experimentos para o seu aparelho estão disponíveis no Elm Lab. Você pode apenas abrir e usá-lo ou adicioná-los todos a sua coleção para facilmente acessá-los no menu principal.</string>
     <string name="start_hint">Toque no triângulo para iniciar o experimento.</string>
     <string name="bluetooth">Bluetooth Low Energy</string>
     <string name="bt_android_version">Bluetooth Low Energy não é suportado nas versões Android anteriores a 4.3.</string>
@@ -206,7 +206,7 @@
     <string name="bt_error_discovering">Erro enquanto descobrindo os serviços de dispositivos bluetooth.</string>
     <string name="bt_fail_reading">A operação de leitura não foi bem sucedida.</string>
     <string name="bt_fail_writing">A operação de escrita não foi bem sucedida.</string>
-    <string name="bt_more_info_link_text">Se o seu dispositivo não é suportado, vá em \"Mais informações\" para saber mais sobre o suporte flexível do Bluetooth Low Energy no phyphox em nosso site.</string>
+    <string name="bt_more_info_link_text">Se o seu dispositivo não é suportado, vá em \"Mais informações\" para saber mais sobre o suporte flexível do Bluetooth Low Energy no Elm Lab em nosso site.</string>
     <string name="bt_more_info_link_button">Mais informações</string>
     <string name="bt_more_info_link_url">https://phyphox.org/ble</string>
     <string name="common_unit_short_arbitrary_unit">u.a.</string>

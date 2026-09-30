@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">phyphox</string>
+    <string name="app_name">Elm Lab</string>
     <string name="action_settings">Cài đặt</string>
-    <string name="title_activity_experiment">phyphox</string>
+    <string name="title_activity_experiment">Elm Lab</string>
     <string name="graph_tools_pan_and_zoom">Thu phóng</string>
     <string name="graph_tools_pick">Lấy dữ liệu</string>
     <string name="graph_tools_more">Thêm công cụ</string>
@@ -37,11 +37,11 @@
     <string name="newExperimentBluetooth">Thêm thí nghiệm cho thiết bị Bluetooth</string>
     <string name="newExperimentBluetoothErrorTitle">Bluetooth bị lỗi</string>
     <string name="newExperimentBluetoothLoadFromDevice">Tải từ thiết bị</string>
-    <string name="newExperimentBluetoothLoadFromDeviceInfo">Thiết bị này tự cung cấp thí nghiệm phyphox. Chọn tải từ thiết bị để mở nó.</string>
+    <string name="newExperimentBluetoothLoadFromDeviceInfo">Thiết bị này tự cung cấp thí nghiệm Elm Lab. Chọn tải từ thiết bị để mở nó.</string>
     <string name="newExperimentQR">Thêm thí nghiệm từ mã QR</string>
-    <string name="newExperimentQRscan">Quét mã QR chứa thí nghiệm phyphox.</string>
+    <string name="newExperimentQRscan">Quét mã QR chứa thí nghiệm Elm Lab.</string>
     <string name="newExperimentQRErrorTitle">Lỗi mã QR.</string>
-    <string name="newExperimentQRNoExperiment">Không thể tìm thấy mã QR chứa thí nghiệm phyphox.</string>
+    <string name="newExperimentQRNoExperiment">Không thể tìm thấy mã QR chứa thí nghiệm Elm Lab.</string>
     <string name="newExperimentQRcrcMismatch">Mã QR bạn mới quét không đúng với mã trước đó. Vui lòng đảm bảo bạn chỉ quét mã nằm trong cùng một thí nghiệm.</string>
     <string name="newExperimentQRCodesMissing1">Mã QR mới quét là một phần của</string>
     <string name="newExperimentQRCodesMissing2">mã. Vui lòng nhấn tiếp tục để quét mã còn lại. Mã còn thiếu:</string>
@@ -62,7 +62,7 @@
     <string name="deviceInfoCopied">Thông tin thiết bị đã được lưu trong bộ nhớ.</string>
     <string name="warning">Cảnh báo</string>
     <string name="donotshowagain">Không hiển thị lại</string>
-    <string name="damageWarning">Vui lòng không làm hỏng điện thoại trong khi làm thí nghiệm. Vui lòng cẩn thận để tránh làm rơi điện thoại trên bề mặt cứng và không để gần từ trường mạnh. Tác giả phyphox không có trách nhiệm đối với việc hỏng điện thoại của bạn.</string>
+    <string name="damageWarning">Vui lòng không làm hỏng điện thoại trong khi làm thí nghiệm. Vui lòng cẩn thận để tránh làm rơi điện thoại trên bề mặt cứng và không để gần từ trường mạnh. Tác giả Elm Lab không có trách nhiệm đối với việc hỏng điện thoại của bạn.</string>
     <string name="info">Thông tin</string>
     <string name="credits">Thông tin tác giả</string>
     <string name="creditsRWTH">phyphox đã được tạo ra ở Viện Vật Lý thứ 2 ở Đại Học RWTH Aachen.</string>
@@ -122,10 +122,10 @@
     <string name="timedRunStopDelay">Khoảng thời gian thí nghiệm (s)</string>
     <string name="enableTimedRun">Chạy thời gian</string>
     <string name="export">Xuất dữ liệu</string>
-    <string name="export_subject">Dữ liệu từ phyphox</string>
+    <string name="export_subject">Dữ liệu từ Elm Lab</string>
     <string name="export_pick_share">Chọn phương pháp xuất</string>
     <string name="share">Chia sẻ ảnh chụp màn hình</string>
-    <string name="share_subject">Ảnh chụp màn hình từ phyphox</string>
+    <string name="share_subject">Ảnh chụp màn hình từ Elm Lab</string>
     <string name="share_pick_share">Chọn phương pháp chia sẻ</string>
     <string name="remoteServer">Cho phép truy cập từ xa</string>
     <string name="remoteServerWarning">Bạn sắp cho phép truy cập dữ liệu từ xa thu được. Bạn chỉ nên làm như vậy trên một mạng đáng tin cậy! Bạn cũng cần lưu ý rằng truy cập trực tiếp giữa các thiết bị có thể không khả dụng trên nhiều mạng công ty hoặc trường đại học.
@@ -157,14 +157,14 @@
     <string name="save_state_title">Tiêu đề</string>
     <string name="save_state_save">Vào b.sưu tập</string>
     <string name="save_state_share">Chia sẻ</string>
-    <string name="save_state_subject">Trạng thái thí nghiệm cho phyphox</string>
+    <string name="save_state_subject">Trạng thái thí nghiệm cho Elm Lab</string>
     <string name="save_state_default_title">Phép đo</string>
     <string name="save_state_success">Trạng thái đã được lưu và tập tin.</string>
     <string name="open_zip_title">Mở nhiều thí nghiệm</string>
     <string name="open_zip_dialog_instructions">Tài nguyên này chứa nhiều thí nghiệm. Bạn có thể chọn một thí nghiệm để mở và tùy ý lưu nó vào bộ sưu tập của bạn hoặc sử dụng nút bên dưới để lưu tất cả chúng vào bộ sưu tập của bạn cùng một lúc.</string>
     <string name="open_save_all">Lưu tất cả</string>
     <string name="open_bluetooth_assets_title">Thí nghiệm cho Bluetooth</string>
-    <string name="open_bluetooth_assets">Các thí nghiệm sau đây cho thiết bị của bạn có sẵn từ phyphox. Bạn có thể chỉ cần mở và sử dụng chúng hoặc thêm tất cả chúng vào bộ sưu tập của bạn để dễ dàng truy cập chúng từ menu chính.</string>
+    <string name="open_bluetooth_assets">Các thí nghiệm sau đây cho thiết bị của bạn có sẵn từ Elm Lab. Bạn có thể chỉ cần mở và sử dụng chúng hoặc thêm tất cả chúng vào bộ sưu tập của bạn để dễ dàng truy cập chúng từ menu chính.</string>
     <string name="timedRun">Thời gian chạy</string>
     <string name="pick_exportSets">Chọn bộ dữ liệu để xuất.</string>
     <string name="pick_exportFormat">Chọn định dạng dữ liệu.</string>
@@ -206,7 +206,7 @@
     <string name="bt_error_discovering">Lỗi khi tìm thiết bị bluetooth.</string>
     <string name="bt_fail_reading">Đọc dữ liệu không thành công.</string>
     <string name="bt_fail_writing">Viết dữ liệu không thành công.</string>
-    <string name="bt_more_info_link_text">Nếu thiết bị của bạn không hỗ trợ, chọn \"thông tin thêm\" để tìm hiểu thêm hỗ trợ về Bluetooth Năng Lượng Thấp trong phyphox trên trang web của chúng tôi.</string>
+    <string name="bt_more_info_link_text">Nếu thiết bị của bạn không hỗ trợ, chọn \"thông tin thêm\" để tìm hiểu thêm hỗ trợ về Bluetooth Năng Lượng Thấp trong Elm Lab trên trang web của chúng tôi.</string>
     <string name="bt_more_info_link_button">Thông tin thêm</string>
     <string name="bt_more_info_link_url">https://phyphox.org/ble</string>
     <string name="common_unit_short_arbitrary_unit">đ.v.t.y</string>
@@ -227,12 +227,12 @@
     <string name="bt_location_service_explanation">Ngoài quyền lấy thông tin vị trí, Android yêu cầu bật dịch vụ vị trí để quét Bluetooth vì kết quả có thể được sử dụng để lấy thông tin vị trí. Chúng tôi sẽ chuyển hướng bạn đến cài đặt hệ thống của bạn.</string>
     <string name="networkPrivacyWarning">Cảnh báo quyền riêng tư</string>
     <string name="networkVisitPrivacyURL">Chính sách bảo mật</string>
-    <string name="networkPrivacyInfo">Thử nghiệm này sử dụng kết nối mạng, có nghĩa là dữ liệu thí nghiệm có thể được truyền đến một dịch vụ mạng. Bạn có thể tìm thêm thông tin chi tiết bằng cách nhấp vào nút chính sách bảo mật bên dưới, nút này sẽ đưa bạn đến trang web có chính sách bảo mật do người tạo thí nghiệm này cung cấp. Nếu dịch vụ mạng không phải là thiết bị cục bộ, bạn nên lưu ý rằng phyphox có thể truyền thông tin sau nếu bạn bắt đầu thử nghiệm này:</string>
+    <string name="networkPrivacyInfo">Thử nghiệm này sử dụng kết nối mạng, có nghĩa là dữ liệu thí nghiệm có thể được truyền đến một dịch vụ mạng. Bạn có thể tìm thêm thông tin chi tiết bằng cách nhấp vào nút chính sách bảo mật bên dưới, nút này sẽ đưa bạn đến trang web có chính sách bảo mật do người tạo thí nghiệm này cung cấp. Nếu dịch vụ mạng không phải là thiết bị cục bộ, bạn nên lưu ý rằng Elm Lab có thể truyền thông tin sau nếu bạn bắt đầu thử nghiệm này:</string>
     <string name="networkPrivacyUniqueID">Một id duy nhất cho thiết bị này và dịch vụ mạng, cho phép đối sánh tất cả dữ liệu được gửi từ thiết bị này thông qua cấu hình thí nghiệm này.</string>
     <string name="networkPrivacySensorData">Dữ liệu từ các cảm biến sau:</string>
     <string name="networkPrivacySensorMicrophone">Ghi âm hoặc dữ liệu bắt nguồn từ bản ghi âm từ micrô.</string>
     <string name="networkPrivacySensorLocation">Dữ liệu vị trí (dữ liệu GPS hoặc tương tự).</string>
-    <string name="networkPrivacyDeviceInfo">Thông tin chi tiết về kiểu thiết bị của bạn và/hoặc phiên bản của phyphox.</string>
+    <string name="networkPrivacyDeviceInfo">Thông tin chi tiết về kiểu thiết bị của bạn và/hoặc phiên bản của Elm Lab.</string>
     <string name="networkPrivacySensorInfo">Chi tiết kỹ thuật về các cảm biến sau:</string>
     <string name="graph_tools_system_time">Đổi sang thời gian hệ thống</string>
     <string name="categoryPhyphoxOrg">Đóng góp cho phyphox</string>

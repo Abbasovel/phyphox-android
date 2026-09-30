@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">phyphox</string>
+    <string name="app_name">Elm Lab</string>
     <string name="action_settings">Nastavitve</string>
-    <string name="title_activity_experiment">phyphox</string>
+    <string name="title_activity_experiment">Elm Lab</string>
     <string name="graph_tools_more">Več</string>
     <string name="graph_tools_reset">Ponastavi</string>
     <string name="graph_tools_export">Izvozi podatke</string>
@@ -30,9 +30,9 @@
     <string name="newExperimentBluetooth">Dodajte eksperiment za napravo Bluetooth</string>
     <string name="newExperimentBluetoothErrorTitle">Napaka pri branju preko Bluetooth</string>
     <string name="newExperimentBluetoothLoadFromDevice">Naloži iz naprave</string>
-    <string name="newExperimentBluetoothLoadFromDeviceInfo">Ta naprava ima lastne phyphox eksperimente. Izberite naloži iz naprave.</string>
+    <string name="newExperimentBluetoothLoadFromDeviceInfo">Ta naprava ima lastne Elm Lab eksperimente. Izberite naloži iz naprave.</string>
     <string name="newExperimentQR">Dodaj eksperiment s pomočjo QR kode</string>
-    <string name="newExperimentQRscan">Preberi QR kodo, ki vsebuje phyphox eksperiment.</string>
+    <string name="newExperimentQRscan">Preberi QR kodo, ki vsebuje Elm Lab eksperiment.</string>
     <string name="newExperimentQRErrorTitle">Napaka v QR kodi</string>
     <string name="generalErrorDialog">Prišlo je do napake.</string>
     <string name="help">Pomoč in info</string>
@@ -92,7 +92,7 @@
     <string name="timedRunStopDelay">Trajanje eksperimenta (s)</string>
     <string name="enableTimedRun">Uporabi časovni potek</string>
     <string name="export">Izvozi podatke</string>
-    <string name="export_subject">Podatki iz phyphox</string>
+    <string name="export_subject">Podatki iz Elm Lab</string>
     <string name="export_pick_share">Izberite način izvoza</string>
     <string name="share">Delite posnetek zaslona</string>
     <string name="share_subject">Posnetek zaslona iz phyphoxa</string>
@@ -121,7 +121,7 @@
     <string name="save_state_title">Naslov</string>
     <string name="save_state_save">V zbirko</string>
     <string name="save_state_share">Deli</string>
-    <string name="save_state_subject">Stanje phyphox eksperimenta</string>
+    <string name="save_state_subject">Stanje Elm Lab eksperimenta</string>
     <string name="save_state_default_title">Meritev</string>
     <string name="save_state_success">Stanje je bilo shranjeno v vašo zbirko.</string>
     <string name="open_zip_title">Odpiranje niza eksperimentov</string>

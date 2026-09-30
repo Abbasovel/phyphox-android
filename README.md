@@ -1,3 +1,15 @@
+# Elm Lab (Android)
+
+**Elm Lab** — İnteraktiv Elm Muzeyi (Bakı) üçün fizika təcrübələri tətbiqi. Bu, [phyphox](https://github.com/phyphox/phyphox-android)
+(© Dr. Sebastian Staacks, RWTH Aachen University) proqramının GNU GPL-3.0 lisenziyası ilə paylanan dəyişdirilmiş versiyasıdır.
+Elm Lab RWTH Aachen və ya phyphox komandası ilə əlaqəli deyil və onlar tərəfindən təsdiqlənməyib.
+"phyphox" və "RWTH Aachen" adları və loqoları öz sahiblərinin qeydiyyatdan keçmiş ticarət nişanlarıdır; Elm Lab-da bu loqolar istifadə olunmur.
+
+Dəyişikliklər: tətbiq adı və identifikatoru (`az.elmmuzeyi.elmlab`), ikon və loqolar, mətnlərdə məhsul adı —
+bax `tools/elmlab/rebrand.py`. APK: *Releases* bölməsi (GitHub Actions ilə yığılır).
+
+---
+
 # phyphox: Android
 
 Phyphox is an app that uses the sensors in a smartphone for physics experiments. You can find additional details and examples on https://phyphox.org.

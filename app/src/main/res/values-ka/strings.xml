@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ფაიფოქსი</string>
+    <string name="app_name">Elm Lab</string>
     <string name="action_settings">პარამეტრები</string>
-    <string name="title_activity_experiment">ფაიფოქსი</string>
+    <string name="title_activity_experiment">Elm Lab</string>
     <string name="graph_tools_pan_and_zoom">მასშტაბი</string>
     <string name="graph_tools_pick">აირჩიე მონაცემი</string>
     <string name="graph_tools_more">დამატებითი ხელსაწყოები</string>

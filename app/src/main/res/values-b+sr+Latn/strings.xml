@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">phyphox</string>
+    <string name="app_name">Elm Lab</string>
     <string name="action_settings">Podešavanja</string>
-    <string name="title_activity_experiment">phyphox</string>
+    <string name="title_activity_experiment">Elm Lab</string>
     <string name="newExperiment">Dodaj eksperiment</string>
     <string name="newExperimentPhyphoxInfo">Posetite phyphox.org kako biste sproveli naprednije eksperimente, uključujući analizu podataka i deljenje istih sa kolegama, studentima i prijateljima.</string>
     <string name="newExperimentInputTitle">Naslov</string>
@@ -19,7 +19,7 @@
     <string name="translationToWebsiteURL">http://phyphox.org/languages#sr</string>
     <string name="warning">Upozorenje</string>
     <string name="donotshowagain">Ne pokazuj ponovo</string>
-    <string name="damageWarning">Molimo vas da budete oprezni prilikom izvođenja eksperimenata, kako ne biste oštetili vaš telefon. Molimo vas da posebno povedete računa o ispuštanju telefona na čvrste površine i da ga ne izlažete jakom magnetnom polju. Autori Phyphox-a nisu odgovorni za bilo kakva oštećenja vašeg telefona.</string>
+    <string name="damageWarning">Molimo vas da budete oprezni prilikom izvođenja eksperimenata, kako ne biste oštetili vaš telefon. Molimo vas da posebno povedete računa o ispuštanju telefona na čvrste površine i da ga ne izlažete jakom magnetnom polju. Autori Elm Lab-a nisu odgovorni za bilo kakva oštećenja vašeg telefona.</string>
     <string name="info">Info</string>
     <string name="credits">Bodovi</string>
     <string name="creditsRWTH">phyphox je nastao na drugom institutu za fiziku, Univerzitet u Aachan RWTH.</string>
@@ -70,10 +70,10 @@
     <string name="timedRunDialogTitle">Podešavanje vremena</string>
     <string name="enableTimedRun">Podesi merač vremena</string>
     <string name="export">Otpremi podatke</string>
-    <string name="export_subject">Podaci sa phyphox-a</string>
+    <string name="export_subject">Podaci sa Elm Lab-a</string>
     <string name="export_pick_share">Izaberi metod odpremanja</string>
     <string name="share">Podeli sliku ekrana</string>
-    <string name="share_subject">Slika ekrana iz phyphox-a</string>
+    <string name="share_subject">Slika ekrana iz Elm Lab-a</string>
     <string name="share_pick_share">Izaberi metod za deljenje</string>
     <string name="remoteServer">Dozvoli upravljanje na daljinu</string>
     <string name="remoteServerWarning">Omogućićete upravljanje na daljinu za izabrane podatke. Ovo bi trebalo da radite samo na poverljivoj mreži! Na mnogim univerzitetskim mrežama direktan pristup uređaju neće biti omogućen.
@@ -137,11 +137,11 @@
     <string name="newExperimentBluetooth">Dodaj eksperiment za blutut uređaj</string>
     <string name="newExperimentBluetoothErrorTitle">Blutut skener greška</string>
     <string name="newExperimentBluetoothLoadFromDevice">Skini sa uređaja</string>
-    <string name="newExperimentBluetoothLoadFromDeviceInfo">Ovaj uređaj sprovodi sopstveni phyphox eksperiment. Odaberite \"skini sa uređaja\" kako biste ga otvorili.</string>
+    <string name="newExperimentBluetoothLoadFromDeviceInfo">Ovaj uređaj sprovodi sopstveni Elm Lab eksperiment. Odaberite \"skini sa uređaja\" kako biste ga otvorili.</string>
     <string name="newExperimentQR">Dodaj eksperiment sa QR koda</string>
-    <string name="newExperimentQRscan">Skeniraj QR kod koji sadrži phyphox eksperiment.</string>
+    <string name="newExperimentQRscan">Skeniraj QR kod koji sadrži Elm Lab eksperiment.</string>
     <string name="newExperimentQRErrorTitle">QR kod greška.</string>
-    <string name="newExperimentQRNoExperiment">Nije pronađen QR kod koji sadrži phyphox eksperiment.</string>
+    <string name="newExperimentQRNoExperiment">Nije pronađen QR kod koji sadrži Elm Lab eksperiment.</string>
     <string name="newExperimentQRcrcMismatch">QR kod koji je upravo skeniran ne odgovara prethodnim kodovima. Molimo vas da skenirate kodove koji pripadaju istom eksperimentu.</string>
     <string name="newExperimentQRCodesMissing1">QR kod koji ste skenirali je deo seta od</string>
     <string name="newExperimentQRCodesMissing2">kodova. Molimo vas pritisnite nastavak za skeniranje ostalih kodova. Kodovi i dalje nedostaju:</string>
@@ -169,7 +169,7 @@
     <string name="open_zip_dialog_instructions">Ovaj izvor sadrži više eksperimenata. Možete izabrati otvaranje jednog i ukoliko želite, sačuvate u Vašu kolekciju ili ih sve sačuvati odjednom-pritiskom na dugme ispod.</string>
     <string name="open_save_all">Sačuvaj sve</string>
     <string name="open_bluetooth_assets_title">Eksperimenti za Bluetooth uređaje</string>
-    <string name="open_bluetooth_assets">Sledeći eksperimenti za Vaš uređaj su dostupni na phyphox-u. Možete ih otvoriti i koristiti ili dodati sve u Vašu kolekciju za lako pristupanje sa glavnog menija.</string>
+    <string name="open_bluetooth_assets">Sledeći eksperimenti za Vaš uređaj su dostupni na Elm Lab-u. Možete ih otvoriti i koristiti ili dodati sve u Vašu kolekciju za lako pristupanje sa glavnog menija.</string>
     <string name="start_hint">Dodirnite trougao za početak eksperimenta.</string>
     <string name="bluetooth">Blutut niske energije</string>
     <string name="bt_android_version">Bluetooth Low Energy nije podržan na Android verzijama nižim od 4.3.</string>
@@ -204,7 +204,7 @@
     <string name="bt_error_discovering">Greška pri pronalaženju usluga Bluetooth uređaja.</string>
     <string name="bt_fail_reading">Čitanje neuspešno.</string>
     <string name="bt_fail_writing">Upisivanje neuspešno.</string>
-    <string name="bt_more_info_link_text">Ukoliko Vaš uređaj nije podržan, izaberite opciju \"more info\" da biste saznali viže o prilagodljivoj Bluetooth Low Energy podršci u phyphox na našem veb sajtu.</string>
+    <string name="bt_more_info_link_text">Ukoliko Vaš uređaj nije podržan, izaberite opciju \"more info\" da biste saznali viže o prilagodljivoj Bluetooth Low Energy podršci u Elm Lab na našem veb sajtu.</string>
     <string name="bt_more_info_link_button">Više informacija</string>
     <string name="bt_more_info_link_url">https://phyphox.org/ble</string>
 </resources>

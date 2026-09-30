@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">phyphox</string>
+    <string name="app_name">Elm Lab</string>
     <string name="action_settings">Настройки</string>
-    <string name="title_activity_experiment">phyphox</string>
+    <string name="title_activity_experiment">Elm Lab</string>
     <string name="newExperiment">Добавить эксперимент</string>
     <string name="newExperimentPhyphoxInfo">Посетите phyphox.org, чтобы создать эксперименты более высокого уровня и поделиться ими с коллегами, студентами и друзьями.</string>
     <string name="newExperimentInputTitle">Название</string>
@@ -19,7 +19,7 @@
     <string name="translationToWebsiteURL">http://phyphox.org/languages#ru</string>
     <string name="warning">Предупреждение</string>
     <string name="donotshowagain">Не показывать снова</string>
-    <string name="damageWarning">Будьте осторожны, чтобы не повредить телефон во время экспериментов. Не бросайте его на твердые поверхности и не подвергайте его воздействию чрезмерных магнитных полей. Авторы phyphox не несут ответственности за любой ущерб, нанесённый вашему телефону.</string>
+    <string name="damageWarning">Будьте осторожны, чтобы не повредить телефон во время экспериментов. Не бросайте его на твердые поверхности и не подвергайте его воздействию чрезмерных магнитных полей. Авторы Elm Lab не несут ответственности за любой ущерб, нанесённый вашему телефону.</string>
     <string name="info">Информация</string>
     <string name="credits">Авторы</string>
     <string name="creditsRWTH">phyphox был создан во 2-м институте физики Рейнско-Вестфальского Технического Университета Ахена.</string>
@@ -70,10 +70,10 @@
     <string name="timedRunStopDelay">Продолжительность эксперимента (с)</string>
     <string name="enableTimedRun">Провести хронометраж</string>
     <string name="export">Экспорт данных</string>
-    <string name="export_subject">Данные из phyphox</string>
+    <string name="export_subject">Данные из Elm Lab</string>
     <string name="export_pick_share">Выберите способ экспорта</string>
     <string name="share">Поделиться скриншотом</string>
-    <string name="share_subject">Скриншот из phyphox</string>
+    <string name="share_subject">Скриншот из Elm Lab</string>
     <string name="share_pick_share">Выберите метод раздачи</string>
     <string name="remoteServer">Разрешить удаленный доступ</string>
     <string name="remoteServerWarning">Вы собираетесь включить удаленный доступ к полученным данным. Рекомендуется делать это только в надежной сети! Также обратите внимание, что прямой доступ между устройствами может быть невозможен во многих корпоративных или университетских сетях.
@@ -101,7 +101,7 @@
     <string name="save_state_title">Название</string>
     <string name="save_state_save">В коллекцию</string>
     <string name="save_state_share">Поделиться</string>
-    <string name="save_state_subject">Эксперимент для phyphox</string>
+    <string name="save_state_subject">Эксперимент для Elm Lab</string>
     <string name="save_state_default_title">Измерение</string>
     <string name="save_state_success">Эксперимент сохранен в вашей коллекции.</string>
     <string name="timedRun">Хронометраж</string>
@@ -139,11 +139,11 @@
     <string name="newExperimentBluetooth">Добавить эксперимент для устройства Bluetooth</string>
     <string name="newExperimentBluetoothErrorTitle">Ошибка сканирования Bluetooth</string>
     <string name="newExperimentBluetoothLoadFromDevice">Загрузка с устройства</string>
-    <string name="newExperimentBluetoothLoadFromDeviceInfo">Это устройство предоставляет собственный эксперимент на приложении phyphox. Выберите загрузку с устройства, чтобы открыть его.</string>
+    <string name="newExperimentBluetoothLoadFromDeviceInfo">Это устройство предоставляет собственный эксперимент на приложении Elm Lab. Выберите загрузку с устройства, чтобы открыть его.</string>
     <string name="newExperimentQR">Добавить эксперимент по QR-коду</string>
-    <string name="newExperimentQRscan">Сканирование QR-кода, который содержит эксперимент от phyphox.</string>
+    <string name="newExperimentQRscan">Сканирование QR-кода, который содержит эксперимент от Elm Lab.</string>
     <string name="newExperimentQRErrorTitle">Ошибка QR-кода.</string>
-    <string name="newExperimentQRNoExperiment">Не удалось найти QR-код содержащий эксперимент от phyphox.</string>
+    <string name="newExperimentQRNoExperiment">Не удалось найти QR-код содержащий эксперимент от Elm Lab.</string>
     <string name="newExperimentQRcrcMismatch">QR-код, который вы только что считали, похоже, не соответствует предыдущим кодам. Обязательно считывайте только коды принадлежащие одному эксперименту.</string>
     <string name="newExperimentQRCodesMissing1">QR-код, который вы только что считали, является частью набора</string>
     <string name="newExperimentQRCodesMissing2">коды. Продолжайте считывать оставшиеся коды. Коды все еще отсутствуют:</string>
@@ -171,7 +171,7 @@
     <string name="open_zip_dialog_instructions">Этот ресурс содержит несколько экспериментов. Вы можете выбрать его, чтобы открыть его, и, при необходимости, сохранить его в своей коллекции или использовать кнопку ниже, чтобы сохранить их все в свою коллекцию.</string>
     <string name="open_save_all">Сохранить все</string>
     <string name="open_bluetooth_assets_title">Эксперименты для устройства Bluetooth</string>
-    <string name="open_bluetooth_assets">Следующие эксперименты от phyphox доступны для вашего устройства. Вы можете открыть их и использовать напрямую, либо добавить их в свою коллекцию, чтобы получить к ним доступ из главного меню.</string>
+    <string name="open_bluetooth_assets">Следующие эксперименты от Elm Lab доступны для вашего устройства. Вы можете открыть их и использовать напрямую, либо добавить их в свою коллекцию, чтобы получить к ним доступ из главного меню.</string>
     <string name="start_hint">Коснитесь треугольника, чтобы начать эксперимент.</string>
     <string name="bluetooth">Энергосберегающий модус Bluetooth</string>
     <string name="bt_android_version">Bluetooth Low Energy не поддерживается на этом устройстве.</string>
@@ -206,7 +206,7 @@
     <string name="bt_error_discovering">Ошибка при обнаружении услуг Bluetooth-устройства.</string>
     <string name="bt_fail_reading">Операция чтения была безуспешной.</string>
     <string name="bt_fail_writing">Операция записи была безуспешной.</string>
-    <string name="bt_more_info_link_text">Если ваше устройство не поддерживается, выберите «подробнее», чтобы узнать больше о поддержке Bluetooth Low Energy в phyphox на нашем веб-сайте.</string>
+    <string name="bt_more_info_link_text">Если ваше устройство не поддерживается, выберите «подробнее», чтобы узнать больше о поддержке Bluetooth Low Energy в Elm Lab на нашем веб-сайте.</string>
     <string name="bt_more_info_link_button">Подробнее</string>
     <string name="bt_more_info_link_url">https://phyphox.org/ble</string>
     <string name="export_empty">Эта экспериментальная конфигурация не определяет какие-либо данные для экспорта. В случае ошибки обратитесь к источнику QR-кода или файла конфигурации.</string>
@@ -214,12 +214,12 @@
     <string name="bt_location_service_explanation">В дополнение к разрешению на получение информации о местоположении, Android требует, чтобы службы местоположения были включены для сканирования по Bluetooth, в результате чего их можно было бы использовать для получения информации о местоположении. Мы перенаправим вас к настройкам вашей системы.</string>
     <string name="networkPrivacyWarning">Предупреждение о конфиденциальности</string>
     <string name="networkVisitPrivacyURL">Политика конфиденциальности</string>
-    <string name="networkPrivacyInfo">В этом эксперименте используется сетевое соединение, что означает, что экспериментальные данные могут передаваться в сетевую службу. Вы можете найти более подробную информацию, нажав ниже на кнопку \"Политика конфиденциальности\", которая приведет вас на веб-сайт с политикой конфиденциальности, предоставленной создателем этого эксперимента. Если сетевая служба не является локальным устройством, следует помнить, что при запуске данного эксперимента phyphox может передавать следующую информацию:</string>
+    <string name="networkPrivacyInfo">В этом эксперименте используется сетевое соединение, что означает, что экспериментальные данные могут передаваться в сетевую службу. Вы можете найти более подробную информацию, нажав ниже на кнопку \"Политика конфиденциальности\", которая приведет вас на веб-сайт с политикой конфиденциальности, предоставленной создателем этого эксперимента. Если сетевая служба не является локальным устройством, следует помнить, что при запуске данного эксперимента Elm Lab может передавать следующую информацию:</string>
     <string name="networkPrivacyUniqueID">Идентификатор, уникальный для этого устройства и сетевой службы; он позволяет сопоставить все данные, отправленные с этого устройства в рамках этой конфигурации эксперимента.</string>
     <string name="networkPrivacySensorData">Данные следующих датчиков:</string>
     <string name="networkPrivacySensorMicrophone">Записи или данные, полученные из записей с микрофона.</string>
     <string name="networkPrivacySensorLocation">Данные о местоположении (данные GPS или аналогичные данные).</string>
-    <string name="networkPrivacyDeviceInfo">Подробная информация о модели устройства и/или версии phyphox.</string>
+    <string name="networkPrivacyDeviceInfo">Подробная информация о модели устройства и/или версии Elm Lab.</string>
     <string name="networkPrivacySensorInfo">Технические подробности о следующих датчиках:</string>
     <string name="sensorAttitude">Позиция</string>
     <string name="leave_experiment">Покинуть эксперимент</string>
@@ -454,9 +454,9 @@
     <string name="common_unit_short_micro_meter">мкм</string>
     <string name="common_quantity_short_wavelength">λ</string>
     <string name="spectrum_orientation">Ориентация</string>
-    <string name="localNetworkLoadMessage">Не удалось загрузить эксперимент по этому адресу. Если он размещён на устройстве в вашей локальной сети, приложению phyphox требуется разрешение на доступ к локальной сети. Предоставить разрешение и повторить попытку\?</string>
-    <string name="localNetworkExperimentMessage">Этот эксперимент использует подключение к устройству в вашей локальной сети. Чтобы связаться с ним, приложению phyphox требуется разрешение на доступ к локальной сети.</string>
+    <string name="localNetworkLoadMessage">Не удалось загрузить эксперимент по этому адресу. Если он размещён на устройстве в вашей локальной сети, приложению Elm Lab требуется разрешение на доступ к локальной сети. Предоставить разрешение и повторить попытку\?</string>
+    <string name="localNetworkExperimentMessage">Этот эксперимент использует подключение к устройству в вашей локальной сети. Чтобы связаться с ним, приложению Elm Lab требуется разрешение на доступ к локальной сети.</string>
     <string name="localNetworkDeniedHint">Без разрешения на доступ к локальной сети подключение к устройствам в вашей локальной сети будет невозможно.</string>
     <string name="remoteServerPortInUseTitle">Не удалось включить удалённый доступ</string>
-    <string name="remoteServerPortInUse">Не удалось включить удалённый доступ, так как порт уже занят другим приложением на этом устройстве. Закройте приложение, использующее этот порт, или укажите другой порт в настройках phyphox.</string>
+    <string name="remoteServerPortInUse">Не удалось включить удалённый доступ, так как порт уже занят другим приложением на этом устройстве. Закройте приложение, использующее этот порт, или укажите другой порт в настройках Elm Lab.</string>
 </resources>
