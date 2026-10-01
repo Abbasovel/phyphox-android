@@ -474,7 +474,7 @@
     <string name="elmlabDemoSoundTitle">Səsin sürəti</string>
     <string name="elmlabDemoSoundSub">İki telefonla, elə bu zalda</string>
     <string name="elmlabAutoPaused">Avto-pauza: həddə çatıldı</string>
-    <string name="elmlabToolToolsHeading">Alətlər</string>
+    <string name="elmlabToolsHeading">Alətlər</string>
     <string name="elmlabToolToneTitle">Ton generatoru</string>
     <string name="elmlabToolToneSub">İstənilən tezlikdə səs yaradın</string>
     <string name="elmlabToolStrobeTitle">Fənər stroboskopu</string>

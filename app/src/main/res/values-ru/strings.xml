@@ -474,7 +474,7 @@
     <string name="elmlabDemoSoundTitle">Скорость звука</string>
     <string name="elmlabDemoSoundSub">Двумя телефонами, прямо в этом зале</string>
     <string name="elmlabAutoPaused">Автопауза: порог достигнут</string>
-    <string name="elmlabToolToolsHeading">Инструменты</string>
+    <string name="elmlabToolsHeading">Инструменты</string>
     <string name="elmlabToolToneTitle">Генератор тона</string>
     <string name="elmlabToolToneSub">Звук любой частоты</string>
     <string name="elmlabToolStrobeTitle">Стробоскоп-фонарик</string>
