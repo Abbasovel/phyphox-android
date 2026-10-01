@@ -261,10 +261,24 @@ public class ExperimentListActivity extends AppCompatActivity {
             setUpElmLabDemoHome();
     }
 
+    private static void removeImageTint(View v) {
+        if (v instanceof android.widget.ImageView) {
+            android.widget.ImageView iv = (android.widget.ImageView) v;
+            androidx.core.widget.ImageViewCompat.setImageTintList(iv, null);
+            iv.setImageTintList(null);
+            iv.setColorFilter(null);
+        } else if (v instanceof android.view.ViewGroup) {
+            android.view.ViewGroup g = (android.view.ViewGroup) v;
+            for (int i = 0; i < g.getChildCount(); i++)
+                removeImageTint(g.getChildAt(i));
+        }
+    }
+
     //Elm Lab demo: own home screen with four large illustrated cards on top of the (hidden) list
     private void setUpElmLabDemoHome() {
         View home = getLayoutInflater().inflate(R.layout.elmlab_demo_home, null);
         home.setClickable(true);
+        removeImageTint(home); //the phyphox theme tints every ImageView white
         addContentView(home, new android.view.ViewGroup.LayoutParams(
                 android.view.ViewGroup.LayoutParams.MATCH_PARENT, android.view.ViewGroup.LayoutParams.MATCH_PARENT));
         WindowInsetHelper.setInsets(home, WindowInsetHelper.ApplyTo.PADDING, WindowInsetHelper.ApplyTo.PADDING, WindowInsetHelper.ApplyTo.PADDING, WindowInsetHelper.ApplyTo.PADDING);
