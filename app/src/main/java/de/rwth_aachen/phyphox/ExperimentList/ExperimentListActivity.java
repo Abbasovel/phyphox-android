@@ -216,6 +216,11 @@ public class ExperimentListActivity extends AppCompatActivity {
         res = getResources(); //Get Resource reference for easy access.
 
         creditsV = findViewById(R.id.credits);
+        if (de.rwth_aachen.phyphox.BuildConfig.ELMLAB_DEMO) {
+            //Elm Lab demo: no menu and no "add experiment" button
+            creditsV.setVisibility(View.GONE);
+            findViewById(R.id.newExperiment).setVisibility(View.GONE);
+        }
         newExperimentButton = findViewById(R.id.newExperiment);
 
         newExperimentSimple = findViewById(R.id.newExperimentSimple);

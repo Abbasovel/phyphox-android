@@ -66,6 +66,13 @@ android {
     productFlavors {
         regular {
             dimension "permissions"
+            buildConfigField "boolean", "ELMLAB_DEMO", "false"
+        }
+        //Elm Lab demo: only the museum demonstration experiments, nothing else on screen
+        demo {
+            dimension "permissions"
+            applicationIdSuffix ".demo"
+            buildConfigField "boolean", "ELMLAB_DEMO", "true"
         }
     }
 

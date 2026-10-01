@@ -28,12 +28,15 @@ jobs:
         run: |
           python3 tools/elmlab/az_fixes.py
           python3 tools/elmlab/strip_phyphox_org.py
+          mkdir -p app/src/main/assets/experiments/elmlab_demo
+          cp tools/elmlab/demo_experiments/*.phyphox app/src/main/assets/experiments/elmlab_demo/
       - name: Build APK
-        run: ./gradlew --no-daemon --stacktrace assembleRegularRelease
+        run: ./gradlew --no-daemon --stacktrace assembleRegularRelease assembleDemoRelease
       - name: Collect APK
         run: |
           mkdir -p out
           cp app/build/outputs/apk/regular/release/*.apk "out/ElmLab-b${{ github.run_number }}.apk"
+          cp app/build/outputs/apk/demo/release/*.apk "out/ElmLab-Numayis-b${{ github.run_number }}.apk"
           ls -la out
       - uses: actions/upload-artifact@v4
         with:
@@ -50,4 +53,5 @@ jobs:
           body: |
             Elm Lab — İnteraktiv Elm Muzeyi üçün fizika təcrübələri tətbiqi.
             phyphox (RWTH Aachen, GPL-3.0) əsasında hazırlanıb; mənbə kodu bu repozitoriyadadır.
+            ElmLab-*.apk — tam tətbiq; ElmLab-Numayis-*.apk — yalnız 4 muzey nümayişi.
             Quraşdırma: APK faylını telefona endirin və açın.

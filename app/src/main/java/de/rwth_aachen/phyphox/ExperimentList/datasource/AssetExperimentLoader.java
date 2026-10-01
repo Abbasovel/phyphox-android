@@ -520,13 +520,15 @@ public class AssetExperimentLoader {
     protected void loadAndAddExperimentsFromAssets() {
         try {
 
-            final String[] experimentXMLs = environment.assetManager.list("experiments"); //All experiments are placed in the experiments folder
+            //Elm Lab demo build: only the museum demonstration experiments
+            final String elmlabDir = de.rwth_aachen.phyphox.BuildConfig.ELMLAB_DEMO ? "elmlab_demo/" : "";
+            final String[] experimentXMLs = environment.assetManager.list("experiments" + (elmlabDir.isEmpty() ? "" : "/elmlab_demo")); //All experiments are placed in the experiments folder
             for (String experimentXML : experimentXMLs) {
                 //Load details for each experiment
                 if (!experimentXML.endsWith(".phyphox"))
                     continue;
-                InputStream input = environment.assetManager.open("experiments/" + experimentXML);
-                ExperimentLoadInfoData data = new ExperimentLoadInfoData(input, experimentXML, null, true);
+                InputStream input = environment.assetManager.open("experiments/" + elmlabDir + experimentXML);
+                ExperimentLoadInfoData data = new ExperimentLoadInfoData(input, elmlabDir + experimentXML, null, true);
                 ExperimentShortInfo shortInfo = loadExperimentShortInfo(data, environment);
                 if (shortInfo != null) {
                     addBluetoothInfos(shortInfo);
