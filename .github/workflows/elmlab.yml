@@ -31,7 +31,13 @@ jobs:
           mkdir -p app/src/main/assets/experiments/elmlab_demo
           cp tools/elmlab/demo_experiments/*.phyphox app/src/main/assets/experiments/elmlab_demo/
       - name: Build APK
-        run: ./gradlew --no-daemon --stacktrace assembleRegularRelease assembleDemoRelease
+        run: |
+          set -o pipefail
+          ./gradlew --no-daemon assembleRegularRelease assembleDemoRelease 2>&1 | tee build.log
+      - name: Report build errors
+        if: failure()
+        run: |
+          grep -E "error:|^e: |What went wrong|AAPT|ERROR" -A3 build.log | head -60 | while IFS= read -r l; do echo "::error::$l"; done
       - name: Collect APK
         run: |
           mkdir -p out
