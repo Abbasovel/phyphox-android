@@ -257,8 +257,7 @@ public class ExperimentListActivity extends AppCompatActivity {
         launchedToViewFile = Intent.ACTION_VIEW.equals(getIntent().getAction()) && getIntent().getScheme() != null;
         handleIntent(getIntent());
 
-        if (de.rwth_aachen.phyphox.BuildConfig.ELMLAB_DEMO)
-            setUpElmLabDemoHome();
+        setUpElmLabHome();
     }
 
     private static void removeImageTint(View v) {
@@ -274,28 +273,67 @@ public class ExperimentListActivity extends AppCompatActivity {
         }
     }
 
-    //Elm Lab demo: own home screen with four large illustrated cards on top of the (hidden) list
-    private void setUpElmLabDemoHome() {
-        View home = getLayoutInflater().inflate(R.layout.elmlab_demo_home, null);
+    //Elm Lab: own home screen with large illustrated cards on top of the (hidden) phyphox list.
+    //Full app: the four tools. Demo app: the four museum demonstrations.
+    private void setUpElmLabHome() {
+        final boolean demo = de.rwth_aachen.phyphox.BuildConfig.ELMLAB_DEMO;
+        View home = getLayoutInflater().inflate(R.layout.elmlab_home, null);
         home.setClickable(true);
-        removeImageTint(home); //the phyphox theme tints every ImageView white
         addContentView(home, new android.view.ViewGroup.LayoutParams(
                 android.view.ViewGroup.LayoutParams.MATCH_PARENT, android.view.ViewGroup.LayoutParams.MATCH_PARENT));
         WindowInsetHelper.setInsets(home, WindowInsetHelper.ApplyTo.PADDING, WindowInsetHelper.ApplyTo.PADDING, WindowInsetHelper.ApplyTo.PADDING, WindowInsetHelper.ApplyTo.PADDING);
-        int[] ids = {R.id.elmlab_card_pressure, R.id.elmlab_card_weightless, R.id.elmlab_card_car, R.id.elmlab_card_sound};
-        String[] files = {"1_pressure.phyphox", "2_weightless.phyphox", "3_car.phyphox", "4_sound.phyphox"};
-        for (int i = 0; i < ids.length; i++) {
+        ((TextView) home.findViewById(R.id.elmlab_heading)).setText(demo ? R.string.elmlabDemoHeading : R.string.elmlabToolsHeading);
+
+        View info = home.findViewById(R.id.elmlab_info);
+        if (demo)
+            info.setVisibility(View.GONE);
+        else
+            info.setOnClickListener(v -> creditsV.performClick()); //credits and settings menu
+
+        final int[] images, titles, subs; final String[] files;
+        if (demo) {
+            images = new int[]{R.drawable.elmlab_demo_pressure, R.drawable.elmlab_demo_weightless, R.drawable.elmlab_demo_car, R.drawable.elmlab_demo_sound};
+            titles = new int[]{R.string.elmlabDemoPressureTitle, R.string.elmlabDemoWeightlessTitle, R.string.elmlabDemoCarTitle, R.string.elmlabDemoSoundTitle};
+            subs = new int[]{R.string.elmlabDemoPressureSub, R.string.elmlabDemoWeightlessSub, R.string.elmlabDemoCarSub, R.string.elmlabDemoSoundSub};
+            files = new String[]{"elmlab_demo/1_pressure.phyphox", "elmlab_demo/2_weightless.phyphox", "elmlab_demo/3_car.phyphox", "elmlab_demo/4_sound.phyphox"};
+        } else {
+            images = new int[]{R.drawable.elmlab_tool_tone, R.drawable.elmlab_tool_strobe, R.drawable.elmlab_tool_pendulum, R.drawable.elmlab_tool_stopwatch};
+            titles = new int[]{R.string.elmlabToolToneTitle, R.string.elmlabToolStrobeTitle, R.string.elmlabToolPendulumTitle, R.string.elmlabToolStopwatchTitle};
+            subs = new int[]{R.string.elmlabToolToneSub, R.string.elmlabToolStrobeSub, R.string.elmlabToolPendulumSub, R.string.elmlabToolStopwatchSub};
+            files = new String[]{"tone_generator.phyphox", "strobe.phyphox", "pendulum.phyphox", "acoustic_stopwatch.phyphox"};
+        }
+
+        android.widget.LinearLayout cards = home.findViewById(R.id.elmlab_cards);
+        android.widget.LinearLayout row = null;
+        for (int i = 0; i < files.length; i++) {
+            if (i % 2 == 0) {
+                row = new android.widget.LinearLayout(this);
+                row.setOrientation(android.widget.LinearLayout.HORIZONTAL);
+                cards.addView(row, new android.widget.LinearLayout.LayoutParams(
+                        android.view.ViewGroup.LayoutParams.MATCH_PARENT, android.view.ViewGroup.LayoutParams.WRAP_CONTENT));
+            }
+            View card = getLayoutInflater().inflate(R.layout.elmlab_home_card, row, false);
+            ((android.widget.ImageView) card.findViewById(R.id.elmlab_card_image)).setImageResource(images[i]);
+            ((TextView) card.findViewById(R.id.elmlab_card_title)).setText(titles[i]);
+            ((TextView) card.findViewById(R.id.elmlab_card_sub)).setText(subs[i]);
+            ((android.widget.ImageView) card.findViewById(R.id.elmlab_card_image)).setContentDescription(getString(titles[i]));
             final String file = files[i];
-            home.findViewById(ids[i]).setOnClickListener(v -> {
+            card.setOnClickListener(v -> {
                 Intent intent = new Intent(this, de.rwth_aachen.phyphox.Experiment.class);
-                intent.putExtra(de.rwth_aachen.phyphox.ExperimentList.model.Const.EXPERIMENT_XML, "elmlab_demo/" + file);
+                intent.putExtra(de.rwth_aachen.phyphox.ExperimentList.model.Const.EXPERIMENT_XML, file);
                 intent.putExtra(de.rwth_aachen.phyphox.ExperimentList.model.Const.EXPERIMENT_ISTEMP, (String) null);
                 intent.putExtra(de.rwth_aachen.phyphox.ExperimentList.model.Const.EXPERIMENT_ISASSET, true);
                 intent.putExtra(de.rwth_aachen.phyphox.ExperimentList.model.Const.EXPERIMENT_UNAVAILABLESENSOR, -1);
                 intent.setAction(Intent.ACTION_VIEW);
                 startActivity(intent);
             });
+            row.addView(card);
         }
+        removeImageTint(home); //the phyphox theme tints every ImageView white
+        //keep the info icon white like before
+        if (!demo)
+            androidx.core.widget.ImageViewCompat.setImageTintList((android.widget.ImageView) info,
+                    android.content.res.ColorStateList.valueOf(0xFFFFFFFF));
     }
 
     private void updateBackCallbackState() {

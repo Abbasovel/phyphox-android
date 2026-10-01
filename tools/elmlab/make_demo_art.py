@@ -83,3 +83,60 @@ d.text((600,1110),"d", font=font(110), fill=YEL, anchor="mm")
 d.rounded_rectangle([250,90,950,230], radius=36, fill=RED); d.text((600,160),"v = 2d / Δt", font=font(100), fill=WHITE, anchor="mm")
 save(im,"sound")
 print("art ok")
+
+# ---------- tools (full Elm Lab app) ----------
+def save_tool(im, n): im.resize((600,600), Image.LANCZOS).save(OUT/f"elmlab_tool_{n}.png", optimize=True)
+
+# tone generator: speaker + waves + frequency
+im, d = canvas()
+d.rectangle([180,470,330,730], fill=WHITE); d.polygon([(330,470),(560,280),(560,920),(330,730)], fill=WHITE)
+for i,r in enumerate(range(140,560,105)):
+    d.arc([560-r,600-r,560+r,600+r], start=-38, end=38, fill=BLUE if i%2==0 else YEL, width=22)
+pts=[(250+i*7, 1050+70*math.sin(i/9)) for i in range(101)]
+d.line(pts, fill=RED, width=16, joint="curve")
+d.rounded_rectangle([700,90,1120,220], radius=36, fill=BLUE2); d.text((910,155),"440 Hz", font=font(96), fill=WHITE, anchor="mm")
+save_tool(im,"tone")
+
+# flashlight stroboscope: torch + pulsed beam + rotating fan
+im, d = canvas()
+d.rounded_rectangle([90,520,420,680], radius=30, fill=WHITE); d.polygon([(420,500),(520,450),(520,750),(420,700)], fill=WHITE)
+d.rounded_rectangle([200,560,260,640], radius=10, fill=BLUE2)
+for k in range(4):
+    x0=560+k*150; d.polygon([(x0,600-60-k*45),(x0+90,600-90-k*55),(x0+90,600+90+k*55),(x0,600+60+k*45)], fill=YEL if k%2==0 else (120,110,60))
+cx,cy=960,950
+for a in range(0,360,90):
+    ang=math.radians(a+20); d.polygon([(cx,cy),(cx+170*math.cos(ang-0.25),cy+170*math.sin(ang-0.25)),(cx+170*math.cos(ang+0.25),cy+170*math.sin(ang+0.25))], fill=BLUE)
+d.ellipse([cx-28,cy-28,cx+28,cy+28], fill=WHITE)
+for i in range(6):  # square pulse train
+    x=90+i*110; d.line([(x,1060),(x,980),(x+55,980),(x+55,1060),(x+110,1060)], fill=RED, width=14)
+d.rounded_rectangle([90,90,520,220], radius=36, fill=BLUE2); d.text((305,155),"f = 25 Hz", font=font(92), fill=WHITE, anchor="mm")
+save_tool(im,"strobe")
+
+# pendulum: pivot, string, bob, arc, period
+im, d = canvas()
+px,py,L=600,170,700
+d.rectangle([380,130,820,170], fill=MUTED)
+for a,col,w in [(-28,(70,90,120),10),(0,(70,90,120),10)]:
+    x=px+L*math.sin(math.radians(a)); y=py+L*math.cos(math.radians(a)); d.line([(px,py),(x,y)], fill=col, width=w); d.ellipse([x-70,y-70,x+70,y+70], outline=col, width=10)
+a=24; x=px+L*math.sin(math.radians(a)); y=py+L*math.cos(math.radians(a))
+d.line([(px,py),(x,y)], fill=WHITE, width=12); d.ellipse([x-80,y-80,x+80,y+80], fill=RED)
+d.arc([px-L-90,py-L-90,px+L+90,py+L+90], start=90-34, end=90+34, fill=YEL, width=12)
+arrow(d,(px+(L+90)*math.sin(math.radians(30)),py+(L+90)*math.cos(math.radians(30))),(px+(L+90)*math.sin(math.radians(34)),py+(L+90)*math.cos(math.radians(34))),YEL,w=12,head=44)
+d.rounded_rectangle([140,960,1060,1100], radius=36, fill=BLUE2); d.text((600,1030),"T = 2π√(L/g)", font=font(96), fill=WHITE, anchor="mm")
+save_tool(im,"pendulum")
+
+# acoustic stopwatch: stopwatch + two claps
+im, d = canvas()
+cx,cy,R=600,640,330
+d.rectangle([555,230,645,300], fill=WHITE); d.rounded_rectangle([510,190,690,240], radius=16, fill=WHITE)
+d.ellipse([cx-R,cy-R,cx+R,cy+R], fill=WHITE); d.ellipse([cx-R+40,cy-R+40,cx+R-40,cy+R-40], fill=BG2)
+for k in range(12):
+    ang=math.radians(k*30); d.line([(cx+(R-80)*math.sin(ang),cy-(R-80)*math.cos(ang)),(cx+(R-50)*math.sin(ang),cy-(R-50)*math.cos(ang))], fill=MUTED, width=12)
+d.pieslice([cx-R+60,cy-R+60,cx+R-60,cy+R-60], start=-90, end=20, fill=(47,111,214))
+d.line([(cx,cy),(cx+(R-90)*math.cos(math.radians(20)),cy+(R-90)*math.sin(math.radians(20)))], fill=RED, width=18); d.ellipse([cx-26,cy-26,cx+26,cy+26], fill=RED)
+for sx in (130,1070):
+    for r in (60,120,180):
+        d.arc([sx-r,330-r,sx+r,330+r], start=(200 if sx<600 else -20), end=(340 if sx<600 else 160), fill=YEL, width=12)
+d.rounded_rectangle([320,1020,880,1130], radius=36, fill=BLUE2); d.text((600,1075),"Δt = 0,347 s", font=font(84), fill=WHITE, anchor="mm")
+save_tool(im,"stopwatch")
+print("tools art ok")

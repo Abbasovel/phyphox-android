@@ -566,4 +566,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     <string name="elmlabDemoSoundTitle">Speed of sound</string>
     <string name="elmlabDemoSoundSub">With two phones, right in this hall</string>
     <string name="elmlabAutoPaused">Automatic pause: threshold reached</string>
+    <string name="elmlabToolToolsHeading">Tools</string>
+    <string name="elmlabToolToneTitle">Tone generator</string>
+    <string name="elmlabToolToneSub">Generate a sound of any frequency</string>
+    <string name="elmlabToolStrobeTitle">Flashlight stroboscope</string>
+    <string name="elmlabToolStrobeSub">The flashlight blinks at a set frequency</string>
+    <string name="elmlabToolPendulumTitle">Pendulum</string>
+    <string name="elmlabToolPendulumSub">Period of a pendulum and measuring g</string>
+    <string name="elmlabToolStopwatchTitle">Acoustic stopwatch</string>
+    <string name="elmlabToolStopwatchSub">Time between two sounds</string>
 </resources>
