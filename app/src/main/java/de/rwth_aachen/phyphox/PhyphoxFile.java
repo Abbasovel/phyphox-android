@@ -1842,10 +1842,10 @@ public abstract class PhyphoxFile {
                     int zPrecision = getIntAttribute("zPrecision", -1);
 
                     boolean suppressScientificNotation = getBooleanAttribute("suppressScientificNotation", false);
-                    RGB color = new RGB(parent.getResources().getColor(R.color.phyphox_primary));
+                    RGB color = new RGB(parent.getResources().getColor(R.color.elmlab_graph));
                     boolean globalColor = false;
                     if (xpp.getAttributeValue(XmlPullParser.NO_NAMESPACE, "color") != null) {
-                        color = getColorAttribute("color", new RGB(parent.getResources().getColor(R.color.phyphox_primary)));
+                        color = getColorAttribute("color", new RGB(parent.getResources().getColor(R.color.elmlab_graph)));
                         globalColor = true;
                     }
 
@@ -2006,7 +2006,7 @@ public abstract class PhyphoxFile {
                     if (!globalColor) {
                         for (int i = 0; i < yCount; i++) {
                             switch (i % 6) {
-                                case 0: ge.setColor(new RGB(parent.getResources().getColor(R.color.phyphox_primary)), curveOfDataset[i], parent.getResources());
+                                case 0: ge.setColor(new RGB(parent.getResources().getColor(R.color.elmlab_graph)), curveOfDataset[i], parent.getResources());
                                     break;
                                 case 1: ge.setColor(new RGB(parent.getResources().getColor(R.color.phyphox_green)), curveOfDataset[i], parent.getResources());
                                     break;

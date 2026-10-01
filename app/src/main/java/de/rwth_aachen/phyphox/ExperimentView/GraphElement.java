@@ -125,7 +125,7 @@ public class GraphElement extends ExpViewElement implements Serializable {
         nCurves = (inputs.size()+1)/2;
 
         for (int i = 0; i < nCurves; i++) {
-            color.add(new RGB(res.getColor(R.color.phyphox_primary)));
+            color.add(new RGB(res.getColor(R.color.elmlab_graph)));
             lineWidth.add(1.0);
             style.add(GraphView.Style.lines);
             mapWidth.add(0);

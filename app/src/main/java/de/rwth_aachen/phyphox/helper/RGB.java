@@ -41,7 +41,7 @@ public class RGB implements Serializable {
             return null;
         //We first check for specific names. As we do not set prefix (like a hash), we have to be careful that these constants do not colide with a valid hex representation of RGB
         switch(colorStr.toLowerCase()) {
-            case "orange": return new RGB(res.getColor(R.color.phyphox_primary));
+            case "orange": return new RGB(res.getColor(R.color.elmlab_graph));
             case "red": return new RGB(res.getColor(R.color.phyphox_red));
             case "magenta": return new RGB(res.getColor(R.color.phyphox_magenta));
             case "blue": return new RGB(res.getColor(R.color.phyphox_blue_60));

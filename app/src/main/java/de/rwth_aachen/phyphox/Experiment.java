@@ -1588,6 +1588,8 @@ public class Experiment extends AppCompatActivity implements View.OnClickListene
                     if (!remoteInput) {
                         experiment.handleInputViews(measuring);
                     }
+                    //Elm Lab: optional automatic pause (buffers elmlab_watch / elmlab_threshold / elmlab_delay)
+                    elmlabAutoPause();
                     //Update all the views currently visible
                     if (experiment.updateViews(tabLayout.getSelectedTabPosition(), false)) {
                         if (remoteInput) {
@@ -1611,6 +1613,36 @@ public class Experiment extends AppCompatActivity implements View.OnClickListene
             }
         }
     };
+
+    //Elm Lab: an experiment can ask for an automatic pause. If it has the buffers "elmlab_watch"
+    //and "elmlab_threshold" (> 0, 0 = off), the measurement is paused "elmlab_delay" seconds after
+    //the last value of elmlab_watch has dropped to or below the threshold.
+    private long elmlabTriggerTime = -1;
+    private void elmlabAutoPause() {
+        if (!measuring || experiment == null) {
+            elmlabTriggerTime = -1;
+            return;
+        }
+        DataBuffer watch = experiment.getBuffer("elmlab_watch");
+        DataBuffer threshold = experiment.getBuffer("elmlab_threshold");
+        if (watch == null || threshold == null)
+            return;
+        double thr = threshold.value;
+        if (Double.isNaN(thr) || thr <= 0)
+            return;
+        DataBuffer delayBuffer = experiment.getBuffer("elmlab_delay");
+        double delay = (delayBuffer == null || Double.isNaN(delayBuffer.value)) ? 0 : Math.max(0, delayBuffer.value);
+        long now = System.currentTimeMillis();
+        if (elmlabTriggerTime < 0) {
+            if (watch.getFilledSize() > 0 && !Double.isNaN(watch.value) && watch.value <= thr)
+                elmlabTriggerTime = now;
+        }
+        if (elmlabTriggerTime >= 0 && now - elmlabTriggerTime >= delay * 1000) {
+            elmlabTriggerTime = -1;
+            stopMeasurement();
+            Toast.makeText(this, R.string.elmlabAutoPaused, Toast.LENGTH_SHORT).show();
+        }
+    }
 
     public void showExperimentInfo(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

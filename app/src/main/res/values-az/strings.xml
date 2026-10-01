@@ -473,4 +473,5 @@
     <string name="elmlabDemoCarSub">İrəli təcil m/s² və g ilə</string>
     <string name="elmlabDemoSoundTitle">Səsin sürəti</string>
     <string name="elmlabDemoSoundSub">İki telefonla, elə bu zalda</string>
+    <string name="elmlabAutoPaused">Avto-pauza: həddə çatıldı</string>
 </resources>

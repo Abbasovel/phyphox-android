@@ -565,4 +565,5 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     <string name="elmlabDemoCarSub">Forward acceleration in m/s² and g</string>
     <string name="elmlabDemoSoundTitle">Speed of sound</string>
     <string name="elmlabDemoSoundSub">With two phones, right in this hall</string>
+    <string name="elmlabAutoPaused">Automatic pause: threshold reached</string>
 </resources>

@@ -43,7 +43,7 @@ Necə: telefonu yerə qoyun, ölçməni başladın, 20–30 s gözləyin (istən
       </button>
       <graph label="Təzyiq fərqi (başlanğıca nəzərən)" timeOnX="true" labelX="t" unitX="s" labelY="Δp" unitY="Pa" partialUpdate="true">
         <input axis="x">p_time</input>
-        <input axis="y">dp</input>
+        <input axis="y" lineWidth="2">dp</input>
       </graph>
       <value label="Atmosfer təzyiqi" size="1" precision="2" unit="hPa">
         <input>pressure</input>
@@ -86,7 +86,9 @@ Necə: ölçməni başladın və telefonu yumşaq yatağın və ya döşəyin ü
     <container size="0">accY</container>
     <container size="0">accZ</container>
     <container size="0">acc_time</container>
-    <container size="0">amag</container>
+    <container size="0">elmlab_watch</container>
+    <container>elmlab_threshold</container>
+    <container>elmlab_delay</container>
   </data-containers>
   <input>
     <sensor type="accelerometer" rate="0">
@@ -99,17 +101,24 @@ Necə: ölçməni başladın və telefonu yumşaq yatağın və ya döşəyin ü
   <views>
     <view label="Ölçmə">
       <value label="Hiss olunan təcil |a|" size="3" precision="1" unit="m/s²">
-        <input>amag</input>
+        <input>elmlab_watch</input>
       </value>
       <value label="Vəziyyət" size="2">
-        <input>amag</input>
+        <input>elmlab_watch</input>
         <map max="2">ÇƏKİSİZLİK</map>
         <map>dayaq var</map>
       </value>
       <graph label="|a| zamandan asılı olaraq" timeOnX="true" labelX="t" unitX="s" labelY="|a|" unitY="m/s²" partialUpdate="true">
         <input axis="x">acc_time</input>
-        <input axis="y">amag</input>
+        <input axis="y" lineWidth="2">elmlab_watch</input>
       </graph>
+      <edit label="Avto-pauza həddi (0 = söndür)" unit="m/s²" default="2" signed="false" decimal="true">
+        <output>elmlab_threshold</output>
+      </edit>
+      <edit label="Pauzadan əvvəl gecikmə" unit="s" default="0" signed="false" decimal="true">
+        <output>elmlab_delay</output>
+      </edit>
+      <info label="|a| həddə düşən kimi ölçmə avtomatik dayanır və qrafik donur. Gecikməni 0,5 s etsəniz, qrafikdə yerə düşmə anı da görünəcək. Davam etmək üçün ▶ düyməsinə basın."/>
       <info label="9,8 m/s² = adi çəki (1 g). Atma anında |a| 9,8-dən böyük olur, uçuşda isə 0-a düşür. Telefonu yalnız yumşaq səthin üzərinə atın!"/>
     </view>
   </views>
@@ -118,7 +127,7 @@ Necə: ölçməni başladın və telefonu yumşaq yatağın və ya döşəyin ü
       <input clear="false">accX</input>
       <input clear="false">accY</input>
       <input clear="false">accZ</input>
-      <output>amag</output>
+      <output>elmlab_watch</output>
     </formula>
   </analysis>
   <export>
@@ -127,7 +136,7 @@ Necə: ölçməni başladın və telefonu yumşaq yatağın və ya döşəyin ü
       <data name="ax (m/s²)">accX</data>
       <data name="ay (m/s²)">accY</data>
       <data name="az (m/s²)">accZ</data>
-      <data name="|a| (m/s²)">amag</data>
+      <data name="|a| (m/s²)">elmlab_watch</data>
     </set>
   </export>
 </phyphox>
@@ -177,7 +186,7 @@ Təhlükəsizlik: telefonla sürücü yox, sərnişin məşğul olsun; ölçmən
       </value>
       <graph label="İrəli təcil" timeOnX="true" labelX="t" unitX="s" labelY="a" unitY="m/s²" partialUpdate="true">
         <input axis="x">a_time</input>
-        <input axis="y">af</input>
+        <input axis="y" lineWidth="2">af</input>
       </graph>
     </view>
     <view label="Sürət (GPS)">
@@ -191,7 +200,7 @@ Təhlükəsizlik: telefonla sürücü yox, sərnişin məşğul olsun; ölçmən
       </value>
       <graph label="Sürət" timeOnX="true" labelX="t" unitX="s" labelY="v" unitY="km/s" partialUpdate="true">
         <input axis="x">v_time</input>
-        <input axis="y">vkmh</input>
+        <input axis="y" lineWidth="2">vkmh</input>
       </graph>
     </view>
   </views>

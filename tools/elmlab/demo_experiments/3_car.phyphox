@@ -47,7 +47,7 @@ Təhlükəsizlik: telefonla sürücü yox, sərnişin məşğul olsun; ölçmən
       </value>
       <graph label="İrəli təcil" timeOnX="true" labelX="t" unitX="s" labelY="a" unitY="m/s²" partialUpdate="true">
         <input axis="x">a_time</input>
-        <input axis="y">af</input>
+        <input axis="y" lineWidth="2">af</input>
       </graph>
     </view>
     <view label="Sürət (GPS)">
@@ -61,7 +61,7 @@ Təhlükəsizlik: telefonla sürücü yox, sərnişin məşğul olsun; ölçmən
       </value>
       <graph label="Sürət" timeOnX="true" labelX="t" unitX="s" labelY="v" unitY="km/s" partialUpdate="true">
         <input axis="x">v_time</input>
-        <input axis="y">vkmh</input>
+        <input axis="y" lineWidth="2">vkmh</input>
       </graph>
     </view>
   </views>

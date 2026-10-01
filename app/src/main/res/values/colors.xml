@@ -2,6 +2,7 @@
 <resources>
 
     <color name="phyphox_primary">#ff2f6fd6</color>
+    <color name="elmlab_graph">#ffffb627</color> <!-- Elm Lab: graph lines, amber for contrast on dark background -->
     <color name="phyphox_primary_weak">#ffa8c3f2</color>
     <color name="phyphox_rwth_primary">#ff00549f</color>
 

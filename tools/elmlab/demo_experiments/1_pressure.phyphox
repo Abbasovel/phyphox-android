@@ -38,7 +38,7 @@ Necə: telefonu yerə qoyun, ölçməni başladın, 20–30 s gözləyin (istən
       </button>
       <graph label="Təzyiq fərqi (başlanğıca nəzərən)" timeOnX="true" labelX="t" unitX="s" labelY="Δp" unitY="Pa" partialUpdate="true">
         <input axis="x">p_time</input>
-        <input axis="y">dp</input>
+        <input axis="y" lineWidth="2">dp</input>
       </graph>
       <value label="Atmosfer təzyiqi" size="1" precision="2" unit="hPa">
         <input>pressure</input>
