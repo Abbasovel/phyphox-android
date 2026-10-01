@@ -555,4 +555,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     <string name="elmlabAttribution">Elm Lab is based on the open-source app phyphox (© Dr. Sebastian Staacks, RWTH Aachen University) and is distributed under the GNU GPL v3 without any warranty. Source code: github.com/Abbasovel/phyphox-android. "phyphox" and "RWTH Aachen" are registered trademarks; Elm Lab is not affiliated with them.</string>
     <string name="elmlabLicensesShow">Authors and licences ▾</string>
     <string name="elmlabLicensesHide">Authors and licences ▴</string>
+    <string name="elmlabDemoHeading">Museum demonstrations</string>
+    <string name="elmlabDemoChoose">Choose an experiment</string>
+    <string name="elmlabDemoPressureTitle">Air pressure: head and feet</string>
+    <string name="elmlabDemoPressureSub">Δp ≈ 20 Pa over your height</string>
+    <string name="elmlabDemoWeightlessTitle">Weightlessness</string>
+    <string name="elmlabDemoWeightlessSub">A thrown object is weightless in flight</string>
+    <string name="elmlabDemoCarTitle">Car acceleration</string>
+    <string name="elmlabDemoCarSub">Forward acceleration in m/s² and g</string>
+    <string name="elmlabDemoSoundTitle">Speed of sound</string>
+    <string name="elmlabDemoSoundSub">With two phones, right in this hall</string>
 </resources>

@@ -8,9 +8,9 @@ def icon(name): return re.search(r'<icon[^>]*>.*?</icon>|<icon[^>]*/>', (SRC/nam
 CAT = "Muzey nümayişi"
 HEAD = '<phyphox version="1.20" locale="az">\n  <title>{t}</title>\n  <category>' + CAT + '</category>\n  {i}\n  <description>{d}</description>\n'
 
-pressure = HEAD.format(t="1. Baş və ayaq arasında hava təzyiqi", i=icon("pressure.phyphox"), d="""Hava sütunu da çəkiyə malikdir: aşağıda təzyiq yuxarıdakından böyükdür. Boyunuz qədər (1,7 m) hündürlük fərqi təzyiqi təxminən 20 Pa (0,2 hPa) dəyişir: Δp = ρ·g·h = 1,2 · 9,81 · 1,7 ≈ 20 Pa.
+pressure = HEAD.format(t="Hava təzyiqi: baş və ayaq", i=icon("pressure.phyphox"), d="""Hava sütunu da çəkiyə malikdir: aşağıda təzyiq yuxarıdakından böyükdür. Boyunuz qədər (1,7 m) hündürlük fərqi təzyiqi təxminən 20 Pa (0,2 hPa) dəyişir: Δp = ρ·g·h = 1,2 · 9,81 · 1,7 ≈ 20 Pa.
 
-Necə: telefonu yerə qoyun, ölçməni başladın, 20–30 s gözləyin. Sonra telefonu başınız hündürlüyünə qaldırıb yenə 20–30 s tərpətməyin. Qrafikdə ~20 Pa-lıq pillə görünəcək.""") + """  <data-containers>
+Necə: telefonu yerə qoyun, ölçməni başladın, 20–30 s gözləyin (istənilən an «Sıfırla» düyməsi ilə indiki səviyyəni sıfır götürə bilərsiniz). Sonra telefonu başınız hündürlüyünə qaldırıb yenə 20–30 s tərpətməyin. Qrafikdə ~20 Pa-lıq pillə görünəcək.""") + """  <data-containers>
     <container size="0">pressure</container>
     <container size="0">p_time</container>
     <container size="1">p0</container>
@@ -31,6 +31,16 @@ Necə: telefonu yerə qoyun, ölçməni başladın, 20–30 s gözləyin. Sonra 
       <value label="Hündürlük fərqi Δh" size="2" precision="2" unit="m">
         <input>dh</input>
       </value>
+      <button label="Sıfırla (bu səviyyə = 0)">
+        <input type="empty"/>
+        <output>pressure</output>
+        <input type="empty"/>
+        <output>p_time</output>
+        <input type="empty"/>
+        <output>dp</output>
+        <input type="empty"/>
+        <output>dh</output>
+      </button>
       <graph label="Təzyiq fərqi (başlanğıca nəzərən)" timeOnX="true" labelX="t" unitX="s" labelY="Δp" unitY="Pa" partialUpdate="true">
         <input axis="x">p_time</input>
         <input axis="y">dp</input>
@@ -67,7 +77,7 @@ Necə: telefonu yerə qoyun, ölçməni başladın, 20–30 s gözləyin. Sonra 
 </phyphox>
 """
 
-weightless = HEAD.format(t="2. Çəkisizlik: yuxarı atılan cisim", i=icon("accelerometer.phyphox"), d="""Cisim əldən çıxdığı andan yerə düşənə qədər çəkisizlik halındadır: həm qalxanda, həm ən yuxarı nöqtədə, həm də enəndə. Ona yalnız ağırlıq qüvvəsi təsir edir, dayaq yoxdur.
+weightless = HEAD.format(t="Çəkisizlik", i=icon("accelerometer.phyphox"), d="""Cisim əldən çıxdığı andan yerə düşənə qədər çəkisizlik halındadır: həm qalxanda, həm ən yuxarı nöqtədə, həm də enəndə. Ona yalnız ağırlıq qüvvəsi təsir edir, dayaq yoxdur.
 
 Akselerometr dayaq qüvvəsinin yaratdığı təcili ölçür. Telefon masada uzananda |a| ≈ 9,8 m/s² (1 g), sərbəst uçuşda isə |a| ≈ 0.
 
@@ -123,7 +133,7 @@ Necə: ölçməni başladın və telefonu yumşaq yatağın və ya döşəyin ü
 </phyphox>
 """
 
-car = HEAD.format(t="3. Avtomobilin təcili", i=icon("linear_accelerometer.phyphox"), d="""Avtomobil sürətini artıranda telefon da onunla birlikdə təcil alır. Xətti akselerometr ağırlıq qüvvəsi çıxılmış təcili ölçür.
+car = HEAD.format(t="Avtomobilin təcili", i=icon("linear_accelerometer.phyphox"), d="""Avtomobil sürətini artıranda telefon da onunla birlikdə təcil alır. Xətti akselerometr ağırlıq qüvvəsi çıxılmış təcili ölçür.
 
 Necə: telefonu tutacaqda şaquli vəziyyətdə, ekranı sürücüyə tərəf bərkidin. Avtomobil dayanarkən ölçməni başladın, sonra təcillənin. "İrəli təcil" müsbət, əyləc mənfi göstəriləcək. Sürət GPS ilə ölçülür.
 
@@ -220,7 +230,7 @@ st = (SRC/"acoustic_stopwatch.phyphox").read_text(encoding="utf-8")
 containers = re.search(r'<data-containers>(.*?)</data-containers>', st, re.S).group(1)
 analysis = re.search(r'(<analysis[^>]*>)(.*?)</analysis>', st, re.S)
 inp = re.search(r'<input>\s*<audio>.*?</input>', st, re.S).group(0)
-sound = HEAD.format(t="4. Səsin sürəti (iki telefonla)", i=icon("acoustic_stopwatch.phyphox"), d="""İki telefon zalda bir-birindən d məsafədə (10–15 m) qoyulur, hər ikisində bu təcrübə işə salınır.
+sound = HEAD.format(t="Səsin sürəti", i=icon("acoustic_stopwatch.phyphox"), d="""İki telefon zalda bir-birindən d məsafədə (10–15 m) qoyulur, hər ikisində bu təcrübə işə salınır.
 1) A telefonunun yanında bir nəfər əl çalır: hər iki saniyəölçən işə düşür, B-dəki bir az gec.
 2) B telefonunun yanında ikinci nəfər əl çalır: hər iki saniyəölçən dayanır, A-dakı bir az gec.
 Səs məsafəni iki dəfə qət etdiyindən: v = 2d / (t_A − t_B). Reaksiya vaxtı nəticəyə təsir etmir.

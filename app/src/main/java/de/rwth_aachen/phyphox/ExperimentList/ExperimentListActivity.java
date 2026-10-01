@@ -257,6 +257,31 @@ public class ExperimentListActivity extends AppCompatActivity {
         launchedToViewFile = Intent.ACTION_VIEW.equals(getIntent().getAction()) && getIntent().getScheme() != null;
         handleIntent(getIntent());
 
+        if (de.rwth_aachen.phyphox.BuildConfig.ELMLAB_DEMO)
+            setUpElmLabDemoHome();
+    }
+
+    //Elm Lab demo: own home screen with four large illustrated cards on top of the (hidden) list
+    private void setUpElmLabDemoHome() {
+        View home = getLayoutInflater().inflate(R.layout.elmlab_demo_home, null);
+        home.setClickable(true);
+        addContentView(home, new android.view.ViewGroup.LayoutParams(
+                android.view.ViewGroup.LayoutParams.MATCH_PARENT, android.view.ViewGroup.LayoutParams.MATCH_PARENT));
+        WindowInsetHelper.setInsets(home, WindowInsetHelper.ApplyTo.PADDING, WindowInsetHelper.ApplyTo.PADDING, WindowInsetHelper.ApplyTo.PADDING, WindowInsetHelper.ApplyTo.PADDING);
+        int[] ids = {R.id.elmlab_card_pressure, R.id.elmlab_card_weightless, R.id.elmlab_card_car, R.id.elmlab_card_sound};
+        String[] files = {"1_pressure.phyphox", "2_weightless.phyphox", "3_car.phyphox", "4_sound.phyphox"};
+        for (int i = 0; i < ids.length; i++) {
+            final String file = files[i];
+            home.findViewById(ids[i]).setOnClickListener(v -> {
+                Intent intent = new Intent(this, de.rwth_aachen.phyphox.Experiment.class);
+                intent.putExtra(de.rwth_aachen.phyphox.ExperimentList.model.Const.EXPERIMENT_XML, "elmlab_demo/" + file);
+                intent.putExtra(de.rwth_aachen.phyphox.ExperimentList.model.Const.EXPERIMENT_ISTEMP, (String) null);
+                intent.putExtra(de.rwth_aachen.phyphox.ExperimentList.model.Const.EXPERIMENT_ISASSET, true);
+                intent.putExtra(de.rwth_aachen.phyphox.ExperimentList.model.Const.EXPERIMENT_UNAVAILABLESENSOR, -1);
+                intent.setAction(Intent.ACTION_VIEW);
+                startActivity(intent);
+            });
+        }
     }
 
     private void updateBackCallbackState() {

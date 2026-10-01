@@ -463,4 +463,14 @@
     <string name="elmlabAttribution">Elm Lab açıq mənbəli phyphox proqramı (© Dr. Sebastian Staacks, RWTH Aachen Universiteti) əsasında hazırlanıb və GNU GPL v3 lisenziyası ilə, heç bir zəmanət verilmədən yayılır. Mənbə kodu: github.com/Abbasovel/phyphox-android. «phyphox» və «RWTH Aachen» qeydiyyatdan keçmiş ticarət nişanlarıdır; Elm Lab onlarla əlaqəli deyil.</string>
     <string name="elmlabLicensesShow">Müəlliflər və lisenziyalar ▾</string>
     <string name="elmlabLicensesHide">Müəlliflər və lisenziyalar ▴</string>
+    <string name="elmlabDemoHeading">Muzey nümayişləri</string>
+    <string name="elmlabDemoChoose">Təcrübə seçin</string>
+    <string name="elmlabDemoPressureTitle">Hava təzyiqi: baş və ayaq</string>
+    <string name="elmlabDemoPressureSub">Boyunuz qədər hündürlükdə Δp ≈ 20 Pa</string>
+    <string name="elmlabDemoWeightlessTitle">Çəkisizlik</string>
+    <string name="elmlabDemoWeightlessSub">Atılan cisim bütün uçuş boyu çəkisizdir</string>
+    <string name="elmlabDemoCarTitle">Avtomobilin təcili</string>
+    <string name="elmlabDemoCarSub">İrəli təcil m/s² və g ilə</string>
+    <string name="elmlabDemoSoundTitle">Səsin sürəti</string>
+    <string name="elmlabDemoSoundSub">İki telefonla, elə bu zalda</string>
 </resources>

@@ -463,4 +463,14 @@
     <string name="elmlabAttribution">Elm Lab создан на основе приложения с открытым исходным кодом phyphox (© Dr. Sebastian Staacks, RWTH Aachen University) и распространяется по лицензии GNU GPL v3 без каких-либо гарантий. Исходный код: github.com/Abbasovel/phyphox-android. «phyphox» и «RWTH Aachen» — зарегистрированные товарные знаки; Elm Lab с ними не связан.</string>
     <string name="elmlabLicensesShow">Авторы и лицензии ▾</string>
     <string name="elmlabLicensesHide">Авторы и лицензии ▴</string>
+    <string name="elmlabDemoHeading">Музейные демонстрации</string>
+    <string name="elmlabDemoChoose">Выберите эксперимент</string>
+    <string name="elmlabDemoPressureTitle">Давление воздуха: голова и ноги</string>
+    <string name="elmlabDemoPressureSub">Δp ≈ 20 Па на высоте роста</string>
+    <string name="elmlabDemoWeightlessTitle">Невесомость</string>
+    <string name="elmlabDemoWeightlessSub">Брошенное тело невесомо весь полёт</string>
+    <string name="elmlabDemoCarTitle">Ускорение автомобиля</string>
+    <string name="elmlabDemoCarSub">Ускорение вперёд в м/с² и g</string>
+    <string name="elmlabDemoSoundTitle">Скорость звука</string>
+    <string name="elmlabDemoSoundSub">Двумя телефонами, прямо в этом зале</string>
 </resources>
