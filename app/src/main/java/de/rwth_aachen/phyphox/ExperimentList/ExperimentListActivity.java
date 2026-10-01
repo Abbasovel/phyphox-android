@@ -273,51 +273,33 @@ public class ExperimentListActivity extends AppCompatActivity {
         }
     }
 
-    //Elm Lab: own home screen with large illustrated cards on top of the (hidden) phyphox list.
-    //Full app: the four tools. Demo app: the four museum demonstrations.
-    private void setUpElmLabHome() {
-        final boolean demo = de.rwth_aachen.phyphox.BuildConfig.ELMLAB_DEMO;
-        View home = getLayoutInflater().inflate(R.layout.elmlab_home, null);
-        home.setClickable(true);
-        addContentView(home, new android.view.ViewGroup.LayoutParams(
-                android.view.ViewGroup.LayoutParams.MATCH_PARENT, android.view.ViewGroup.LayoutParams.MATCH_PARENT));
-        WindowInsetHelper.setInsets(home, WindowInsetHelper.ApplyTo.PADDING, WindowInsetHelper.ApplyTo.PADDING, WindowInsetHelper.ApplyTo.PADDING, WindowInsetHelper.ApplyTo.PADDING);
-        ((TextView) home.findViewById(R.id.elmlab_heading)).setText(demo ? R.string.elmlabDemoHeading : R.string.elmlabToolsHeading);
-
-        View info = home.findViewById(R.id.elmlab_info);
-        if (demo)
-            info.setVisibility(View.GONE);
-        else
-            info.setOnClickListener(v -> creditsV.performClick()); //credits and settings menu
-
-        final int[] images, titles, subs; final String[] files;
-        if (demo) {
-            images = new int[]{R.drawable.elmlab_demo_pressure, R.drawable.elmlab_demo_weightless, R.drawable.elmlab_demo_car, R.drawable.elmlab_demo_sound};
-            titles = new int[]{R.string.elmlabDemoPressureTitle, R.string.elmlabDemoWeightlessTitle, R.string.elmlabDemoCarTitle, R.string.elmlabDemoSoundTitle};
-            subs = new int[]{R.string.elmlabDemoPressureSub, R.string.elmlabDemoWeightlessSub, R.string.elmlabDemoCarSub, R.string.elmlabDemoSoundSub};
-            files = new String[]{"elmlab_demo/1_pressure.phyphox", "elmlab_demo/2_weightless.phyphox", "elmlab_demo/3_car.phyphox", "elmlab_demo/4_sound.phyphox"};
-        } else {
-            images = new int[]{R.drawable.elmlab_tool_tone, R.drawable.elmlab_tool_strobe, R.drawable.elmlab_tool_pendulum, R.drawable.elmlab_tool_stopwatch};
-            titles = new int[]{R.string.elmlabToolToneTitle, R.string.elmlabToolStrobeTitle, R.string.elmlabToolPendulumTitle, R.string.elmlabToolStopwatchTitle};
-            subs = new int[]{R.string.elmlabToolToneSub, R.string.elmlabToolStrobeSub, R.string.elmlabToolPendulumSub, R.string.elmlabToolStopwatchSub};
-            files = new String[]{"tone_generator.phyphox", "strobe.phyphox", "pendulum.phyphox", "acoustic_stopwatch.phyphox"};
-        }
-
-        android.widget.LinearLayout cards = home.findViewById(R.id.elmlab_cards);
+    //Elm Lab: one section (heading + 2-column cards). Item: {image, title, subtitle, asset file, sensor type or -1}
+    private void addElmLabSection(android.widget.LinearLayout parent, int heading, Object[][] items) {
+        TextView h = (TextView) getLayoutInflater().inflate(R.layout.elmlab_home_heading, parent, false);
+        h.setText(heading);
+        parent.addView(h);
+        android.hardware.SensorManager sm = (android.hardware.SensorManager) getSystemService(SENSOR_SERVICE);
         android.widget.LinearLayout row = null;
-        for (int i = 0; i < files.length; i++) {
-            if (i % 2 == 0) {
+        int n = 0;
+        for (Object[] item : items) {
+            int sensorType = (Integer) item[4];
+            if (sensorType >= 0 && sm != null && sm.getDefaultSensor(sensorType) == null)
+                continue; //this phone does not have the sensor
+            if (n % 2 == 0) {
                 row = new android.widget.LinearLayout(this);
                 row.setOrientation(android.widget.LinearLayout.HORIZONTAL);
-                cards.addView(row, new android.widget.LinearLayout.LayoutParams(
+                row.setWeightSum(2);
+                parent.addView(row, new android.widget.LinearLayout.LayoutParams(
                         android.view.ViewGroup.LayoutParams.MATCH_PARENT, android.view.ViewGroup.LayoutParams.WRAP_CONTENT));
             }
+            n++;
             View card = getLayoutInflater().inflate(R.layout.elmlab_home_card, row, false);
-            ((android.widget.ImageView) card.findViewById(R.id.elmlab_card_image)).setImageResource(images[i]);
-            ((TextView) card.findViewById(R.id.elmlab_card_title)).setText(titles[i]);
-            ((TextView) card.findViewById(R.id.elmlab_card_sub)).setText(subs[i]);
-            ((android.widget.ImageView) card.findViewById(R.id.elmlab_card_image)).setContentDescription(getString(titles[i]));
-            final String file = files[i];
+            android.widget.ImageView image = card.findViewById(R.id.elmlab_card_image);
+            image.setImageResource((Integer) item[0]);
+            image.setContentDescription(getString((Integer) item[1]));
+            ((TextView) card.findViewById(R.id.elmlab_card_title)).setText((Integer) item[1]);
+            ((TextView) card.findViewById(R.id.elmlab_card_sub)).setText((Integer) item[2]);
+            final String file = (String) item[3];
             card.setOnClickListener(v -> {
                 Intent intent = new Intent(this, de.rwth_aachen.phyphox.Experiment.class);
                 intent.putExtra(de.rwth_aachen.phyphox.ExperimentList.model.Const.EXPERIMENT_XML, file);
@@ -328,6 +310,46 @@ public class ExperimentListActivity extends AppCompatActivity {
                 startActivity(intent);
             });
             row.addView(card);
+        }
+    }
+
+    //Elm Lab: own home screen with large illustrated cards on top of the (hidden) phyphox list.
+    //Full app: the four tools. Demo app: the four museum demonstrations.
+    private void setUpElmLabHome() {
+        final boolean demo = de.rwth_aachen.phyphox.BuildConfig.ELMLAB_DEMO;
+        View home = getLayoutInflater().inflate(R.layout.elmlab_home, null);
+        home.setClickable(true);
+        addContentView(home, new android.view.ViewGroup.LayoutParams(
+                android.view.ViewGroup.LayoutParams.MATCH_PARENT, android.view.ViewGroup.LayoutParams.MATCH_PARENT));
+        WindowInsetHelper.setInsets(home, WindowInsetHelper.ApplyTo.PADDING, WindowInsetHelper.ApplyTo.PADDING, WindowInsetHelper.ApplyTo.PADDING, WindowInsetHelper.ApplyTo.PADDING);
+
+        View info = home.findViewById(R.id.elmlab_info);
+        if (demo)
+            info.setVisibility(View.GONE);
+        else
+            info.setOnClickListener(v -> creditsV.performClick()); //credits and settings menu
+
+        android.widget.LinearLayout cards = home.findViewById(R.id.elmlab_cards);
+        if (demo) {
+            addElmLabSection(cards, R.string.elmlabDemoHeading, new Object[][]{
+                    {R.drawable.elmlab_demo_pressure, R.string.elmlabDemoPressureTitle, R.string.elmlabDemoPressureSub, "elmlab_demo/1_pressure.phyphox", -1},
+                    {R.drawable.elmlab_demo_weightless, R.string.elmlabDemoWeightlessTitle, R.string.elmlabDemoWeightlessSub, "elmlab_demo/2_weightless.phyphox", -1},
+                    {R.drawable.elmlab_demo_car, R.string.elmlabDemoCarTitle, R.string.elmlabDemoCarSub, "elmlab_demo/3_car.phyphox", -1},
+                    {R.drawable.elmlab_demo_sound, R.string.elmlabDemoSoundTitle, R.string.elmlabDemoSoundSub, "elmlab_demo/4_sound.phyphox", -1}});
+        } else {
+            addElmLabSection(cards, R.string.elmlabSensorHeading, new Object[][]{
+                    {R.drawable.elmlab_sensor_accelerometer, R.string.elmlabSensorAccTitle, R.string.elmlabSensorAccSub, "accelerometer.phyphox", android.hardware.Sensor.TYPE_ACCELEROMETER},
+                    {R.drawable.elmlab_sensor_linear, R.string.elmlabSensorLinTitle, R.string.elmlabSensorLinSub, "linear_accelerometer.phyphox", android.hardware.Sensor.TYPE_LINEAR_ACCELERATION},
+                    {R.drawable.elmlab_sensor_gyroscope, R.string.elmlabSensorGyrTitle, R.string.elmlabSensorGyrSub, "gyroscope.phyphox", android.hardware.Sensor.TYPE_GYROSCOPE},
+                    {R.drawable.elmlab_sensor_magnetometer, R.string.elmlabSensorMagTitle, R.string.elmlabSensorMagSub, "magnetometer.phyphox", android.hardware.Sensor.TYPE_MAGNETIC_FIELD},
+                    {R.drawable.elmlab_sensor_pressure, R.string.elmlabSensorPreTitle, R.string.elmlabSensorPreSub, "pressure.phyphox", android.hardware.Sensor.TYPE_PRESSURE},
+                    {R.drawable.elmlab_sensor_light, R.string.elmlabSensorLigTitle, R.string.elmlabSensorLigSub, "light.phyphox", android.hardware.Sensor.TYPE_LIGHT},
+                    {R.drawable.elmlab_sensor_gps, R.string.elmlabSensorGpsTitle, R.string.elmlabSensorGpsSub, "gps.phyphox", -1}});
+            addElmLabSection(cards, R.string.elmlabToolsHeading, new Object[][]{
+                    {R.drawable.elmlab_tool_tone, R.string.elmlabToolToneTitle, R.string.elmlabToolToneSub, "tone_generator.phyphox", -1},
+                    {R.drawable.elmlab_tool_strobe, R.string.elmlabToolStrobeTitle, R.string.elmlabToolStrobeSub, "strobe.phyphox", -1},
+                    {R.drawable.elmlab_tool_pendulum, R.string.elmlabToolPendulumTitle, R.string.elmlabToolPendulumSub, "pendulum.phyphox", android.hardware.Sensor.TYPE_ACCELEROMETER},
+                    {R.drawable.elmlab_tool_stopwatch, R.string.elmlabToolStopwatchTitle, R.string.elmlabToolStopwatchSub, "acoustic_stopwatch.phyphox", -1}});
         }
         removeImageTint(home); //the phyphox theme tints every ImageView white
         //keep the info icon white like before

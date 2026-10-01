@@ -483,4 +483,19 @@
     <string name="elmlabToolPendulumSub">Rəqqasın periodu və g-nin ölçülməsi</string>
     <string name="elmlabToolStopwatchTitle">Akustik saniyəölçən</string>
     <string name="elmlabToolStopwatchSub">İki səs arasındakı vaxtı ölçün</string>
+    <string name="elmlabSensorHeading">Sensorlar</string>
+    <string name="elmlabSensorAccTitle">g ilə təcil</string>
+    <string name="elmlabSensorAccSub">Ağırlıq qüvvəsi daxil, 3 ox üzrə</string>
+    <string name="elmlabSensorLinTitle">Təcil (g olmadan)</string>
+    <string name="elmlabSensorLinSub">Yalnız hərəkətdən yaranan təcil</string>
+    <string name="elmlabSensorGyrTitle">Giroskop (bucaq sürəti)</string>
+    <string name="elmlabSensorGyrSub">Hər ox ətrafında bucaq sürəti</string>
+    <string name="elmlabSensorMagTitle">Maqnitometr</string>
+    <string name="elmlabSensorMagSub">Maqnit sahəsinin induksiyası, µT</string>
+    <string name="elmlabSensorPreTitle">Təzyiq</string>
+    <string name="elmlabSensorPreSub">Barometr: atmosfer təzyiqi, hPa</string>
+    <string name="elmlabSensorLigTitle">İşıq</string>
+    <string name="elmlabSensorLigSub">İşıqlanma, lüks</string>
+    <string name="elmlabSensorGpsTitle">Məkan (GPS)</string>
+    <string name="elmlabSensorGpsSub">Koordinat, hündürlük, sürət</string>
 </resources>

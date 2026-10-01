@@ -140,3 +140,76 @@ for sx in (130,1070):
 d.rounded_rectangle([320,1020,880,1130], radius=36, fill=BLUE2); d.text((600,1075),"Δt = 0,347 s", font=font(84), fill=WHITE, anchor="mm")
 save_tool(im,"stopwatch")
 print("tools art ok")
+
+# ---------- sensors (full Elm Lab app) ----------
+def save_sensor(im, n): im.resize((600,600), Image.LANCZOS).save(OUT/f"elmlab_sensor_{n}.png", optimize=True)
+def phone_at(d, cx, cy, w=300, h=520):
+    d.rounded_rectangle([cx-w/2,cy-h/2,cx+w/2,cy+h/2], radius=50, fill=WHITE)
+    d.rounded_rectangle([cx-w/2+24,cy-h/2+60,cx+w/2-24,cy+h/2-60], radius=14, fill=BLUE2)
+def badge(d, text, col=BLUE2, y=150):
+    w = font(92).getlength(text)+120
+    d.rounded_rectangle([600-w/2,y-65,600+w/2,y+65], radius=36, fill=col); d.text((600,y),text, font=font(92), fill=WHITE, anchor="mm")
+
+# accelerometer with g: phone + x/y/z axes + g
+im, d = canvas(); phone_at(d,600,660)
+arrow(d,(600,660),(900,660),RED,w=16,head=46); d.text((930,660),"x", font=font(90), fill=RED, anchor="lm")
+arrow(d,(600,660),(600,330),(92,224,160),w=16,head=46); d.text((640,330),"y", font=font(90), fill=(92,224,160), anchor="lm")
+arrow(d,(600,660),(420,840),BLUE,w=16,head=46); d.text((380,880),"z", font=font(90), fill=BLUE, anchor="mm")
+arrow(d,(1000,850),(1000,1120),YEL,w=22,head=60); d.text((1050,990),"g", font=font(110), fill=YEL, anchor="lm")
+badge(d,"9,81 m/s²"); save_sensor(im,"accelerometer")
+
+# linear acceleration: phone moving with speed lines
+im, d = canvas()
+for y,l in [(520,260),(660,340),(800,220)]: d.line([(80,y),(80+l,y)], fill=MUTED, width=16)
+phone_at(d,620,660)
+arrow(d,(820,660),(1110,660),RED,w=30,head=80); d.text((960,560),"a", font=font(120), fill=RED, anchor="mm")
+badge(d,"g olmadan"); save_sensor(im,"linear")
+
+# gyroscope: phone + rotation arc ω
+im, d = canvas(); phone_at(d,600,660,260,450)
+d.arc([260,320,940,1000], start=200, end=340, fill=YEL, width=24)
+arrow(d,(870,420),(905,470),YEL,w=24,head=70)
+d.arc([260,320,940,1000], start=20, end=160, fill=(120,110,60), width=14)
+badge(d,"ω, rad/s"); save_sensor(im,"gyroscope")
+
+# magnetometer: horseshoe magnet + field lines
+im, d = canvas()
+for k,r in enumerate([150,230,310,390]):
+    d.arc([600-r,560-r,600+r,560+r], start=180, end=360, fill=(60,90,130) if k%2 else BLUE, width=10)
+d.rounded_rectangle([330,560,480,1000], radius=20, fill=RED); d.rounded_rectangle([720,560,870,1000], radius=20, fill=BLUE2)
+d.rectangle([330,940,870,1060], fill=MUTED)
+d.rectangle([330,560,480,650], fill=WHITE); d.rectangle([720,560,870,650], fill=WHITE)
+d.text((405,605),"N", font=font(80), fill=RED, anchor="mm"); d.text((795,605),"S", font=font(80), fill=BLUE2, anchor="mm")
+badge(d,"B, µT"); save_sensor(im,"magnetometer")
+
+# pressure: barometer gauge
+im, d = canvas(); cx,cy,R = 600,680,380
+d.ellipse([cx-R,cy-R,cx+R,cy+R], fill=WHITE); d.ellipse([cx-R+36,cy-R+36,cx+R-36,cy+R-36], fill=BG2)
+for k in range(11):
+    a=math.radians(225-k*27); d.line([(cx+(R-70)*math.cos(a),cy-(R-70)*math.sin(a)),(cx+(R-110)*math.cos(a),cy-(R-110)*math.sin(a))], fill=MUTED, width=12)
+a=math.radians(80); d.line([(cx,cy),(cx+(R-120)*math.cos(a),cy-(R-120)*math.sin(a))], fill=RED, width=22); d.ellipse([cx-34,cy-34,cx+34,cy+34], fill=RED)
+d.text((cx,cy+190),"1013", font=font(110), fill=WHITE, anchor="mm")
+badge(d,"p, hPa"); save_sensor(im,"pressure")
+
+# light: bulb with rays
+im, d = canvas(); cx,cy = 600,600
+for k in range(12):
+    a=math.radians(k*30); d.line([(cx+230*math.cos(a),cy+230*math.sin(a)),(cx+330*math.cos(a),cy+330*math.sin(a))], fill=YEL, width=24)
+d.ellipse([cx-170,cy-200,cx+170,cy+140], fill=YEL); d.rectangle([cx-80,cy+120,cx+80,cy+240], fill=WHITE)
+for y in (155,195): d.line([(cx-80,cy+y),(cx+80,cy+y)], fill=MUTED, width=10)
+d.rounded_rectangle([cx-60,cy+240,cx+60,cy+290], radius=20, fill=MUTED)
+badge(d,"E, lx", y=1080); save_sensor(im,"light")
+
+# GPS: globe + pin + satellite
+im, d = canvas(); cx,cy,R = 560,720,330
+d.ellipse([cx-R,cy-R,cx+R,cy+R], fill=BLUE2)
+for k in (-2,-1,0,1,2):
+    r = R*math.cos(math.radians(k*28)); y = cy + R*math.sin(math.radians(k*28)); d.line([(cx-r,y),(cx+r,y)], fill=BLUE, width=8)
+for w in (R*0.35, R*0.75): d.ellipse([cx-w,cy-R,cx+w,cy+R], outline=BLUE, width=8)
+px,py = cx+60, cy-150
+d.ellipse([px-110,py-260,px+110,py-40], fill=RED); d.polygon([(px-95,py-120),(px+95,py-120),(px,py+40)], fill=RED); d.ellipse([px-45,py-195,px+45,py-105], fill=WHITE)
+sx,sy = 960,260
+d.rectangle([sx-50,sy-50,sx+50,sy+50], fill=WHITE); d.rectangle([sx-200,sy-30,sx-70,sy+30], fill=BLUE); d.rectangle([sx+70,sy-30,sx+200,sy+30], fill=BLUE)
+for r in (90,150): d.arc([sx-r-60,sy+60-r,sx+r-60,sy+60+r], start=100, end=170, fill=YEL, width=10)
+save_sensor(im,"gps")
+print("sensor art ok")

@@ -483,4 +483,19 @@
     <string name="elmlabToolPendulumSub">Период маятника и измерение g</string>
     <string name="elmlabToolStopwatchTitle">Акустический секундомер</string>
     <string name="elmlabToolStopwatchSub">Время между двумя звуками</string>
+    <string name="elmlabSensorHeading">Датчики</string>
+    <string name="elmlabSensorAccTitle">Ускорение с g</string>
+    <string name="elmlabSensorAccSub">С учётом силы тяжести, по 3 осям</string>
+    <string name="elmlabSensorLinTitle">Ускорение (без g)</string>
+    <string name="elmlabSensorLinSub">Только ускорение движения</string>
+    <string name="elmlabSensorGyrTitle">Гироскоп (угловая скорость)</string>
+    <string name="elmlabSensorGyrSub">Угловая скорость вокруг 3 осей</string>
+    <string name="elmlabSensorMagTitle">Магнитометр</string>
+    <string name="elmlabSensorMagSub">Индукция магнитного поля, мкТл</string>
+    <string name="elmlabSensorPreTitle">Давление</string>
+    <string name="elmlabSensorPreSub">Барометр: атмосферное давление, гПа</string>
+    <string name="elmlabSensorLigTitle">Свет</string>
+    <string name="elmlabSensorLigSub">Освещённость, лк</string>
+    <string name="elmlabSensorGpsTitle">Местоположение (GPS)</string>
+    <string name="elmlabSensorGpsSub">Координаты, высота, скорость</string>
 </resources>
