@@ -43,6 +43,8 @@ jobs:
           mkdir -p out
           cp app/build/outputs/apk/regular/release/*.apk "out/ElmLab-b${{ github.run_number }}.apk"
           cp app/build/outputs/apk/demo/release/*.apk "out/ElmLab-Numayis-b${{ github.run_number }}.apk"
+          cp out/ElmLab-b${{ github.run_number }}.apk out/ElmLab.apk
+          cp out/ElmLab-Numayis-b${{ github.run_number }}.apk out/ElmLab-Numayis.apk
           ls -la out
       - uses: actions/upload-artifact@v4
         with:
