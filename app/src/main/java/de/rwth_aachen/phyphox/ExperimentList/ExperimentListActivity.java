@@ -330,12 +330,14 @@ public class ExperimentListActivity extends AppCompatActivity {
             info.setOnClickListener(v -> creditsV.performClick()); //credits and settings menu
 
         android.widget.LinearLayout cards = home.findViewById(R.id.elmlab_cards);
-        if (demo) {
-            addElmLabSection(cards, R.string.elmlabDemoHeading, new Object[][]{
+        //museum demonstrations: the whole demo app, and the third section of the full app
+        final Object[][] demoItems = new Object[][]{
                     {R.drawable.elmlab_demo_pressure, R.string.elmlabDemoPressureTitle, R.string.elmlabDemoPressureSub, "elmlab_demo/1_pressure.phyphox", -1},
                     {R.drawable.elmlab_demo_weightless, R.string.elmlabDemoWeightlessTitle, R.string.elmlabDemoWeightlessSub, "elmlab_demo/2_weightless.phyphox", -1},
                     {R.drawable.elmlab_demo_car, R.string.elmlabDemoCarTitle, R.string.elmlabDemoCarSub, "elmlab_demo/3_car.phyphox", -1},
-                    {R.drawable.elmlab_demo_sound, R.string.elmlabDemoSoundTitle, R.string.elmlabDemoSoundSub, "elmlab_demo/4_sound.phyphox", -1}});
+                    {R.drawable.elmlab_demo_sound, R.string.elmlabDemoSoundTitle, R.string.elmlabDemoSoundSub, "elmlab_demo/4_sound.phyphox", -1}};
+        if (demo) {
+            addElmLabSection(cards, R.string.elmlabDemoHeading, demoItems);
         } else {
             addElmLabSection(cards, R.string.elmlabSensorHeading, new Object[][]{
                     {R.drawable.elmlab_sensor_accelerometer, R.string.elmlabSensorAccTitle, R.string.elmlabSensorAccSub, "accelerometer.phyphox", android.hardware.Sensor.TYPE_ACCELEROMETER},
@@ -350,6 +352,7 @@ public class ExperimentListActivity extends AppCompatActivity {
                     {R.drawable.elmlab_tool_strobe, R.string.elmlabToolStrobeTitle, R.string.elmlabToolStrobeSub, "strobe.phyphox", -1},
                     {R.drawable.elmlab_tool_pendulum, R.string.elmlabToolPendulumTitle, R.string.elmlabToolPendulumSub, "pendulum.phyphox", android.hardware.Sensor.TYPE_ACCELEROMETER},
                     {R.drawable.elmlab_tool_stopwatch, R.string.elmlabToolStopwatchTitle, R.string.elmlabToolStopwatchSub, "acoustic_stopwatch.phyphox", -1}});
+            addElmLabSection(cards, R.string.elmlabDemoHeading, demoItems);
         }
         removeImageTint(home); //the phyphox theme tints every ImageView white
         //keep the info icon white like before
