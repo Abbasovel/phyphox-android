@@ -40,6 +40,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/elmlabMuseum"
                 android:id="@+id/elmlabMuseum"
+                android:autoLink="phone"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:textSize="@dimen/credit_font_main"/>
 

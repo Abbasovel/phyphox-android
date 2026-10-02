@@ -65,7 +65,7 @@
     <string name="damageWarning">Təcrübə apararkən telefonunuza zərər verməməyə diqqət edin. Xüsusilə onu sərt səthlərin üzərinə salmamağa çalışın və güclü maqnit sahələrinə məruz qoymayın. Elm Lab müəllifləri telefonunuza dəyən zərərə görə məsuliyyət daşımır.</string>
     <string name="info">Məlumat</string>
     <string name="credits">Müəlliflər</string>
-    <string name="creditsRWTH">phyphox® RWTH Aaxen Universitetinin II Fizika İnstitutunda yaradılıb.</string>
+    <string name="creditsRWTH">phyphox® RWTH Aachen Universitetinin II Fizika İnstitutunda yaradılıb.</string>
     <string name="creditsNames">Hazırlanma və konsepsiya:
 \nDr. Sebastian Staacks
 \nKonsepsiya:
@@ -459,7 +459,7 @@
     <string name="localNetworkDeniedHint">Yerli şəbəkə icazəsi olmadan yerli şəbəkənizdəki cihazlara bağlantılar uğursuz olacaq.</string>
     <string name="remoteServerPortInUseTitle">Uzaqdan giriş aktivləşdirilə bilmədi</string>
     <string name="remoteServerPortInUse">Uzaqdan giriş aktivləşdirilə bilmədi, çünki port bu cihazdakı başqa bir tətbiq tərəfindən istifadə olunur. Portu istifadə edən tətbiqi dayandırın və ya Elm Lab tənzimləmələrində başqa port təyin edin.</string>
-    <string name="elmlabMuseum">Elm Lab — Elçin Abbasovun İnteraktiv Elm Muzeyinin fizika təcrübələri tətbiqidir. Muzeyin kökləri 1998-ci ildə emalatxanada başlanan işlərə gedib çıxır. Bu gün muzeydə fizika, kimya, biologiya, riyaziyyat, coğrafiya və mühəndislik üzrə 150-dən çox işlək interaktiv eksponat var. Əsas ideyamız: elmi danışmaq yox, göstərmək və ziyarətçiyə öz əli ilə sınamağa imkan vermək. Elm Lab ilə telefonunuz cibinizdəki fizika laboratoriyasına çevrilir.\n\nBakı, Mikayıl Müşfiq 2E · filial: Azərbaycan Dövlət Pedaqoji Universiteti\nBiletlər: iTicket.az · Instagram, TikTok: @elmmuzeyi</string>
+    <string name="elmlabMuseum">Elm Lab — Elçin Abbasovun İnteraktiv Elm Muzeyinin fizika təcrübələri tətbiqidir. Muzey 1998-ci ildə emalatxanada hazırlanan avadanlıq və təcrübələrlə başlayıb. 2018-ci ildən Hədəf liseyinin dəvəti ilə orada fəaliyyət göstərir. Muzeyin 2-ci filialı ADPU-da yerləşir. Bu gün muzeydə elmə və mühəndisliyə aid 150-dən çox işlək interaktiv eksponat var. Əsas ideyamız: biz əksər fiziki prosesləri göstərə bilirik. Elm Lab ilə telefonunuz cibinizdəki fizika laboratoriyasına çevrilir.\n\nÜnvan:\n1. Bakı, Mikayıl Müşfiq 2E\n2. Azərbaycan Dövlət Pedaqoji Universiteti, Ü. Hacıbəyli küç., 68\nTel.: +994 55 202 41 15</string>
     <string name="elmlabAttribution">Elm Lab açıq mənbəli phyphox proqramı (© Dr. Sebastian Staacks, RWTH Aachen Universiteti) əsasında hazırlanıb və GNU GPL v3 lisenziyası ilə, heç bir zəmanət verilmədən yayılır. Mənbə kodu: github.com/Abbasovel/phyphox-android. «phyphox» və «RWTH Aachen» qeydiyyatdan keçmiş ticarət nişanlarıdır; Elm Lab onlarla əlaqəli deyil.</string>
     <string name="elmlabLicensesShow">Müəlliflər və lisenziyalar ▾</string>
     <string name="elmlabLicensesHide">Müəlliflər və lisenziyalar ▴</string>
