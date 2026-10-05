@@ -388,6 +388,114 @@ public class ExperimentListActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         experimentRepository.loadAndShowMainExperimentList(this);
+        elmlabCheckUpdate();
+    }
+
+    //Elm Lab: monthly update requirement.
+    //Up to 30 days after the build the app works normally. After that it asks GitHub for the latest
+    //release: if a newer build exists, the app is blocked until it is updated. If no newer build
+    //exists, it keeps working. Without internet it keeps working until 45 days, then asks to connect.
+    private static final long ELMLAB_DAY = 24L * 3600L * 1000L;
+    private View elmlabBlocker = null;
+    private void elmlabCheckUpdate() {
+        final int build = de.rwth_aachen.phyphox.BuildConfig.ELMLAB_BUILD;
+        if (build <= 0)
+            return; //local build without a number
+        final long age = System.currentTimeMillis() - de.rwth_aachen.phyphox.BuildConfig.ELMLAB_BUILD_TIME;
+        if (age <= 30 * ELMLAB_DAY) {
+            elmlabShowBlocker(0);
+            return;
+        }
+        new Thread(() -> {
+            int latest = -1; //-1 = could not check
+            try {
+                java.net.HttpURLConnection c = (java.net.HttpURLConnection) new java.net.URL(
+                        "https://github.com/Abbasovel/phyphox-android/releases/latest").openConnection();
+                c.setInstanceFollowRedirects(false);
+                c.setConnectTimeout(8000);
+                c.setReadTimeout(8000);
+                c.setRequestMethod("HEAD");
+                String location = c.getHeaderField("Location");
+                c.disconnect();
+                if (location != null) {
+                    java.util.regex.Matcher m = java.util.regex.Pattern.compile("elmlab-b(\\d+)").matcher(location);
+                    if (m.find())
+                        latest = Integer.parseInt(m.group(1));
+                }
+            } catch (Exception e) {
+                latest = -1;
+            }
+            final int mode;
+            if (latest > build)
+                mode = 1; //newer version exists: update required
+            else if (latest < 0 && age > 45 * ELMLAB_DAY)
+                mode = 2; //could not check for too long
+            else
+                mode = 0;
+            runOnUiThread(() -> elmlabShowBlocker(mode));
+        }).start();
+    }
+
+    private void elmlabShowBlocker(int mode) {
+        if (mode == 0) {
+            if (elmlabBlocker != null)
+                elmlabBlocker.setVisibility(View.GONE);
+            return;
+        }
+        if (elmlabBlocker == null) {
+            android.widget.LinearLayout box = new android.widget.LinearLayout(this);
+            box.setOrientation(android.widget.LinearLayout.VERTICAL);
+            box.setGravity(android.view.Gravity.CENTER);
+            box.setBackgroundColor(0xFF0E1826);
+            box.setClickable(true);
+            int pad = (int) (32 * getResources().getDisplayMetrics().density);
+            box.setPadding(pad, pad, pad, pad);
+            android.widget.ImageView logo = new android.widget.ImageView(this);
+            logo.setImageResource(R.drawable.phyphox_dark);
+            logo.setAdjustViewBounds(true);
+            box.addView(logo, new android.widget.LinearLayout.LayoutParams(
+                    android.view.ViewGroup.LayoutParams.WRAP_CONTENT, (int) (56 * getResources().getDisplayMetrics().density)));
+            TextView title = new TextView(this);
+            title.setId(R.id.elmlab_update_title);
+            title.setTextColor(0xFFFFFFFF);
+            title.setTextSize(24);
+            title.setTypeface(null, android.graphics.Typeface.BOLD);
+            title.setGravity(android.view.Gravity.CENTER);
+            title.setPadding(0, pad, 0, pad / 2);
+            box.addView(title);
+            TextView text = new TextView(this);
+            text.setId(R.id.elmlab_update_text);
+            text.setTextColor(0xFF9AAABD);
+            text.setTextSize(16);
+            text.setGravity(android.view.Gravity.CENTER);
+            text.setPadding(0, 0, 0, pad);
+            box.addView(text);
+            android.widget.Button button = new android.widget.Button(this);
+            button.setId(R.id.elmlab_update_button);
+            box.addView(button);
+            addContentView(box, new android.view.ViewGroup.LayoutParams(
+                    android.view.ViewGroup.LayoutParams.MATCH_PARENT, android.view.ViewGroup.LayoutParams.MATCH_PARENT));
+            removeImageTint(box);
+            elmlabBlocker = box;
+        }
+        elmlabBlocker.setVisibility(View.VISIBLE);
+        elmlabBlocker.bringToFront();
+        ((TextView) elmlabBlocker.findViewById(R.id.elmlab_update_title)).setText(R.string.elmlabUpdateTitle);
+        ((TextView) elmlabBlocker.findViewById(R.id.elmlab_update_text)).setText(mode == 1 ? R.string.elmlabUpdateText : R.string.elmlabUpdateOfflineText);
+        android.widget.Button button = elmlabBlocker.findViewById(R.id.elmlab_update_button);
+        button.setText(mode == 1 ? R.string.elmlabUpdateButton : R.string.elmlabUpdateRetry);
+        button.setOnClickListener(v -> {
+            if (mode == 1) {
+                String url = de.rwth_aachen.phyphox.BuildConfig.ELMLAB_DEMO
+                        ? "https://abbasovel.github.io/elm-lab/demo/" : "https://abbasovel.github.io/elm-lab/app/";
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, android.net.Uri.parse(url)));
+                } catch (Exception ignored) {
+                }
+            } else {
+                elmlabCheckUpdate();
+            }
+        });
     }
 
     @Override

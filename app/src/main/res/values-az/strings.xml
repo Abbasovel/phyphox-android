@@ -498,4 +498,9 @@
     <string name="elmlabSensorLigSub">İşıqlanma, lüks</string>
     <string name="elmlabSensorGpsTitle">Məkan (GPS)</string>
     <string name="elmlabSensorGpsSub">Koordinat, hündürlük, sürət</string>
+    <string name="elmlabUpdateTitle">Yeniləmə tələb olunur</string>
+    <string name="elmlabUpdateText">Elm Lab-ın yeni versiyası çıxıb. Davam etmək üçün tətbiqi yeniləyin.</string>
+    <string name="elmlabUpdateOfflineText">Bu versiyanın müddəti bitib. Yeniləməni yoxlamaq üçün internetə qoşulun.</string>
+    <string name="elmlabUpdateButton">Yenilə</string>
+    <string name="elmlabUpdateRetry">Yenidən yoxla</string>
 </resources>

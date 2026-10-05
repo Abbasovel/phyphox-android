@@ -33,7 +33,7 @@ jobs:
       - name: Build APK
         run: |
           set -o pipefail
-          ./gradlew --no-daemon assembleRegularRelease assembleDemoRelease 2>&1 | tee build.log
+          ./gradlew --no-daemon -PelmlabBuild=${{ github.run_number }} assembleRegularRelease assembleDemoRelease 2>&1 | tee build.log
       - name: Report build errors
         if: failure()
         run: |

@@ -4,6 +4,9 @@ android {
 
     defaultConfig {
         applicationId "az.elmmuzeyi.elmlab"
+        //Elm Lab: build number (from CI) and build time for the monthly update requirement
+        buildConfigField "int", "ELMLAB_BUILD", (project.findProperty("elmlabBuild") ?: "0").toString()
+        buildConfigField "long", "ELMLAB_BUILD_TIME", System.currentTimeMillis() + "L"
         minSdkVersion 21
         targetSdkVersion 37
         compileSdk 37

@@ -590,4 +590,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     <string name="elmlabSensorLigSub">Illuminance, lux</string>
     <string name="elmlabSensorGpsTitle">Location (GPS)</string>
     <string name="elmlabSensorGpsSub">Coordinates, altitude, speed</string>
+    <string name="elmlabUpdateTitle">Update required</string>
+    <string name="elmlabUpdateText">A new version of Elm Lab is available. Please update the app to continue.</string>
+    <string name="elmlabUpdateOfflineText">This version has expired. Connect to the internet so the app can check for updates.</string>
+    <string name="elmlabUpdateButton">Update</string>
+    <string name="elmlabUpdateRetry">Check again</string>
 </resources>

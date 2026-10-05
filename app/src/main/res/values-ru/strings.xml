@@ -498,4 +498,9 @@
     <string name="elmlabSensorLigSub">Освещённость, лк</string>
     <string name="elmlabSensorGpsTitle">Местоположение (GPS)</string>
     <string name="elmlabSensorGpsSub">Координаты, высота, скорость</string>
+    <string name="elmlabUpdateTitle">Требуется обновление</string>
+    <string name="elmlabUpdateText">Вышла новая версия Elm Lab. Чтобы продолжить, обновите приложение.</string>
+    <string name="elmlabUpdateOfflineText">Срок действия этой версии истёк. Подключитесь к интернету, чтобы проверить обновления.</string>
+    <string name="elmlabUpdateButton">Обновить</string>
+    <string name="elmlabUpdateRetry">Проверить снова</string>
 </resources>

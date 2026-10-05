@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="elmlab_update_title" type="id"/>
+    <item name="elmlab_update_text" type="id"/>
+    <item name="elmlab_update_button" type="id"/>
+</resources>
