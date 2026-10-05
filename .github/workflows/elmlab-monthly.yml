@@ -1,0 +1,18 @@
+name: Elm Lab monthly rebuild
+# Scheduled workflows only run from the default branch (master), so this file lives here and
+# starts the real build on the elmlab branch on the 1st of every month (03:00 UTC).
+on:
+  schedule:
+    - cron: '0 3 1 * *'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh workflow run elmlab.yml --ref elmlab -R "${{ github.repository }}"
+        env:
+          GH_TOKEN: ${{ github.token }}
