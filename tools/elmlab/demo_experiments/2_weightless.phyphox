@@ -15,6 +15,11 @@ Necə: ölçməni başladın və telefonu yumşaq yatağın və ya döşəyin ü
     <container size="0">elmlab_watch</container>
     <container>elmlab_threshold</container>
     <container>elmlab_delay</container>
+    <container size="1">a_last</container>
+    <container size="1" init="1">fl_threshold</container>
+    <container size="1" init="0">fl_intensity</container>
+    <container size="1" init="15">fl_frequency</container>
+    <container size="1" init="0.5">fl_duty</container>
   </data-containers>
   <input>
     <sensor type="accelerometer" rate="0">
@@ -24,6 +29,13 @@ Necə: ölçməni başladın və telefonu yumşaq yatağın və ya döşəyin ü
       <output component="t">acc_time</output>
     </sensor>
   </input>
+  <output>
+    <flashlight>
+      <input parameter="intensity">fl_intensity</input>
+      <input parameter="frequency">fl_frequency</input>
+      <input parameter="dutycycle">fl_duty</input>
+    </flashlight>
+  </output>
   <views>
     <view label="Ölçmə">
       <value label="Hiss olunan təcil |a|" size="3" precision="1" unit="m/s²">
@@ -38,13 +50,17 @@ Necə: ölçməni başladın və telefonu yumşaq yatağın və ya döşəyin ü
         <input axis="x">acc_time</input>
         <input axis="y" lineWidth="2">elmlab_watch</input>
       </graph>
+      <edit label="Fənər həddi (0 = söndür)" unit="m/s²" default="1" signed="false" decimal="true">
+        <output>fl_threshold</output>
+      </edit>
+      <info label="|a| fənər həddindən aşağı olanda telefonun fənəri maksimal parlaqlıqla 15 Hz tezliklə yanıb-sönür."/>
       <edit label="Avto-pauza həddi (0 = söndür)" unit="m/s²" default="2" signed="false" decimal="true">
         <output>elmlab_threshold</output>
       </edit>
-      <edit label="Pauzadan əvvəl gecikmə" unit="s" default="0" signed="false" decimal="true">
+      <edit label="Pauzadan əvvəl gecikmə" unit="s" default="0.6" signed="false" decimal="true">
         <output>elmlab_delay</output>
       </edit>
-      <info label="|a| həddə düşən kimi ölçmə avtomatik dayanır və qrafik donur. Gecikməni 0,5 s etsəniz, qrafikdə yerə düşmə anı da görünəcək. Davam etmək üçün ▶ düyməsinə basın."/>
+      <info label="|a| avto-pauza həddinə düşəndən «gecikmə» qədər sonra ölçmə avtomatik dayanır və qrafik donur (fənər də sönür). Gecikmə 0 olsa, ölçmə dərhal dayanar və fənər yanmağa macal tapmaz. Davam etmək üçün ▶ düyməsinə basın."/>
       <info label="9,8 m/s² = adi çəki (1 g). Atma anında |a| 9,8-dən böyük olur, uçuşda isə 0-a düşür. Telefonu yalnız yumşaq səthin üzərinə atın!"/>
     </view>
   </views>
@@ -54,6 +70,17 @@ Necə: ölçməni başladın və telefonu yumşaq yatağın və ya döşəyin ü
       <input clear="false">accY</input>
       <input clear="false">accZ</input>
       <output>elmlab_watch</output>
+    </formula>
+    <formula formula="sqrt([1_]*[1_]+[2_]*[2_]+[3_]*[3_])">
+      <input clear="false">accX</input>
+      <input clear="false">accY</input>
+      <input clear="false">accZ</input>
+      <output>a_last</output>
+    </formula>
+    <formula formula="heaviside([2]-[1])*heaviside([2]-0.000001)">
+      <input keep="true">a_last</input>
+      <input keep="true">fl_threshold</input>
+      <output>fl_intensity</output>
     </formula>
   </analysis>
   <export>
