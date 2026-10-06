@@ -9,6 +9,29 @@ Necə: telefonu tutacaqda şaquli vəziyyətdə, ekranı sürücüyə tərəf b�
 Yoxlama: 0–100 km/s vaxtı t olarsa, orta təcil = 27,8 / t m/s².
 
 Təhlükəsizlik: telefonla sürücü yox, sərnişin məşğul olsun; ölçməni boş və bağlı ərazidə aparın.</description>
+  <translations>
+    <translation locale="tr">
+      <title>Otomobilin ivmesi</title>
+      <category>Müze gösterisi</category>
+      <description>Otomobil hızlanırken telefon da onunla birlikte ivmelenir. Doğrusal ivmeölçer, yerçekimi çıkarılmış ivmeyi ölçer.
+
+Nasıl: telefonu tutucuda dikey olarak, ekranı sürücüye dönük şekilde sabitleyin. Otomobil dururken ölçümü başlatın, sonra hızlanın. «İleri ivme» pozitif, fren negatif gösterilir. Hız GPS ile ölçülür.
+
+Kontrol: 0–100 km/sa süresi t ise ortalama ivme = 27,8 / t m/s².
+
+Güvenlik: telefonla sürücü değil yolcu ilgilensin; ölçümü boş ve kapalı bir alanda yapın.</description>
+      <string original="Vaxt (s)">Zaman (s)</string>
+      <string original="Təcil">İvme</string>
+      <string original="İrəli təcil">İleri ivme</string>
+      <string original="Maksimum təcil">Maksimum ivme</string>
+      <string original="Sürət (GPS)">Hız (GPS)</string>
+      <string original="söndürülüb">kapalı</string>
+      <string original="aktivdir">etkin</string>
+      <string original="Sürət">Hız</string>
+      <string original="İrəli təcil (m/s²)">İleri ivme (m/s²)</string>
+      <string original="Sürət (km/s)">Hız (km/sa)</string>
+    </translation>
+  </translations>
   <data-containers>
     <container size="0">ax</container>
     <container size="0">ay</container>

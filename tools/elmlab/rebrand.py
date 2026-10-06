@@ -120,6 +120,7 @@ def strings():
         s2 = re.sub(r'(<string name="([^"]+)"[^>]*>)(.*?)(</string>)', fix, s, flags=re.S)
         # grammar after the rename: vowel harmony (phyphox-un -> Lab-ın) and English article
         if p.parent.name == "values-az": s2 = s2.replace(f"{NAME}-un", f"{NAME}-ın").replace(f"{NAME}-u ", f"{NAME}-ı ")
+        if p.parent.name == "values-tr": s2 = s2.replace(f"{NAME}\\'t", f"{NAME}\\'d").replace(f"{NAME}\\'u", f"{NAME}\\'ı")
         if p.parent.name == "values": s2 = re.sub(rf"\b([Aa]) {NAME}", rf"\1n {NAME}", s2)
         if s2 != s: p.write_text(s2, encoding="utf-8")
 

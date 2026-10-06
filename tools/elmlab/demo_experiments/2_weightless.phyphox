@@ -7,6 +7,31 @@
 Akselerometr dayaq qüvvəsinin yaratdığı təcili ölçür. Telefon masada uzananda |a| ≈ 9,8 m/s² (1 g), sərbəst uçuşda isə |a| ≈ 0.
 
 Necə: ölçməni başladın və telefonu yumşaq yatağın və ya döşəyin üzərinə 30–50 sm yuxarı atın. Qrafikdə bütün uçuş boyu |a| ≈ 0 olan "çuxur" görünəcək.</description>
+  <translations>
+    <translation locale="tr">
+      <title>Ağırlıksızlık</title>
+      <category>Müze gösterisi</category>
+      <description>Cisim elden çıktığı andan yere düşene kadar ağırlıksızdır: yükselirken, en üst noktada ve inerken. Ona yalnızca yerçekimi etki eder, destek yoktur.
+
+İvmeölçer, destek kuvvetinin oluşturduğu ivmeyi ölçer. Telefon masada dururken |a| ≈ 9,8 m/s² (1 g), serbest uçuşta ise |a| ≈ 0.
+
+Nasıl: ölçümü başlatın ve telefonu yumuşak bir yatağın veya şiltenin üzerine 30–50 cm yukarı atın. Grafikte tüm uçuş boyunca |a| ≈ 0 olan bir «çukur» görünecek.</description>
+      <string original="Ölçmə">Ölçüm</string>
+      <string original="Vaxt (s)">Zaman (s)</string>
+      <string original="Hiss olunan təcil |a|">Hissedilen ivme |a|</string>
+      <string original="Vəziyyət">Durum</string>
+      <string original="ÇƏKİSİZLİK">AĞIRLIKSIZLIK</string>
+      <string original="dayaq var">destek var</string>
+      <string original="|a| zamandan asılı olaraq">Zamana göre |a|</string>
+      <string original="Fənər həddi (0 = söndür)">Fener eşiği (0 = kapalı)</string>
+      <string original="|a| fənər həddindən aşağı olanda telefonun fənəri maksimal parlaqlıqla 15 Hz tezliklə yanıb-sönür.">|a| fener eşiğinin altına düştüğünde telefonun feneri en yüksek parlaklıkta 15 Hz frekansla yanıp söner.</string>
+      <string original="Avto-pauza həddi (0 = söndür)">Otomatik duraklatma eşiği (0 = kapalı)</string>
+      <string original="Pauzadan əvvəl gecikmə">Duraklatmadan önce gecikme</string>
+      <string original="|a| avto-pauza həddinə düşəndən «gecikmə» qədər sonra ölçmə avtomatik dayanır və qrafik donur (fənər də sönür). Gecikmə 0 olsa, ölçmə dərhal dayanar və fənər yanmağa macal tapmaz. Davam etmək üçün ▶ düyməsinə basın.">|a| otomatik duraklatma eşiğine düştükten «gecikme» kadar sonra ölçüm otomatik olarak durur ve grafik donar (fener de söner). Gecikme 0 ise ölçüm hemen durur ve fener yanmaya fırsat bulamaz. Devam etmek için ▶ düğmesine basın.</string>
+      <string original="9,8 m/s² = adi çəki (1 g). Atma anında |a| 9,8-dən böyük olur, uçuşda isə 0-a düşür. Telefonu yalnız yumşaq səthin üzərinə atın!">9,8 m/s² = normal ağırlık (1 g). Atış anında |a| 9,8'den büyüktür, uçuşta ise 0'a düşer. Telefonu yalnızca yumuşak bir yüzeyin üzerine atın!</string>
+      <string original="Təcil">İvme</string>
+    </translation>
+  </translations>
   <data-containers>
     <container size="0">accX</container>
     <container size="0">accY</container>
@@ -16,7 +41,7 @@ Necə: ölçməni başladın və telefonu yumşaq yatağın və ya döşəyin ü
     <container>elmlab_threshold</container>
     <container>elmlab_delay</container>
     <container size="1">a_last</container>
-    <container size="1" init="1">fl_threshold</container>
+    <container size="1" init="5">fl_threshold</container>
     <container size="1" init="0">fl_intensity</container>
     <container size="1" init="15">fl_frequency</container>
     <container size="1" init="0.5">fl_duty</container>
@@ -50,14 +75,14 @@ Necə: ölçməni başladın və telefonu yumşaq yatağın və ya döşəyin ü
         <input axis="x">acc_time</input>
         <input axis="y" lineWidth="2">elmlab_watch</input>
       </graph>
-      <edit label="Fənər həddi (0 = söndür)" unit="m/s²" default="1" signed="false" decimal="true">
+      <edit label="Fənər həddi (0 = söndür)" unit="m/s²" default="5" signed="false" decimal="true">
         <output>fl_threshold</output>
       </edit>
       <info label="|a| fənər həddindən aşağı olanda telefonun fənəri maksimal parlaqlıqla 15 Hz tezliklə yanıb-sönür."/>
       <edit label="Avto-pauza həddi (0 = söndür)" unit="m/s²" default="2" signed="false" decimal="true">
         <output>elmlab_threshold</output>
       </edit>
-      <edit label="Pauzadan əvvəl gecikmə" unit="s" default="0.6" signed="false" decimal="true">
+      <edit label="Pauzadan əvvəl gecikmə" unit="s" default="2" signed="false" decimal="true">
         <output>elmlab_delay</output>
       </edit>
       <info label="|a| avto-pauza həddinə düşəndən «gecikmə» qədər sonra ölçmə avtomatik dayanır və qrafik donur (fənər də sönür). Gecikmə 0 olsa, ölçmə dərhal dayanar və fənər yanmağa macal tapmaz. Davam etmək üçün ▶ düyməsinə basın."/>

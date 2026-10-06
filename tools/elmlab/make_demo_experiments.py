@@ -90,7 +90,7 @@ Necə: ölçməni başladın və telefonu yumşaq yatağın və ya döşəyin ü
     <container>elmlab_threshold</container>
     <container>elmlab_delay</container>
     <container size="1">a_last</container>
-    <container size="1" init="1">fl_threshold</container>
+    <container size="1" init="5">fl_threshold</container>
     <container size="1" init="0">fl_intensity</container>
     <container size="1" init="15">fl_frequency</container>
     <container size="1" init="0.5">fl_duty</container>
@@ -124,14 +124,14 @@ Necə: ölçməni başladın və telefonu yumşaq yatağın və ya döşəyin ü
         <input axis="x">acc_time</input>
         <input axis="y" lineWidth="2">elmlab_watch</input>
       </graph>
-      <edit label="Fənər həddi (0 = söndür)" unit="m/s²" default="1" signed="false" decimal="true">
+      <edit label="Fənər həddi (0 = söndür)" unit="m/s²" default="5" signed="false" decimal="true">
         <output>fl_threshold</output>
       </edit>
       <info label="|a| fənər həddindən aşağı olanda telefonun fənəri maksimal parlaqlıqla 15 Hz tezliklə yanıb-sönür."/>
       <edit label="Avto-pauza həddi (0 = söndür)" unit="m/s²" default="2" signed="false" decimal="true">
         <output>elmlab_threshold</output>
       </edit>
-      <edit label="Pauzadan əvvəl gecikmə" unit="s" default="0.6" signed="false" decimal="true">
+      <edit label="Pauzadan əvvəl gecikmə" unit="s" default="2" signed="false" decimal="true">
         <output>elmlab_delay</output>
       </edit>
       <info label="|a| avto-pauza həddinə düşəndən «gecikmə» qədər sonra ölçmə avtomatik dayanır və qrafik donur (fənər də sönür). Gecikmə 0 olsa, ölçmə dərhal dayanar və fənər yanmağa macal tapmaz. Davam etmək üçün ▶ düyməsinə basın."/>
@@ -307,7 +307,7 @@ Telefonlardan birində d məsafəsini və digər telefonun göstərdiyi vaxtı d
         <input>v_theory</input>
       </value>
       <separator height="1"/>
-      <edit label="Həssaslıq həddi" unit="" default="0.3" signed="false" min="0" max="1">
+      <edit label="Həssaslıq həddi" unit="" default="0.2" signed="false" min="0" max="1">
         <output>threshold</output>
       </edit>
       <edit label="Minimum fasilə" unit="s" default="0.1" signed="false">
@@ -316,7 +316,7 @@ Telefonlardan birində d məsafəsini və digər telefonun göstərdiyi vaxtı d
       <info label="Zalda əks-səda saniyəölçəni vaxtından əvvəl dayandırırsa, həssaslıq həddini artırın. Əl çalmaları qısa və kəskin olsun."/>
     </view>
   </views>
-  {analysis.group(1)}{analysis.group(2)}    <formula formula="sqrt((2*[1]/([2]-[3]))^2)">
+  {analysis.group(1)}{analysis.group(2)}    <formula formula="sqrt((2*[1]/([2]-[3]))^2)*heaviside([3]-0.0000001)/heaviside([3]-0.0000001)">
       <input keep="true">d_m</input>
       <input clear="false">dt01</input>
       <input keep="true">t_other</input>
@@ -329,7 +329,67 @@ Telefonlardan birində d məsafəsini və digər telefonun göstərdiyi vaxtı d
   </analysis>
 </phyphox>
 """
+from xml.sax.saxutils import escape as _e
+TR = {
+ "Hava təzyiqi: baş və ayaq": "Hava basıncı: baş ve ayak", "Ölçmə": "Ölçüm", "Təzyiq fərqi Δp": "Basınç farkı Δp",
+ "Hündürlük fərqi Δh": "Yükseklik farkı Δh", "Sıfırla (bu səviyyə = 0)": "Sıfırla (bu seviye = 0)",
+ "Təzyiq fərqi (başlanğıca nəzərən)": "Basınç farkı (başlangıca göre)", "Atmosfer təzyiqi": "Atmosfer basıncı",
+ "Telefonu yerdən başınızın hündürlüyünə qaldırın: Δp ≈ −20 Pa, Δh ≈ +1,7 m. Ölçmə zamanı telefonu tərpətməyin və qapıları açmayın.":
+   "Telefonu yerden başınızın yüksekliğine kaldırın: Δp ≈ −20 Pa, Δh ≈ +1,7 m. Ölçüm sırasında telefonu oynatmayın ve kapıları açmayın.",
+ "Təzyiq": "Basınç", "Vaxt (s)": "Zaman (s)", "Təzyiq (hPa)": "Basınç (hPa)",
+ "Çəkisizlik": "Ağırlıksızlık", "Hiss olunan təcil |a|": "Hissedilen ivme |a|", "Vəziyyət": "Durum",
+ "ÇƏKİSİZLİK": "AĞIRLIKSIZLIK", "dayaq var": "destek var", "|a| zamandan asılı olaraq": "Zamana göre |a|",
+ "Fənər həddi (0 = söndür)": "Fener eşiği (0 = kapalı)",
+ "|a| fənər həddindən aşağı olanda telefonun fənəri maksimal parlaqlıqla 15 Hz tezliklə yanıb-sönür.":
+   "|a| fener eşiğinin altına düştüğünde telefonun feneri en yüksek parlaklıkta 15 Hz frekansla yanıp söner.",
+ "Avto-pauza həddi (0 = söndür)": "Otomatik duraklatma eşiği (0 = kapalı)", "Pauzadan əvvəl gecikmə": "Duraklatmadan önce gecikme",
+ "|a| avto-pauza həddinə düşəndən «gecikmə» qədər sonra ölçmə avtomatik dayanır və qrafik donur (fənər də sönür). Gecikmə 0 olsa, ölçmə dərhal dayanar və fənər yanmağa macal tapmaz. Davam etmək üçün ▶ düyməsinə basın.":
+   "|a| otomatik duraklatma eşiğine düştükten «gecikme» kadar sonra ölçüm otomatik olarak durur ve grafik donar (fener de söner). Gecikme 0 ise ölçüm hemen durur ve fener yanmaya fırsat bulamaz. Devam etmek için ▶ düğmesine basın.",
+ "9,8 m/s² = adi çəki (1 g). Atma anında |a| 9,8-dən böyük olur, uçuşda isə 0-a düşür. Telefonu yalnız yumşaq səthin üzərinə atın!":
+   "9,8 m/s² = normal ağırlık (1 g). Atış anında |a| 9,8'den büyüktür, uçuşta ise 0'a düşer. Telefonu yalnızca yumuşak bir yüzeyin üzerine atın!",
+ "Təcil": "İvme", "Avtomobilin təcili": "Otomobilin ivmesi", "İrəli təcil": "İleri ivme", "Maksimum təcil": "Maksimum ivme",
+ "Sürət (GPS)": "Hız (GPS)", "söndürülüb": "kapalı", "aktivdir": "etkin", "Sürət": "Hız",
+ "İrəli təcil (m/s²)": "İleri ivme (m/s²)", "Sürət (km/s)": "Hız (km/sa)",
+ "Səsin sürəti": "Sesin hızı", "Bu telefonun vaxtı": "Bu telefonun süresi", "Sıfırla": "Sıfırla",
+ "Telefonlar arası məsafə d": "Telefonlar arası mesafe d", "Digər telefonun vaxtı": "Diğer telefonun süresi",
+ "Havanın temperaturu": "Hava sıcaklığı", "Gözlənilən (nəzəri)": "Beklenen (teorik)", "Həssaslıq həddi": "Hassasiyet eşiği",
+ "Minimum fasilə": "Minimum aralık",
+ "Zalda əks-səda saniyəölçəni vaxtından əvvəl dayandırırsa, həssaslıq həddini artırın. Əl çalmaları qısa və kəskin olsun.":
+   "Salondaki yankı kronometreyi erken durduruyorsa hassasiyet eşiğini artırın. El çırpmaları kısa ve keskin olsun.",
+}
+TR_DESC = {
+ "1_pressure.phyphox": """Havanın da ağırlığı vardır: aşağıda basınç yukarıdakinden büyüktür. Boyunuz kadar (1,7 m) yükseklik farkı basıncı yaklaşık 20 Pa (0,2 hPa) değiştirir: Δp = ρ·g·h = 1,2 · 9,81 · 1,7 ≈ 20 Pa.
+
+Nasıl: telefonu yere koyun, ölçümü başlatın, 20–30 s bekleyin (istediğiniz an «Sıfırla» düğmesiyle mevcut seviyeyi sıfır kabul edebilirsiniz). Sonra telefonu başınızın yüksekliğine kaldırıp yine 20–30 s oynatmayın. Grafikte ~20 Pa'lık bir basamak görünecek.""",
+ "2_weightless.phyphox": """Cisim elden çıktığı andan yere düşene kadar ağırlıksızdır: yükselirken, en üst noktada ve inerken. Ona yalnızca yerçekimi etki eder, destek yoktur.
+
+İvmeölçer, destek kuvvetinin oluşturduğu ivmeyi ölçer. Telefon masada dururken |a| ≈ 9,8 m/s² (1 g), serbest uçuşta ise |a| ≈ 0.
+
+Nasıl: ölçümü başlatın ve telefonu yumuşak bir yatağın veya şiltenin üzerine 30–50 cm yukarı atın. Grafikte tüm uçuş boyunca |a| ≈ 0 olan bir «çukur» görünecek.""",
+ "3_car.phyphox": """Otomobil hızlanırken telefon da onunla birlikte ivmelenir. Doğrusal ivmeölçer, yerçekimi çıkarılmış ivmeyi ölçer.
+
+Nasıl: telefonu tutucuda dikey olarak, ekranı sürücüye dönük şekilde sabitleyin. Otomobil dururken ölçümü başlatın, sonra hızlanın. «İleri ivme» pozitif, fren negatif gösterilir. Hız GPS ile ölçülür.
+
+Kontrol: 0–100 km/sa süresi t ise ortalama ivme = 27,8 / t m/s².
+
+Güvenlik: telefonla sürücü değil yolcu ilgilensin; ölçümü boş ve kapalı bir alanda yapın.""",
+ "4_sound.phyphox": """İki telefon salonda birbirinden d mesafede (10–15 m) konur, ikisinde de bu deney başlatılır.
+1) A telefonunun yanında biri el çırpar: iki kronometre de başlar, B'deki biraz geç.
+2) B telefonunun yanında ikinci kişi el çırpar: iki kronometre de durur, A'daki biraz geç.
+Ses mesafeyi iki kez kat ettiği için: v = 2d / (t_A − t_B). Tepki süresi sonucu etkilemez.
+
+Telefonlardan birinde d mesafesini ve diğer telefonun gösterdiği süreyi girin, sesin hızı hesaplanır. 20 °C'de beklenen: 343 m/s.""",
+}
+TR_TITLE = {"1_pressure.phyphox": "Hava basıncı: baş ve ayak", "2_weightless.phyphox": "Ağırlıksızlık", "3_car.phyphox": "Otomobilin ivmesi", "4_sound.phyphox": "Sesin hızı"}
+import re as _re
+def add_tr(name, xml):
+    used = set(_re.findall(r'(?:label|name)="([^"]*)"', xml)) | set(_re.findall(r'<map[^>]*>([^<]*)</map>', xml))
+    strings = "".join(f'      <string original="{_e(k, {chr(34): "&quot;"})}">{_e(v)}</string>\n' for k, v in TR.items() if _e(k, {chr(34): "&quot;"}) in used or k in used)
+    block = (f'  <translations>\n    <translation locale="tr">\n      <title>{_e(TR_TITLE[name])}</title>\n      <category>Müze gösterisi</category>\n'
+             f'      <description>{_e(TR_DESC[name])}</description>\n{strings}    </translation>\n  </translations>\n')
+    i = xml.index("</description>") + len("</description>\n")
+    return xml[:i] + block + xml[i:]
 OUT.mkdir(exist_ok=True)
 for name, s in [("1_pressure.phyphox", pressure), ("2_weightless.phyphox", weightless), ("3_car.phyphox", car), ("4_sound.phyphox", sound)]:
-    (OUT/name).write_text(s, encoding="utf-8")
+    (OUT/name).write_text(add_tr(name, s), encoding="utf-8")
 print("ok")

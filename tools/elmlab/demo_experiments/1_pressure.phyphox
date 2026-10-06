@@ -5,6 +5,25 @@
   <description>Hava sütunu da çəkiyə malikdir: aşağıda təzyiq yuxarıdakından böyükdür. Boyunuz qədər (1,7 m) hündürlük fərqi təzyiqi təxminən 20 Pa (0,2 hPa) dəyişir: Δp = ρ·g·h = 1,2 · 9,81 · 1,7 ≈ 20 Pa.
 
 Necə: telefonu yerə qoyun, ölçməni başladın, 20–30 s gözləyin (istənilən an «Sıfırla» düyməsi ilə indiki səviyyəni sıfır götürə bilərsiniz). Sonra telefonu başınız hündürlüyünə qaldırıb yenə 20–30 s tərpətməyin. Qrafikdə ~20 Pa-lıq pillə görünəcək.</description>
+  <translations>
+    <translation locale="tr">
+      <title>Hava basıncı: baş ve ayak</title>
+      <category>Müze gösterisi</category>
+      <description>Havanın da ağırlığı vardır: aşağıda basınç yukarıdakinden büyüktür. Boyunuz kadar (1,7 m) yükseklik farkı basıncı yaklaşık 20 Pa (0,2 hPa) değiştirir: Δp = ρ·g·h = 1,2 · 9,81 · 1,7 ≈ 20 Pa.
+
+Nasıl: telefonu yere koyun, ölçümü başlatın, 20–30 s bekleyin (istediğiniz an «Sıfırla» düğmesiyle mevcut seviyeyi sıfır kabul edebilirsiniz). Sonra telefonu başınızın yüksekliğine kaldırıp yine 20–30 s oynatmayın. Grafikte ~20 Pa'lık bir basamak görünecek.</description>
+      <string original="Ölçmə">Ölçüm</string>
+      <string original="Təzyiq fərqi Δp">Basınç farkı Δp</string>
+      <string original="Hündürlük fərqi Δh">Yükseklik farkı Δh</string>
+      <string original="Sıfırla (bu səviyyə = 0)">Sıfırla (bu seviye = 0)</string>
+      <string original="Təzyiq fərqi (başlanğıca nəzərən)">Basınç farkı (başlangıca göre)</string>
+      <string original="Atmosfer təzyiqi">Atmosfer basıncı</string>
+      <string original="Telefonu yerdən başınızın hündürlüyünə qaldırın: Δp ≈ −20 Pa, Δh ≈ +1,7 m. Ölçmə zamanı telefonu tərpətməyin və qapıları açmayın.">Telefonu yerden başınızın yüksekliğine kaldırın: Δp ≈ −20 Pa, Δh ≈ +1,7 m. Ölçüm sırasında telefonu oynatmayın ve kapıları açmayın.</string>
+      <string original="Təzyiq">Basınç</string>
+      <string original="Vaxt (s)">Zaman (s)</string>
+      <string original="Təzyiq (hPa)">Basınç (hPa)</string>
+    </translation>
+  </translations>
   <data-containers>
     <container size="0">pressure</container>
     <container size="0">p_time</container>

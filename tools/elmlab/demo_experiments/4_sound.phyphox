@@ -10,6 +10,29 @@ iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN
 Səs məsafəni iki dəfə qət etdiyindən: v = 2d / (t_A − t_B). Reaksiya vaxtı nəticəyə təsir etmir.
 
 Telefonlardan birində d məsafəsini və digər telefonun göstərdiyi vaxtı daxil edin, səsin sürəti hesablanacaq. 20 °C-də gözlənilən: 343 m/s.</description>
+  <translations>
+    <translation locale="tr">
+      <title>Sesin hızı</title>
+      <category>Müze gösterisi</category>
+      <description>İki telefon salonda birbirinden d mesafede (10–15 m) konur, ikisinde de bu deney başlatılır.
+1) A telefonunun yanında biri el çırpar: iki kronometre de başlar, B'deki biraz geç.
+2) B telefonunun yanında ikinci kişi el çırpar: iki kronometre de durur, A'daki biraz geç.
+Ses mesafeyi iki kez kat ettiği için: v = 2d / (t_A − t_B). Tepki süresi sonucu etkilemez.
+
+Telefonlardan birinde d mesafesini ve diğer telefonun gösterdiği süreyi girin, sesin hızı hesaplanır. 20 °C'de beklenen: 343 m/s.</description>
+      <string original="Ölçmə">Ölçüm</string>
+      <string original="Səsin sürəti">Sesin hızı</string>
+      <string original="Bu telefonun vaxtı">Bu telefonun süresi</string>
+      <string original="Sıfırla">Sıfırla</string>
+      <string original="Telefonlar arası məsafə d">Telefonlar arası mesafe d</string>
+      <string original="Digər telefonun vaxtı">Diğer telefonun süresi</string>
+      <string original="Havanın temperaturu">Hava sıcaklığı</string>
+      <string original="Gözlənilən (nəzəri)">Beklenen (teorik)</string>
+      <string original="Həssaslıq həddi">Hassasiyet eşiği</string>
+      <string original="Minimum fasilə">Minimum aralık</string>
+      <string original="Zalda əks-səda saniyəölçəni vaxtından əvvəl dayandırırsa, həssaslıq həddini artırın. Əl çalmaları qısa və kəskin olsun.">Salondaki yankı kronometreyi erken durduruyorsa hassasiyet eşiğini artırın. El çırpmaları kısa ve keskin olsun.</string>
+    </translation>
+  </translations>
   <data-containers>
     <container clearGroup="Settings">threshold</container>
     <container clearGroup="Settings">mindelay</container>
@@ -92,7 +115,7 @@ Telefonlardan birində d məsafəsini və digər telefonun göstərdiyi vaxtı d
         <input>v_theory</input>
       </value>
       <separator height="1"/>
-      <edit label="Həssaslıq həddi" unit="" default="0.3" signed="false" min="0" max="1">
+      <edit label="Həssaslıq həddi" unit="" default="0.2" signed="false" min="0" max="1">
         <output>threshold</output>
       </edit>
       <edit label="Minimum fasilə" unit="s" default="0.1" signed="false">
@@ -312,7 +335,7 @@ Telefonlardan birində d məsafəsini və digər telefonun göstərdiyi vaxtı d
       <input>t0effective</input>
       <output>dt01</output>
     </subtract>
-      <formula formula="sqrt((2*[1]/([2]-[3]))^2)">
+      <formula formula="sqrt((2*[1]/([2]-[3]))^2)*heaviside([3]-0.0000001)/heaviside([3]-0.0000001)">
       <input keep="true">d_m</input>
       <input clear="false">dt01</input>
       <input keep="true">t_other</input>
