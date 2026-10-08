@@ -401,6 +401,8 @@ public class ExperimentListActivity extends AppCompatActivity {
         final int build = de.rwth_aachen.phyphox.BuildConfig.ELMLAB_BUILD;
         if (build <= 0)
             return; //local build without a number
+        if (de.rwth_aachen.phyphox.BuildConfig.ELMLAB_PLAY)
+            return; //Google Play installs are updated by Play
         final long age = System.currentTimeMillis() - de.rwth_aachen.phyphox.BuildConfig.ELMLAB_BUILD_TIME;
         if (age <= 30 * ELMLAB_DAY) {
             elmlabShowBlocker(0);
