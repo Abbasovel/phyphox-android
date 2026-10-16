@@ -17,8 +17,13 @@ The release key is private and is not stored in this repository. Create it once 
 Then add four repository secrets (Settings → Secrets and variables → Actions):
 `ELMLAB_KEYSTORE_BASE64` (output of `base64 -w0 elmlab.jks`), `ELMLAB_KEYSTORE_PASSWORD`, `ELMLAB_KEY_ALIAS` (`elmlab`), `ELMLAB_KEY_PASSWORD`.
 
-Each CI run produces the GitHub APKs and, as the workflow artifact `ElmLab-play-aab`, the app bundles for the Google Play Console.
-Play builds (`-PelmlabPlay`) skip the GitHub update check, since Play handles updates.
+### Google Play
+
+`.github/workflows/elmlab-play.yml` builds the Play app bundle (`com.abbasovel.elmlab`, Android 7+) on every push to `elmlab`
+and uploads it to the closed testing track. Play builds (`-PelmlabPlay`) skip the GitHub update check, since Play handles updates.
+It uses the same four signing secrets (the Play upload key) plus `PLAY_SERVICE_ACCOUNT_JSON`, a Google Cloud service account
+key with release permissions for Elm Lab in the Play Console. The track is `alpha` (Closed testing) unless the repository
+variable `PLAY_TRACK` says otherwise.
 
 ---
 

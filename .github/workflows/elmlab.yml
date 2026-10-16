@@ -40,7 +40,7 @@ jobs:
           fi
           echo "$ELMLAB_KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/elmlab.jks"
           echo "ELMLAB_KEYSTORE_FILE=$RUNNER_TEMP/elmlab.jks" >> "$GITHUB_ENV"
-      - name: Build APK (GitHub) and app bundle (Google Play)
+      - name: Build APK
         env:
           ELMLAB_KEYSTORE_PASSWORD: ${{ secrets.ELMLAB_KEYSTORE_PASSWORD }}
           ELMLAB_KEY_ALIAS: ${{ secrets.ELMLAB_KEY_ALIAS }}
@@ -48,7 +48,6 @@ jobs:
         run: |
           set -o pipefail
           ./gradlew --no-daemon -PelmlabBuild=${{ github.run_number }} assembleRegularRelease assembleDemoRelease 2>&1 | tee build.log
-          ./gradlew --no-daemon -PelmlabBuild=${{ github.run_number }} -PelmlabPlay bundleRegularRelease bundleDemoRelease 2>&1 | tee -a build.log
       - name: Report build errors
         if: failure()
         run: |
@@ -65,13 +64,6 @@ jobs:
         with:
           name: ElmLab-apk
           path: out/*.apk
-      # For upload to the Play Console; not attached to the public GitHub release
-      - uses: actions/upload-artifact@v4
-        with:
-          name: ElmLab-play-aab
-          path: |
-            app/build/outputs/bundle/regularRelease/*.aab
-            app/build/outputs/bundle/demoRelease/*.aab
       - name: Publish release
         uses: softprops/action-gh-release@v2
         with:

@@ -11,6 +11,11 @@ android {
         //Elm Lab: Google Play builds (-PelmlabPlay) get their updates from Play, not from GitHub Releases
         buildConfigField "boolean", "ELMLAB_PLAY", project.hasProperty("elmlabPlay").toString()
         minSdkVersion 21
+        if (project.hasProperty("elmlabPlay")) {
+            //Elm Lab on Google Play: its own package (fixed in the Play Console) and Android 7+
+            applicationId "com.abbasovel.elmlab"
+            minSdkVersion 24
+        }
         targetSdkVersion 37
         compileSdk 37
 
