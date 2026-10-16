@@ -28,7 +28,7 @@
     <string name="applyZoomSameAxis">Digər qrafiklər: Eyni ox</string>
     <string name="newExperiment">Təcrübələri əlavə et</string>
     <string name="newExperimentSimple">Sadə təcrübə əlavə et</string>
-    <string name="newExperimentPhyphoxInfo">Verilənlərin təhlili də daxil olmaqla daha mürəkkəb təcrübələr aparmaq üçün phyphox.org saytını ziyarət edin və onları həmkarlarınız, tələbələriniz və dostlarınız ilə paylaşın.</string>
+    <string name="newExperimentPhyphoxInfo">Öz təcrübələrinizi yaradın və onları həmkarlarınız, tələbələriniz və dostlarınız ilə paylaşın.</string>
     <string name="newExperimentInputTitle">Başlıq</string>
     <string name="newExperimentInputBufferSize">Buffer ölçüsü (saxlanılacaq dəyərlərin sayı)</string>
     <string name="newExperimentInputRate">Sensorun tezliyi (Hz-lə, 0 = mümkün qədər sürətli)</string>
@@ -226,8 +226,8 @@
     <string name="networkPrivacyDeviceInfo">Cihazınızın modeli və/ya Elm Lab versiyası haqqında ətraflı məlumat.</string>
     <string name="networkPrivacySensorInfo">Aşağıdakı sensorlar haqqında texniki təfərrüatlar:</string>
     <string name="graph_tools_system_time">Sistem vaxtına çevir</string>
-    <string name="categoryPhyphoxOrg">phyphox-a dəstək olun</string>
-    <string name="categoryPhyphoxOrgHint">Siyahının sonunda phyphox-a dəstək olmaq üçün yeni seçimlər var.</string>
+    <string name="categoryPhyphoxOrg">Dəstək</string>
+    <string name="categoryPhyphoxOrgHint">Siyahının sonunda yeni dəstək seçimləri var.</string>
     <string name="timedRunBeeps">Akustik siqnallar</string>
     <string name="beeperCountdown">Geri sayım səsləri</string>
     <string name="beeperStart">Başlama səsi</string>

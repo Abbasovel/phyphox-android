@@ -16,7 +16,7 @@ public class FileNameFormat {
     public static final String PREF_KEY = "fileNameFormat";
     public static final String DEFAULT_FORMAT = "{title} {date} {time}";
 
-    private static final String FALLBACK_NAME = "phyphox";
+    private static final String FALLBACK_NAME = "ElmLab";
 
     public static String getFormat(Context ctx) {
         String format = PreferenceManager.getDefaultSharedPreferences(ctx).getString(PREF_KEY, DEFAULT_FORMAT);

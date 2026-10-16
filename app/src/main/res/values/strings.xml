@@ -94,8 +94,8 @@
     <string name="noDrawableData">No drawable data.</string>
     <string name="categoryNewExperiment">Simple custom experiments</string>
     <string name="categoryRawSensor">Raw Sensors</string>
-    <string name="categoryPhyphoxOrg">Contribute to phyphox</string>
-    <string name="categoryPhyphoxOrgHint">There are new options to support phyphox at the bottom of the list.</string>
+    <string name="categoryPhyphoxOrg">Support</string>
+    <string name="categoryPhyphoxOrgHint">There are new support options at the bottom of the list.</string>
     <string name="experimentinfo_hint">Check experiment info to learn how to use this experiment.</string>
     <string name="start_hint">Touch the triangle to start the experiment.</string>
     <string name="timedRunBeeps">Acoustic signals</string>
@@ -150,7 +150,7 @@
     <!-- Creating new experiments  -->
     <string name="newExperiment">Add experiments</string>
     <string name="newExperimentSimple">Add simple experiment</string>
-    <string name="newExperimentPhyphoxInfo">Visit phyphox.org to create more advanced experiments including data analysis and share them with colleagues, students and friends.</string>
+    <string name="newExperimentPhyphoxInfo">Create your own experiments and share them with colleagues, students and friends.</string>
     <string name="newExperimentInputTitle">Title</string>
     <string name="newExperimentInputBufferSize">Buffer size (number of values to be stored)</string>
     <string name="newExperimentInputRate">Sensor rate (in Hz, 0 = as fast as possible)</string>

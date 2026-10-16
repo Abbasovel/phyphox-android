@@ -324,7 +324,7 @@ public abstract class PhyphoxFile {
                         phyphoxStream.inputStream = connection.getInputStream();
                         remoteInputToMemory(phyphoxStream, null, false, connection.getContentLength());
                     } catch (Exception e2) {
-                        phyphoxStream.errorMessage = "Error loading experiment from phyphox: " + e2.getMessage();
+                        phyphoxStream.errorMessage = "Error loading experiment: " + e2.getMessage();
                     }
                 }
                 return phyphoxStream;
@@ -4134,7 +4134,7 @@ public abstract class PhyphoxFile {
 
                             //This class needs to be newer than the file. Otherwise ask the user to update.
                             if (experiment.versionMajor > phyphoxMajor || (experiment.versionMajor == phyphoxMajor && experiment.versionMinor > phyphoxMinor)) {
-                                experiment.message = "This experiment has been created for a more recent version of phyphox. Please update phyphox to load this experiment.";
+                                experiment.message = "This experiment has been created for a more recent version of Elm Lab. Please update Elm Lab to load this experiment.";
                                 return experiment;
                             }
                         } catch (NumberFormatException e) {

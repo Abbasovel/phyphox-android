@@ -173,7 +173,7 @@ class BluetoothExperimentLoader(private val ctx: Context, private val callback: 
         if (!q.run(BleOp.DiscoverServices()).ok)
             throw TransferException(notificationError("could not discover services"), "discovery")
         val service = gatt?.getService(Bluetooth.phyphoxServiceUUID)
-            ?: throw TransferException(notificationError("no phyphox service"), "no_service")
+            ?: throw TransferException(notificationError("no experiment service"), "no_service")
         val experimentCharacteristic = service.getCharacteristic(Bluetooth.phyphoxExperimentCharacteristicUUID)
             ?: throw TransferException(notificationError("no experiment characteristic"), "no_characteristic")
         hasControlCharacteristic = service.getCharacteristic(Bluetooth.phyphoxExperimentControlCharacteristicUUID) != null

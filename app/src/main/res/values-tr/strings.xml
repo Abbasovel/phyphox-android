@@ -63,7 +63,7 @@
     <string name="pick_exportFormat">Veri biçimini seçin.</string>
     <string name="noDrawableData">Çizilebilir veri yok.</string>
     <string name="experimentinfo_hint">Deneyin nasıl kullanılacağını öğrenmek için deney bilgisi kısmını kontrol edin.</string>
-    <string name="newExperimentPhyphoxInfo">Veri analizi de dahil olmak üzere daha ileri düzey deneyler oluşturmak için phyphox.org adresini ziyaret edin. Meslektaşlarınız, öğrencileriniz ve arkadaşlarınızla paylaşın.</string>
+    <string name="newExperimentPhyphoxInfo">Kendi deneylerinizi oluşturun ve meslektaşlarınız, öğrencileriniz ve arkadaşlarınızla paylaşın.</string>
     <string name="newExperimentInputBufferSize">Ara bellek boyutu (depolanacak değerlerin sayısı)</string>
     <string name="newExperimentInputRate">Sensör oranı (Hertz, 0 = mümkün olduğunca hızlı)</string>
     <string name="experimentsPhyphoxOrgURL">http://phyphox.org/experiments</string>

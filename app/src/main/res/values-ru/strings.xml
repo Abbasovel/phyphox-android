@@ -4,7 +4,7 @@
     <string name="action_settings">Настройки</string>
     <string name="title_activity_experiment">Elm Lab</string>
     <string name="newExperiment">Добавить эксперимент</string>
-    <string name="newExperimentPhyphoxInfo">Посетите phyphox.org, чтобы создать эксперименты более высокого уровня и поделиться ими с коллегами, студентами и друзьями.</string>
+    <string name="newExperimentPhyphoxInfo">Создавайте собственные эксперименты и делитесь ими с коллегами, студентами и друзьями.</string>
     <string name="newExperimentInputTitle">Название</string>
     <string name="newExperimentInputBufferSize">Размер буфера (количество сохраняемых значений)</string>
     <string name="newExperimentInputRate">Скорость датчика (в Гц, 0 = как можно быстрее)</string>
@@ -359,8 +359,8 @@
     <string name="common_musical_note_g7">G7</string>
     <string name="common_musical_note_ab7">G#7 / Ab7</string>
     <string name="graph_tools_system_time">Преобразование в системное время</string>
-    <string name="categoryPhyphoxOrg">Внести вклад в phyphox</string>
-    <string name="categoryPhyphoxOrgHint">В нижней части списка есть новые опции для поддержки phyphox.</string>
+    <string name="categoryPhyphoxOrg">Поддержка</string>
+    <string name="categoryPhyphoxOrgHint">В нижней части списка есть новые варианты поддержки.</string>
     <string name="timedRunBeeps">Акустические сигналы</string>
     <string name="beeperCountdown">Звуки обратного отсчета</string>
     <string name="beeperStart">Запустить звук</string>

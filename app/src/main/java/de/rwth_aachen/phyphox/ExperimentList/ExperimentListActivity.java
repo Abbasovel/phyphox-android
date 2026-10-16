@@ -546,7 +546,7 @@ public class ExperimentListActivity extends AppCompatActivity {
             sb.append(" <font color='black'");
         }
 
-        sb.append("<b>phyphox</b><br />");
+        sb.append("<b>Elm Lab</b><br />");
         if (pInfo != null) {
             sb.append("Version: ");
             sb.append(pInfo.versionName);
@@ -934,7 +934,7 @@ public class ExperimentListActivity extends AppCompatActivity {
             String[] extensions = {"phyphox"};
             final Collection<File> files = FileUtils.listFiles(tempPath, extensions, true);
             if (files.size() == 0) {
-                Toast.makeText(this, "Error: There is no valid phyphox experiment in this zip file.", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Error: There is no valid experiment in this zip file.", Toast.LENGTH_LONG).show();
             } else if (files.size() == 1) {
                 //Create an intent for this file
                 Intent intent = new Intent(this, Experiment.class);
