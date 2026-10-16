@@ -259,10 +259,5 @@
     <string name="elmlabSensorLigSub">Aydınlanma, lüks</string>
     <string name="elmlabSensorGpsTitle">Konum (GPS)</string>
     <string name="elmlabSensorGpsSub">Koordinat, yükseklik, hız</string>
-    <string name="elmlabUpdateTitle">Güncelleme gerekli</string>
-    <string name="elmlabUpdateText">Elm Lab\'ın yeni sürümü çıktı. Devam etmek için uygulamayı güncelleyin.</string>
-    <string name="elmlabUpdateOfflineText">Bu sürümün süresi doldu. Güncellemeleri kontrol etmek için internete bağlanın.</string>
-    <string name="elmlabUpdateButton">Güncelle</string>
-    <string name="elmlabUpdateRetry">Tekrar kontrol et</string>
     <string name="elmlabAutoPaused">Otomatik duraklatma: eşiğe ulaşıldı</string>
 </resources>

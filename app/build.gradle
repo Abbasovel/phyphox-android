@@ -4,12 +4,9 @@ android {
 
     defaultConfig {
         applicationId "az.elmmuzeyi.elmlab"
-        //Elm Lab: build number (from CI) and build time for the monthly update requirement
+        //Elm Lab: build number (from CI)
         def elmlabBuild = (project.findProperty("elmlabBuild") ?: "0").toString().toInteger()
         buildConfigField "int", "ELMLAB_BUILD", elmlabBuild.toString()
-        buildConfigField "long", "ELMLAB_BUILD_TIME", System.currentTimeMillis() + "L"
-        //Elm Lab: Google Play builds (-PelmlabPlay) get their updates from Play, not from GitHub Releases
-        buildConfigField "boolean", "ELMLAB_PLAY", project.hasProperty("elmlabPlay").toString()
         minSdkVersion 21
         if (project.hasProperty("elmlabPlay")) {
             //Elm Lab on Google Play: its own package (fixed in the Play Console) and Android 7+
