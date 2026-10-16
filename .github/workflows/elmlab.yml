@@ -30,7 +30,21 @@ jobs:
           python3 tools/elmlab/strip_phyphox_org.py
           mkdir -p app/src/main/assets/experiments/elmlab_demo
           cp tools/elmlab/demo_experiments/*.phyphox app/src/main/assets/experiments/elmlab_demo/
+      - name: Signing key from repository secrets
+        env:
+          ELMLAB_KEYSTORE_BASE64: ${{ secrets.ELMLAB_KEYSTORE_BASE64 }}
+        run: |
+          if [ -z "$ELMLAB_KEYSTORE_BASE64" ]; then
+            echo "::error::Repository secret ELMLAB_KEYSTORE_BASE64 is missing, see README"
+            exit 1
+          fi
+          echo "$ELMLAB_KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/elmlab.jks"
+          echo "ELMLAB_KEYSTORE_FILE=$RUNNER_TEMP/elmlab.jks" >> "$GITHUB_ENV"
       - name: Build APK
+        env:
+          ELMLAB_KEYSTORE_PASSWORD: ${{ secrets.ELMLAB_KEYSTORE_PASSWORD }}
+          ELMLAB_KEY_ALIAS: ${{ secrets.ELMLAB_KEY_ALIAS }}
+          ELMLAB_KEY_PASSWORD: ${{ secrets.ELMLAB_KEY_PASSWORD }}
         run: |
           set -o pipefail
           ./gradlew --no-daemon -PelmlabBuild=${{ github.run_number }} assembleRegularRelease assembleDemoRelease 2>&1 | tee build.log

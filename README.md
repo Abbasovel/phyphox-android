@@ -8,6 +8,23 @@ Elm Lab RWTH Aachen və ya phyphox komandası ilə əlaqəli deyil və onlar tə
 Dəyişikliklər: tətbiq adı və identifikatoru (`az.elmmuzeyi.elmlab`), ikon və loqolar, mətnlərdə məhsul adı —
 bax `tools/elmlab/rebrand.py`. APK: *Releases* bölməsi (GitHub Actions ilə yığılır).
 
+### Signing key / İmza açarı
+
+The release key is private and is not stored in this repository. Create it once and keep a backup:
+
+    keytool -genkeypair -v -keystore elmlab.jks -alias elmlab -keyalg RSA -keysize 4096 -validity 10000
+
+Then add four repository secrets (Settings → Secrets and variables → Actions):
+`ELMLAB_KEYSTORE_BASE64` (output of `base64 -w0 elmlab.jks`), `ELMLAB_KEYSTORE_PASSWORD`, `ELMLAB_KEY_ALIAS` (`elmlab`), `ELMLAB_KEY_PASSWORD`.
+
+### Google Play
+
+`.github/workflows/elmlab-play.yml` builds the Play app bundle (`com.abbasovel.elmlab`, Android 7+) on every push to `elmlab`
+and uploads it to the closed testing track. Play builds (`-PelmlabPlay`) skip the GitHub update check, since Play handles updates.
+It uses the same four signing secrets (the Play upload key) plus `PLAY_SERVICE_ACCOUNT_JSON`, a Google Cloud service account
+key with release permissions for Elm Lab in the Play Console. The track is `alpha` (Closed testing) unless the repository
+variable `PLAY_TRACK` says otherwise.
+
 ---
 
 # phyphox: Android

@@ -1,0 +1,68 @@
+name: Elm Lab Google Play
+# Builds the Play app bundle from the elmlab branch and uploads it to the closed testing track.
+on:
+  push:
+    branches: [elmlab]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: elmlab-play
+  cancel-in-progress: false
+
+jobs:
+  play:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          submodules: recursive
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+      - name: Elm Lab assets
+        run: |
+          python3 tools/elmlab/az_fixes.py
+          python3 tools/elmlab/strip_phyphox_org.py
+          mkdir -p app/src/main/assets/experiments/elmlab_demo
+          cp tools/elmlab/demo_experiments/*.phyphox app/src/main/assets/experiments/elmlab_demo/
+      - name: Upload key from repository secrets
+        env:
+          ELMLAB_KEYSTORE_BASE64: ${{ secrets.ELMLAB_KEYSTORE_BASE64 }}
+          PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          if [ -z "$ELMLAB_KEYSTORE_BASE64" ] || [ -z "$PLAY_SERVICE_ACCOUNT_JSON" ]; then
+            echo "::error::Repository secrets ELMLAB_KEYSTORE_BASE64 and PLAY_SERVICE_ACCOUNT_JSON are needed, see README"
+            exit 1
+          fi
+          echo "$ELMLAB_KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/elmlab.jks"
+          echo "ELMLAB_KEYSTORE_FILE=$RUNNER_TEMP/elmlab.jks" >> "$GITHUB_ENV"
+      - name: Build app bundle
+        env:
+          ELMLAB_KEYSTORE_PASSWORD: ${{ secrets.ELMLAB_KEYSTORE_PASSWORD }}
+          ELMLAB_KEY_ALIAS: ${{ secrets.ELMLAB_KEY_ALIAS }}
+          ELMLAB_KEY_PASSWORD: ${{ secrets.ELMLAB_KEY_PASSWORD }}
+        run: |
+          set -o pipefail
+          ./gradlew --no-daemon -PelmlabBuild=${{ github.run_number }} -PelmlabPlay bundleRegularRelease 2>&1 | tee build.log
+      - name: Report build errors
+        if: failure()
+        run: |
+          [ -f build.log ] && grep -E "error:|^e: |What went wrong|AAPT|ERROR" -A3 build.log | head -60 | while IFS= read -r l; do echo "::error::$l"; done || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ElmLab-play-aab
+          path: app/build/outputs/bundle/regularRelease/*.aab
+      - name: Upload to Google Play
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+          packageName: com.abbasovel.elmlab
+          releaseFiles: app/build/outputs/bundle/regularRelease/*.aab
+          track: ${{ vars.PLAY_TRACK || 'alpha' }}
+          status: completed

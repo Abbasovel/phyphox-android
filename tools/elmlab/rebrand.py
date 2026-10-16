@@ -130,13 +130,17 @@ def gradle():
     s = re.sub(r'applicationId "[^"]+"', f'applicationId "{APP_ID}"', s)
     s = re.sub(r'versionName "([^"]+)"', lambda m: m.group(0) if "elmlab" in m.group(1) else f'versionName "{m.group(1)}-elmlab"', s)
     if "signingConfigs {" not in s:
-        s = s.replace("    buildTypes {", '''    signingConfigs {
-        elmlab {
-            // Elm Lab test key (public). Replace with a private key before a store release.
-            storeFile file('elmlab.keystore')
-            storePassword 'elmlab-test'
-            keyAlias 'elmlab'
-            keyPassword 'elmlab-test'
+        s = s.replace("    buildTypes {", '''    //Elm Lab: the release key is private. CI reads it from repository secrets (see .github/workflows/elmlab.yml),
+    //locally set the same ELMLAB_* environment variables. Without them, release builds are unsigned.
+    def elmlabKeystore = System.getenv("ELMLAB_KEYSTORE_FILE")
+    signingConfigs {
+        if (elmlabKeystore) {
+            elmlab {
+                storeFile file(elmlabKeystore)
+                storePassword System.getenv("ELMLAB_KEYSTORE_PASSWORD")
+                keyAlias System.getenv("ELMLAB_KEY_ALIAS")
+                keyPassword System.getenv("ELMLAB_KEY_PASSWORD")
+            }
         }
     }
 
@@ -145,11 +149,8 @@ def gradle():
         abortOnError false
     }
 
-    buildTypes {
-        debug {
-            signingConfig signingConfigs.elmlab
-        }''', 1)
-        s = s.replace("        release {\n", "        release {\n            signingConfig signingConfigs.elmlab\n", 1)
+    buildTypes {''', 1)
+        s = s.replace("        release {\n", "        release {\n            if (elmlabKeystore)\n                signingConfig signingConfigs.elmlab\n", 1)
     p.write_text(s, encoding="utf-8")
     m = APP/"src/main/AndroidManifest.xml"; t = m.read_text(encoding="utf-8")
     m.write_text(t.replace('android:authorities="de.rwth_aachen.phyphox.exportProvider"', 'android:authorities="${applicationId}.exportProvider"'), encoding="utf-8")
