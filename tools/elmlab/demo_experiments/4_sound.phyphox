@@ -32,6 +32,48 @@ Telefonlardan birinde d mesafesini ve diğer telefonun gösterdiği süreyi giri
       <string original="Minimum fasilə">Minimum aralık</string>
       <string original="Zalda əks-səda saniyəölçəni vaxtından əvvəl dayandırırsa, həssaslıq həddini artırın. Əl çalmaları qısa və kəskin olsun.">Salondaki yankı kronometreyi erken durduruyorsa hassasiyet eşiğini artırın. El çırpmaları kısa ve keskin olsun.</string>
     </translation>
+    <translation locale="ru">
+      <title>Скорость звука</title>
+      <category>Музейная демонстрация</category>
+      <description>Два телефона ставят в зале на расстоянии d (10–15 м) друг от друга, на обоих запускают этот эксперимент.
+1) Рядом с телефоном A кто-то хлопает: оба секундомера запускаются, на B чуть позже.
+2) Рядом с телефоном B второй человек хлопает: оба секундомера останавливаются, на A чуть позже.
+Звук проходит расстояние дважды, поэтому: v = 2d / (t_A − t_B). Время реакции на результат не влияет.
+
+Введите на одном из телефонов расстояние d и время, показанное другим телефоном, — скорость звука будет вычислена. При 20 °C ожидается 343 м/с.</description>
+      <string original="Ölçmə">Измерение</string>
+      <string original="Səsin sürəti">Скорость звука</string>
+      <string original="Bu telefonun vaxtı">Время этого телефона</string>
+      <string original="Sıfırla">Сбросить</string>
+      <string original="Telefonlar arası məsafə d">Расстояние между телефонами d</string>
+      <string original="Digər telefonun vaxtı">Время другого телефона</string>
+      <string original="Havanın temperaturu">Температура воздуха</string>
+      <string original="Gözlənilən (nəzəri)">Ожидаемое (теоретическое)</string>
+      <string original="Həssaslıq həddi">Порог чувствительности</string>
+      <string original="Minimum fasilə">Минимальный интервал</string>
+      <string original="Zalda əks-səda saniyəölçəni vaxtından əvvəl dayandırırsa, həssaslıq həddini artırın. Əl çalmaları qısa və kəskin olsun.">Если эхо в зале останавливает секундомер раньше времени, увеличьте порог чувствительности. Хлопки должны быть короткими и резкими.</string>
+    </translation>
+    <translation locale="en">
+      <title>Speed of sound</title>
+      <category>Museum demonstration</category>
+      <description>Two phones are placed in the hall at a distance d (10–15 m) from each other; this experiment is started on both.
+1) Someone claps next to phone A: both stopwatches start, the one on B slightly later.
+2) A second person claps next to phone B: both stopwatches stop, the one on A slightly later.
+The sound travels the distance twice, so: v = 2d / (t_A − t_B). Reaction time does not affect the result.
+
+On one phone enter the distance d and the time shown by the other phone, and the speed of sound is calculated. Expected at 20 °C: 343 m/s.</description>
+      <string original="Ölçmə">Measurement</string>
+      <string original="Səsin sürəti">Speed of sound</string>
+      <string original="Bu telefonun vaxtı">This phone's time</string>
+      <string original="Sıfırla">Reset</string>
+      <string original="Telefonlar arası məsafə d">Distance between phones d</string>
+      <string original="Digər telefonun vaxtı">Other phone's time</string>
+      <string original="Havanın temperaturu">Air temperature</string>
+      <string original="Gözlənilən (nəzəri)">Expected (theoretical)</string>
+      <string original="Həssaslıq həddi">Sensitivity threshold</string>
+      <string original="Minimum fasilə">Minimum interval</string>
+      <string original="Zalda əks-səda saniyəölçəni vaxtından əvvəl dayandırırsa, həssaslıq həddini artırın. Əl çalmaları qısa və kəskin olsun.">If the echo in the hall stops the stopwatch too early, raise the sensitivity threshold. Claps should be short and sharp.</string>
+    </translation>
   </translations>
   <data-containers>
     <container clearGroup="Settings">threshold</container>

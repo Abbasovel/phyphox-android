@@ -23,6 +23,40 @@ Nasıl: telefonu yere koyun, ölçümü başlatın, 20–30 s bekleyin (istediğ
       <string original="Vaxt (s)">Zaman (s)</string>
       <string original="Təzyiq (hPa)">Basınç (hPa)</string>
     </translation>
+    <translation locale="ru">
+      <title>Давление воздуха: голова и ноги</title>
+      <category>Музейная демонстрация</category>
+      <description>Воздух тоже имеет вес: внизу давление больше, чем вверху. Разница высот, равная вашему росту (1,7 м), меняет давление примерно на 20 Па (0,2 гПа): Δp = ρ·g·h = 1,2 · 9,81 · 1,7 ≈ 20 Па.
+
+Как: положите телефон на пол, запустите измерение, подождите 20–30 с (в любой момент кнопкой «Сбросить» можно принять текущий уровень за ноль). Затем поднимите телефон на высоту головы и снова не двигайте 20–30 с. На графике появится ступенька ~20 Па.</description>
+      <string original="Ölçmə">Измерение</string>
+      <string original="Təzyiq fərqi Δp">Разность давлений Δp</string>
+      <string original="Hündürlük fərqi Δh">Разность высот Δh</string>
+      <string original="Sıfırla (bu səviyyə = 0)">Сбросить (этот уровень = 0)</string>
+      <string original="Təzyiq fərqi (başlanğıca nəzərən)">Разность давлений (относительно начала)</string>
+      <string original="Atmosfer təzyiqi">Атмосферное давление</string>
+      <string original="Telefonu yerdən başınızın hündürlüyünə qaldırın: Δp ≈ −20 Pa, Δh ≈ +1,7 m. Ölçmə zamanı telefonu tərpətməyin və qapıları açmayın.">Поднимите телефон с пола на высоту головы: Δp ≈ −20 Па, Δh ≈ +1,7 м. Во время измерения не двигайте телефон и не открывайте двери.</string>
+      <string original="Təzyiq">Давление</string>
+      <string original="Vaxt (s)">Время (с)</string>
+      <string original="Təzyiq (hPa)">Давление (гПа)</string>
+    </translation>
+    <translation locale="en">
+      <title>Air pressure: head and feet</title>
+      <category>Museum demonstration</category>
+      <description>Air has weight too: pressure is higher below than above. A height difference equal to your height (1.7 m) changes the pressure by about 20 Pa (0.2 hPa): Δp = ρ·g·h = 1.2 · 9.81 · 1.7 ≈ 20 Pa.
+
+How: put the phone on the floor, start the measurement, wait 20–30 s (at any moment the «Reset» button takes the current level as zero). Then lift the phone to the height of your head and keep it still for another 20–30 s. The graph will show a step of ~20 Pa.</description>
+      <string original="Ölçmə">Measurement</string>
+      <string original="Təzyiq fərqi Δp">Pressure difference Δp</string>
+      <string original="Hündürlük fərqi Δh">Height difference Δh</string>
+      <string original="Sıfırla (bu səviyyə = 0)">Reset (this level = 0)</string>
+      <string original="Təzyiq fərqi (başlanğıca nəzərən)">Pressure difference (relative to start)</string>
+      <string original="Atmosfer təzyiqi">Atmospheric pressure</string>
+      <string original="Telefonu yerdən başınızın hündürlüyünə qaldırın: Δp ≈ −20 Pa, Δh ≈ +1,7 m. Ölçmə zamanı telefonu tərpətməyin və qapıları açmayın.">Lift the phone from the floor to the height of your head: Δp ≈ −20 Pa, Δh ≈ +1.7 m. Do not move the phone or open doors during the measurement.</string>
+      <string original="Təzyiq">Pressure</string>
+      <string original="Vaxt (s)">Time (s)</string>
+      <string original="Təzyiq (hPa)">Pressure (hPa)</string>
+    </translation>
   </translations>
   <data-containers>
     <container size="0">pressure</container>

@@ -31,6 +31,48 @@ Güvenlik: telefonla sürücü değil yolcu ilgilensin; ölçümü boş ve kapal
       <string original="İrəli təcil (m/s²)">İleri ivme (m/s²)</string>
       <string original="Sürət (km/s)">Hız (km/sa)</string>
     </translation>
+    <translation locale="ru">
+      <title>Ускорение автомобиля</title>
+      <category>Музейная демонстрация</category>
+      <description>Когда автомобиль разгоняется, телефон ускоряется вместе с ним. Линейный акселерометр измеряет ускорение без силы тяжести.
+
+Как: закрепите телефон в держателе вертикально, экраном к водителю. Запустите измерение, пока автомобиль стоит, затем разгоняйтесь. «Ускорение вперёд» положительно, торможение отрицательно. Скорость измеряется по GPS.
+
+Проверка: если время разгона 0–100 км/ч равно t, среднее ускорение = 27,8 / t м/с².
+
+Безопасность: с телефоном работает пассажир, а не водитель; измеряйте на пустой закрытой площадке.</description>
+      <string original="Vaxt (s)">Время (с)</string>
+      <string original="Təcil">Ускорение</string>
+      <string original="İrəli təcil">Ускорение вперёд</string>
+      <string original="Maksimum təcil">Максимальное ускорение</string>
+      <string original="Sürət (GPS)">Скорость (GPS)</string>
+      <string original="söndürülüb">выключен</string>
+      <string original="aktivdir">активен</string>
+      <string original="Sürət">Скорость</string>
+      <string original="İrəli təcil (m/s²)">Ускорение вперёд (м/с²)</string>
+      <string original="Sürət (km/s)">Скорость (км/ч)</string>
+    </translation>
+    <translation locale="en">
+      <title>Car acceleration</title>
+      <category>Museum demonstration</category>
+      <description>When the car speeds up, the phone accelerates with it. The linear accelerometer measures acceleration without gravity.
+
+How: fix the phone vertically in a holder, screen facing the driver. Start the measurement while the car is standing, then accelerate. «Forward acceleration» is positive, braking negative. Speed is measured by GPS.
+
+Check: if the 0–100 km/h time is t, the average acceleration = 27.8 / t m/s².
+
+Safety: the passenger, not the driver, handles the phone; measure on an empty, closed area.</description>
+      <string original="Vaxt (s)">Time (s)</string>
+      <string original="Təcil">Acceleration</string>
+      <string original="İrəli təcil">Forward acceleration</string>
+      <string original="Maksimum təcil">Maximum acceleration</string>
+      <string original="Sürət (GPS)">Speed (GPS)</string>
+      <string original="söndürülüb">off</string>
+      <string original="aktivdir">active</string>
+      <string original="Sürət">Speed</string>
+      <string original="İrəli təcil (m/s²)">Forward acceleration (m/s²)</string>
+      <string original="Sürət (km/s)">Speed (km/h)</string>
+    </translation>
   </translations>
   <data-containers>
     <container size="0">ax</container>

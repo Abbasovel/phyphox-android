@@ -31,6 +31,52 @@ Nasıl: ölçümü başlatın ve telefonu yumuşak bir yatağın veya şiltenin 
       <string original="9,8 m/s² = adi çəki (1 g). Atma anında |a| 9,8-dən böyük olur, uçuşda isə 0-a düşür. Telefonu yalnız yumşaq səthin üzərinə atın!">9,8 m/s² = normal ağırlık (1 g). Atış anında |a| 9,8'den büyüktür, uçuşta ise 0'a düşer. Telefonu yalnızca yumuşak bir yüzeyin üzerine atın!</string>
       <string original="Təcil">İvme</string>
     </translation>
+    <translation locale="ru">
+      <title>Невесомость</title>
+      <category>Музейная демонстрация</category>
+      <description>Тело невесомо с момента, когда оно покидает руку, и до падения: при подъёме, в верхней точке и при спуске. На него действует только сила тяжести, опоры нет.
+
+Акселерометр измеряет ускорение, создаваемое силой опоры. Когда телефон лежит на столе, |a| ≈ 9,8 м/с² (1 g), а в свободном полёте |a| ≈ 0.
+
+Как: запустите измерение и подбросьте телефон на 30–50 см над мягкой кроватью или матрасом. На графике весь полёт будет «ямой» с |a| ≈ 0.</description>
+      <string original="Ölçmə">Измерение</string>
+      <string original="Vaxt (s)">Время (с)</string>
+      <string original="Hiss olunan təcil |a|">Ощущаемое ускорение |a|</string>
+      <string original="Vəziyyət">Состояние</string>
+      <string original="ÇƏKİSİZLİK">НЕВЕСОМОСТЬ</string>
+      <string original="dayaq var">есть опора</string>
+      <string original="|a| zamandan asılı olaraq">|a| в зависимости от времени</string>
+      <string original="Fənər həddi (0 = söndür)">Порог фонарика (0 = выкл.)</string>
+      <string original="|a| fənər həddindən aşağı olanda telefonun fənəri maksimal parlaqlıqla 15 Hz tezliklə yanıb-sönür.">Когда |a| ниже порога фонарика, фонарик телефона мигает на максимальной яркости с частотой 15 Гц.</string>
+      <string original="Avto-pauza həddi (0 = söndür)">Порог автопаузы (0 = выкл.)</string>
+      <string original="Pauzadan əvvəl gecikmə">Задержка перед паузой</string>
+      <string original="|a| avto-pauza həddinə düşəndən «gecikmə» qədər sonra ölçmə avtomatik dayanır və qrafik donur (fənər də sönür). Gecikmə 0 olsa, ölçmə dərhal dayanar və fənər yanmağa macal tapmaz. Davam etmək üçün ▶ düyməsinə basın.">Через время «задержки» после того, как |a| опустится до порога автопаузы, измерение автоматически останавливается и график замирает (фонарик гаснет). При задержке 0 измерение остановится сразу, и фонарик не успеет загореться. Чтобы продолжить, нажмите ▶.</string>
+      <string original="9,8 m/s² = adi çəki (1 g). Atma anında |a| 9,8-dən böyük olur, uçuşda isə 0-a düşür. Telefonu yalnız yumşaq səthin üzərinə atın!">9,8 м/с² = обычный вес (1 g). В момент броска |a| больше 9,8, а в полёте падает до 0. Бросайте телефон только на мягкую поверхность!</string>
+      <string original="Təcil">Ускорение</string>
+    </translation>
+    <translation locale="en">
+      <title>Weightlessness</title>
+      <category>Museum demonstration</category>
+      <description>An object is weightless from the moment it leaves the hand until it lands: while rising, at the top and while falling. Only gravity acts on it, there is no support.
+
+The accelerometer measures the acceleration caused by the supporting force. With the phone lying on a table |a| ≈ 9.8 m/s² (1 g), in free flight |a| ≈ 0.
+
+How: start the measurement and toss the phone 30–50 cm up above a soft bed or mattress. The whole flight shows up as a «dip» with |a| ≈ 0.</description>
+      <string original="Ölçmə">Measurement</string>
+      <string original="Vaxt (s)">Time (s)</string>
+      <string original="Hiss olunan təcil |a|">Felt acceleration |a|</string>
+      <string original="Vəziyyət">State</string>
+      <string original="ÇƏKİSİZLİK">WEIGHTLESS</string>
+      <string original="dayaq var">supported</string>
+      <string original="|a| zamandan asılı olaraq">|a| over time</string>
+      <string original="Fənər həddi (0 = söndür)">Flashlight threshold (0 = off)</string>
+      <string original="|a| fənər həddindən aşağı olanda telefonun fənəri maksimal parlaqlıqla 15 Hz tezliklə yanıb-sönür.">While |a| is below the flashlight threshold, the phone's flashlight blinks at full brightness at 15 Hz.</string>
+      <string original="Avto-pauza həddi (0 = söndür)">Auto-pause threshold (0 = off)</string>
+      <string original="Pauzadan əvvəl gecikmə">Delay before pause</string>
+      <string original="|a| avto-pauza həddinə düşəndən «gecikmə» qədər sonra ölçmə avtomatik dayanır və qrafik donur (fənər də sönür). Gecikmə 0 olsa, ölçmə dərhal dayanar və fənər yanmağa macal tapmaz. Davam etmək üçün ▶ düyməsinə basın.">The measurement stops automatically and the graph freezes (the flashlight turns off) one "delay" after |a| drops to the auto-pause threshold. With a delay of 0 it stops immediately and the flashlight has no time to light up. Press ▶ to continue.</string>
+      <string original="9,8 m/s² = adi çəki (1 g). Atma anında |a| 9,8-dən böyük olur, uçuşda isə 0-a düşür. Telefonu yalnız yumşaq səthin üzərinə atın!">9.8 m/s² = normal weight (1 g). At the throw |a| is above 9.8, in flight it drops to 0. Only throw the phone onto a soft surface!</string>
+      <string original="Təcil">Acceleration</string>
+    </translation>
   </translations>
   <data-containers>
     <container size="0">accX</container>

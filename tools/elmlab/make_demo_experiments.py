@@ -382,13 +382,122 @@ Telefonlardan birinde d mesafesini ve diğer telefonun gösterdiği süreyi giri
 }
 TR_TITLE = {"1_pressure.phyphox": "Hava basıncı: baş ve ayak", "2_weightless.phyphox": "Ağırlıksızlık", "3_car.phyphox": "Otomobilin ivmesi", "4_sound.phyphox": "Sesin hızı"}
 import re as _re
+RU = {
+ "Hava təzyiqi: baş və ayaq": "Давление воздуха: голова и ноги", "Ölçmə": "Измерение", "Təzyiq fərqi Δp": "Разность давлений Δp",
+ "Hündürlük fərqi Δh": "Разность высот Δh", "Sıfırla (bu səviyyə = 0)": "Сбросить (этот уровень = 0)",
+ "Təzyiq fərqi (başlanğıca nəzərən)": "Разность давлений (относительно начала)", "Atmosfer təzyiqi": "Атмосферное давление",
+ "Telefonu yerdən başınızın hündürlüyünə qaldırın: Δp ≈ −20 Pa, Δh ≈ +1,7 m. Ölçmə zamanı telefonu tərpətməyin və qapıları açmayın.":
+   "Поднимите телефон с пола на высоту головы: Δp ≈ −20 Па, Δh ≈ +1,7 м. Во время измерения не двигайте телефон и не открывайте двери.",
+ "Təzyiq": "Давление", "Vaxt (s)": "Время (с)", "Təzyiq (hPa)": "Давление (гПа)",
+ "Çəkisizlik": "Невесомость", "Hiss olunan təcil |a|": "Ощущаемое ускорение |a|", "Vəziyyət": "Состояние",
+ "ÇƏKİSİZLİK": "НЕВЕСОМОСТЬ", "dayaq var": "есть опора", "|a| zamandan asılı olaraq": "|a| в зависимости от времени",
+ "Fənər həddi (0 = söndür)": "Порог фонарика (0 = выкл.)",
+ "|a| fənər həddindən aşağı olanda telefonun fənəri maksimal parlaqlıqla 15 Hz tezliklə yanıb-sönür.":
+   "Когда |a| ниже порога фонарика, фонарик телефона мигает на максимальной яркости с частотой 15 Гц.",
+ "Avto-pauza həddi (0 = söndür)": "Порог автопаузы (0 = выкл.)", "Pauzadan əvvəl gecikmə": "Задержка перед паузой",
+ "|a| avto-pauza həddinə düşəndən «gecikmə» qədər sonra ölçmə avtomatik dayanır və qrafik donur (fənər də sönür). Gecikmə 0 olsa, ölçmə dərhal dayanar və fənər yanmağa macal tapmaz. Davam etmək üçün ▶ düyməsinə basın.":
+   "Через время «задержки» после того, как |a| опустится до порога автопаузы, измерение автоматически останавливается и график замирает (фонарик гаснет). При задержке 0 измерение остановится сразу, и фонарик не успеет загореться. Чтобы продолжить, нажмите ▶.",
+ "9,8 m/s² = adi çəki (1 g). Atma anında |a| 9,8-dən böyük olur, uçuşda isə 0-a düşür. Telefonu yalnız yumşaq səthin üzərinə atın!":
+   "9,8 м/с² = обычный вес (1 g). В момент броска |a| больше 9,8, а в полёте падает до 0. Бросайте телефон только на мягкую поверхность!",
+ "Təcil": "Ускорение", "Avtomobilin təcili": "Ускорение автомобиля", "İrəli təcil": "Ускорение вперёд", "Maksimum təcil": "Максимальное ускорение",
+ "Sürət (GPS)": "Скорость (GPS)", "söndürülüb": "выключен", "aktivdir": "активен", "Sürət": "Скорость",
+ "İrəli təcil (m/s²)": "Ускорение вперёд (м/с²)", "Sürət (km/s)": "Скорость (км/ч)",
+ "Səsin sürəti": "Скорость звука", "Bu telefonun vaxtı": "Время этого телефона", "Sıfırla": "Сбросить",
+ "Telefonlar arası məsafə d": "Расстояние между телефонами d", "Digər telefonun vaxtı": "Время другого телефона",
+ "Havanın temperaturu": "Температура воздуха", "Gözlənilən (nəzəri)": "Ожидаемое (теоретическое)", "Həssaslıq həddi": "Порог чувствительности",
+ "Minimum fasilə": "Минимальный интервал",
+ "Zalda əks-səda saniyəölçəni vaxtından əvvəl dayandırırsa, həssaslıq həddini artırın. Əl çalmaları qısa və kəskin olsun.":
+   "Если эхо в зале останавливает секундомер раньше времени, увеличьте порог чувствительности. Хлопки должны быть короткими и резкими.",
+}
+RU_TITLE = {"1_pressure.phyphox": "Давление воздуха: голова и ноги", "2_weightless.phyphox": "Невесомость", "3_car.phyphox": "Ускорение автомобиля", "4_sound.phyphox": "Скорость звука"}
+RU_DESC = {
+ "1_pressure.phyphox": """Воздух тоже имеет вес: внизу давление больше, чем вверху. Разница высот, равная вашему росту (1,7 м), меняет давление примерно на 20 Па (0,2 гПа): Δp = ρ·g·h = 1,2 · 9,81 · 1,7 ≈ 20 Па.
+
+Как: положите телефон на пол, запустите измерение, подождите 20–30 с (в любой момент кнопкой «Сбросить» можно принять текущий уровень за ноль). Затем поднимите телефон на высоту головы и снова не двигайте 20–30 с. На графике появится ступенька ~20 Па.""",
+ "2_weightless.phyphox": """Тело невесомо с момента, когда оно покидает руку, и до падения: при подъёме, в верхней точке и при спуске. На него действует только сила тяжести, опоры нет.
+
+Акселерометр измеряет ускорение, создаваемое силой опоры. Когда телефон лежит на столе, |a| ≈ 9,8 м/с² (1 g), а в свободном полёте |a| ≈ 0.
+
+Как: запустите измерение и подбросьте телефон на 30–50 см над мягкой кроватью или матрасом. На графике весь полёт будет «ямой» с |a| ≈ 0.""",
+ "3_car.phyphox": """Когда автомобиль разгоняется, телефон ускоряется вместе с ним. Линейный акселерометр измеряет ускорение без силы тяжести.
+
+Как: закрепите телефон в держателе вертикально, экраном к водителю. Запустите измерение, пока автомобиль стоит, затем разгоняйтесь. «Ускорение вперёд» положительно, торможение отрицательно. Скорость измеряется по GPS.
+
+Проверка: если время разгона 0–100 км/ч равно t, среднее ускорение = 27,8 / t м/с².
+
+Безопасность: с телефоном работает пассажир, а не водитель; измеряйте на пустой закрытой площадке.""",
+ "4_sound.phyphox": """Два телефона ставят в зале на расстоянии d (10–15 м) друг от друга, на обоих запускают этот эксперимент.
+1) Рядом с телефоном A кто-то хлопает: оба секундомера запускаются, на B чуть позже.
+2) Рядом с телефоном B второй человек хлопает: оба секундомера останавливаются, на A чуть позже.
+Звук проходит расстояние дважды, поэтому: v = 2d / (t_A − t_B). Время реакции на результат не влияет.
+
+Введите на одном из телефонов расстояние d и время, показанное другим телефоном, — скорость звука будет вычислена. При 20 °C ожидается 343 м/с.""",
+}
+EN = {
+ "Hava təzyiqi: baş və ayaq": "Air pressure: head and feet", "Ölçmə": "Measurement", "Təzyiq fərqi Δp": "Pressure difference Δp",
+ "Hündürlük fərqi Δh": "Height difference Δh", "Sıfırla (bu səviyyə = 0)": "Reset (this level = 0)",
+ "Təzyiq fərqi (başlanğıca nəzərən)": "Pressure difference (relative to start)", "Atmosfer təzyiqi": "Atmospheric pressure",
+ "Telefonu yerdən başınızın hündürlüyünə qaldırın: Δp ≈ −20 Pa, Δh ≈ +1,7 m. Ölçmə zamanı telefonu tərpətməyin və qapıları açmayın.":
+   "Lift the phone from the floor to the height of your head: Δp ≈ −20 Pa, Δh ≈ +1.7 m. Do not move the phone or open doors during the measurement.",
+ "Təzyiq": "Pressure", "Vaxt (s)": "Time (s)", "Təzyiq (hPa)": "Pressure (hPa)",
+ "Çəkisizlik": "Weightlessness", "Hiss olunan təcil |a|": "Felt acceleration |a|", "Vəziyyət": "State",
+ "ÇƏKİSİZLİK": "WEIGHTLESS", "dayaq var": "supported", "|a| zamandan asılı olaraq": "|a| over time",
+ "Fənər həddi (0 = söndür)": "Flashlight threshold (0 = off)",
+ "|a| fənər həddindən aşağı olanda telefonun fənəri maksimal parlaqlıqla 15 Hz tezliklə yanıb-sönür.":
+   "While |a| is below the flashlight threshold, the phone's flashlight blinks at full brightness at 15 Hz.",
+ "Avto-pauza həddi (0 = söndür)": "Auto-pause threshold (0 = off)", "Pauzadan əvvəl gecikmə": "Delay before pause",
+ "|a| avto-pauza həddinə düşəndən «gecikmə» qədər sonra ölçmə avtomatik dayanır və qrafik donur (fənər də sönür). Gecikmə 0 olsa, ölçmə dərhal dayanar və fənər yanmağa macal tapmaz. Davam etmək üçün ▶ düyməsinə basın.":
+   "The measurement stops automatically and the graph freezes (the flashlight turns off) one \"delay\" after |a| drops to the auto-pause threshold. With a delay of 0 it stops immediately and the flashlight has no time to light up. Press ▶ to continue.",
+ "9,8 m/s² = adi çəki (1 g). Atma anında |a| 9,8-dən böyük olur, uçuşda isə 0-a düşür. Telefonu yalnız yumşaq səthin üzərinə atın!":
+   "9.8 m/s² = normal weight (1 g). At the throw |a| is above 9.8, in flight it drops to 0. Only throw the phone onto a soft surface!",
+ "Təcil": "Acceleration", "Avtomobilin təcili": "Car acceleration", "İrəli təcil": "Forward acceleration", "Maksimum təcil": "Maximum acceleration",
+ "Sürət (GPS)": "Speed (GPS)", "söndürülüb": "off", "aktivdir": "active", "Sürət": "Speed",
+ "İrəli təcil (m/s²)": "Forward acceleration (m/s²)", "Sürət (km/s)": "Speed (km/h)",
+ "Səsin sürəti": "Speed of sound", "Bu telefonun vaxtı": "This phone's time", "Sıfırla": "Reset",
+ "Telefonlar arası məsafə d": "Distance between phones d", "Digər telefonun vaxtı": "Other phone's time",
+ "Havanın temperaturu": "Air temperature", "Gözlənilən (nəzəri)": "Expected (theoretical)", "Həssaslıq həddi": "Sensitivity threshold",
+ "Minimum fasilə": "Minimum interval",
+ "Zalda əks-səda saniyəölçəni vaxtından əvvəl dayandırırsa, həssaslıq həddini artırın. Əl çalmaları qısa və kəskin olsun.":
+   "If the echo in the hall stops the stopwatch too early, raise the sensitivity threshold. Claps should be short and sharp.",
+}
+EN_TITLE = {"1_pressure.phyphox": "Air pressure: head and feet", "2_weightless.phyphox": "Weightlessness", "3_car.phyphox": "Car acceleration", "4_sound.phyphox": "Speed of sound"}
+EN_DESC = {
+ "1_pressure.phyphox": """Air has weight too: pressure is higher below than above. A height difference equal to your height (1.7 m) changes the pressure by about 20 Pa (0.2 hPa): Δp = ρ·g·h = 1.2 · 9.81 · 1.7 ≈ 20 Pa.
+
+How: put the phone on the floor, start the measurement, wait 20–30 s (at any moment the «Reset» button takes the current level as zero). Then lift the phone to the height of your head and keep it still for another 20–30 s. The graph will show a step of ~20 Pa.""",
+ "2_weightless.phyphox": """An object is weightless from the moment it leaves the hand until it lands: while rising, at the top and while falling. Only gravity acts on it, there is no support.
+
+The accelerometer measures the acceleration caused by the supporting force. With the phone lying on a table |a| ≈ 9.8 m/s² (1 g), in free flight |a| ≈ 0.
+
+How: start the measurement and toss the phone 30–50 cm up above a soft bed or mattress. The whole flight shows up as a «dip» with |a| ≈ 0.""",
+ "3_car.phyphox": """When the car speeds up, the phone accelerates with it. The linear accelerometer measures acceleration without gravity.
+
+How: fix the phone vertically in a holder, screen facing the driver. Start the measurement while the car is standing, then accelerate. «Forward acceleration» is positive, braking negative. Speed is measured by GPS.
+
+Check: if the 0–100 km/h time is t, the average acceleration = 27.8 / t m/s².
+
+Safety: the passenger, not the driver, handles the phone; measure on an empty, closed area.""",
+ "4_sound.phyphox": """Two phones are placed in the hall at a distance d (10–15 m) from each other; this experiment is started on both.
+1) Someone claps next to phone A: both stopwatches start, the one on B slightly later.
+2) A second person claps next to phone B: both stopwatches stop, the one on A slightly later.
+The sound travels the distance twice, so: v = 2d / (t_A − t_B). Reaction time does not affect the result.
+
+On one phone enter the distance d and the time shown by the other phone, and the speed of sound is calculated. Expected at 20 °C: 343 m/s.""",
+}
+
+LANGS = [("tr", TR, TR_TITLE, TR_DESC, "Müze gösterisi"), ("ru", RU, RU_TITLE, RU_DESC, "Музейная демонстрация"), ("en", EN, EN_TITLE, EN_DESC, "Museum demonstration")]
 def add_tr(name, xml):
+    q = {chr(34): "&quot;"}
     used = set(_re.findall(r'(?:label|name)="([^"]*)"', xml)) | set(_re.findall(r'<map[^>]*>([^<]*)</map>', xml))
-    strings = "".join(f'      <string original="{_e(k, {chr(34): "&quot;"})}">{_e(v)}</string>\n' for k, v in TR.items() if _e(k, {chr(34): "&quot;"}) in used or k in used)
-    block = (f'  <translations>\n    <translation locale="tr">\n      <title>{_e(TR_TITLE[name])}</title>\n      <category>Müze gösterisi</category>\n'
-             f'      <description>{_e(TR_DESC[name])}</description>\n{strings}    </translation>\n  </translations>\n')
+    missing = [u for u in used if u not in {_e(k, q) for k in TR} and not _re.fullmatch(r'[\w ()/²|.-]*', u)]
+    if missing: print("untranslated in", name, missing)
+    blocks = ""
+    for loc, D, TT, DD, cat in LANGS:
+        strings = "".join(f'      <string original="{_e(k, q)}">{_e(v)}</string>\n' for k, v in D.items() if _e(k, q) in used)
+        blocks += (f'    <translation locale="{loc}">\n      <title>{_e(TT[name])}</title>\n      <category>{_e(cat)}</category>\n'
+                   f'      <description>{_e(DD[name])}</description>\n{strings}    </translation>\n')
     i = xml.index("</description>") + len("</description>\n")
-    return xml[:i] + block + xml[i:]
+    return xml[:i] + "  <translations>\n" + blocks + "  </translations>\n" + xml[i:]
 OUT.mkdir(exist_ok=True)
 for name, s in [("1_pressure.phyphox", pressure), ("2_weightless.phyphox", weightless), ("3_car.phyphox", car), ("4_sound.phyphox", sound)]:
     (OUT/name).write_text(add_tr(name, s), encoding="utf-8")
